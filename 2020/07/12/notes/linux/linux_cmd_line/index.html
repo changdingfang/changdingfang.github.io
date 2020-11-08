@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>linux命令行 | 常丁方的博客</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="linux命令行 | 常丁方的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="没找到页面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://changdingfang.com/404.html">
+<meta property="og:site_name" content="常丁方的博客">
+<meta property="og:description" content="没找到页面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-28T10:25:25.000Z">
+<meta property="article:modified_time" content="2020-08-03T11:38:43.244Z">
+<meta property="article:author" content="常丁方">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="架构">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/favicon.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="/js/js/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/js/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>常丁方</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="gitee" href="https://gitee.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-gitee"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:245292011@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=245292011&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(57)</small></div></li>
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(39)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="笔记<--->cpp">cpp<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->linux">linux<small>(12)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->shell">shell<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->docker">docker<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->vim">vim<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->数据库">数据库<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nginx">nginx<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nodejs">nodejs<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->python">python<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->regex">regex<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->windows">windows<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="学习"><i class="fold iconfont icon-right"></i>学习<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="学习<--->架构">架构<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="阅读思考"><i class="fold iconfont icon-right"></i>阅读思考<small>(2)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="阅读思考<--->思考">思考<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="阅读思考<--->阅读">阅读<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="其他"><i class="fold iconfont icon-right"></i>其他<small>(8)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="其他<--->boombeach">boombeach<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->test">test<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->健康">健康<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->标签">标签<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->转载">转载<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/blog_files">资源</a>
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="57">
+<input type="hidden" id="yelog_site_word_count" value="205.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://hexo.io/zh-cn/">hexo</a></li>
+            
+            <li><a target="_blank" href="http://wallleap.cn">wallleap</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmake</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>compiler</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cpp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,dns</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,signal</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,svn</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,turn,stun</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nodejs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>notes,python</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>sqlserver</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>test</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>todo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>windows</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>健康</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思考</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日志</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>架构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标签</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>海岛奇兵</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>订阅</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>转载</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>阅读</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 "
+           href="/2020/08/14/todo/"
+           data-tag="todo"
+           data-author="" >
+            <span class="post-title" title="TODO">TODO</span>
+            <span class="post-date" title="2020-08-14 12:35:00">2020/08/14</span>
+        </a>
+        
+        <a id="top" class="全部文章 其他 标签 "
+           href="/2020/07/23/other/label/"
+           data-tag="标签"
+           data-author="" >
+            <span class="post-title" title="网页标签">网页标签</span>
+            <span class="post-date" title="2020-07-23 22:48:03">2020/07/23</span>
+        </a>
+        
+        <a id="top" class="全部文章 其他 健康 "
+           href="/2020/07/23/other/health/"
+           data-tag="健康"
+           data-author="" >
+            <span class="post-title" title="健康">健康</span>
+            <span class="post-date" title="2020-07-23 22:29:32">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 python "
+           href="/2020/09/19/notes/python/python-forget/"
+           data-tag="notes,python"
+           data-author="" >
+            <span class="post-title" title="python记一些方法">python记一些方法</span>
+            <span class="post-date" title="2020-09-19 16:12:21">2020/09/19</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/19/notes/linux/stun-turn/"
+           data-tag="linux,turn,stun"
+           data-author="" >
+            <span class="post-title" title="stun-turn服务器搭建">stun-turn服务器搭建</span>
+            <span class="post-date" title="2020-09-19 15:36:36">2020/09/19</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/10/notes/linux/linux-proc/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux下/proc文件夹">linux下/proc文件夹</span>
+            <span class="post-date" title="2020-09-10 22:14:51">2020/09/10</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/notes/cpp/more-effective-cpp/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="改善c++编程">改善c++编程</span>
+            <span class="post-date" title="2020-08-25 19:06:06">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 其他 笔记 cpp 转载 "
+           href="/2020/08/14/notes/cpp/modern-cpp-tutorial/"
+           data-tag="cpp,转载,订阅"
+           data-author="" >
+            <span class="post-title" title="现代c++教程">现代c++教程</span>
+            <span class="post-date" title="2020-08-14 19:47:13">2020/08/14</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/13/notes/cpp/cpp14/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++14特性">c++14特性</span>
+            <span class="post-date" title="2020-08-13 18:42:29">2020/08/13</span>
+        </a>
+        
+        <a  class="全部文章 学习 架构 "
+           href="/2020/08/09/study/architectTemplate/"
+           data-tag="架构"
+           data-author="" >
+            <span class="post-title" title="架构设计模板">架构设计模板</span>
+            <span class="post-date" title="2020-08-09 12:31:27">2020/08/09</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/08/04/study/dflog/"
+           data-tag="cpp,日志"
+           data-author="" >
+            <span class="post-title" title="一个简单的c++日志库">一个简单的c++日志库</span>
+            <span class="post-date" title="2020-08-04 19:38:21">2020/08/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/01/notes/cpp/cpp-compiler/"
+           data-tag="cpp,compiler"
+           data-author="" >
+            <span class="post-title" title="cpp编译器安装">cpp编译器安装</span>
+            <span class="post-date" title="2020-08-01 11:02:23">2020/08/01</span>
+        </a>
+        
+        <a  class="全部文章 笔记 vim "
+           href="/2020/07/29/notes/vim/vim-config/"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="vim配置">vim配置</span>
+            <span class="post-date" title="2020-07-29 12:27:38">2020/07/29</span>
+        </a>
+        
+        <a  class="全部文章 其他 boombeach "
+           href="/2020/07/27/other/boombeach/gxjl/"
+           data-tag="海岛奇兵"
+           data-author="" >
+            <span class="post-title" title="海岛奇兵更新记录">海岛奇兵更新记录</span>
+            <span class="post-date" title="2020-07-27 21:28:57">2020/07/27</span>
+        </a>
+        
+        <a  class="全部文章 "
+           href="/2020/07/27/other/boombeach/yxfy/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="原型防御">原型防御</span>
+            <span class="post-date" title="2020-07-27 21:24:07">2020/07/27</span>
+        </a>
+        
+        <a  class="全部文章 其他 boombeach "
+           href="/2020/07/27/other/boombeach/yx/"
+           data-tag="海岛奇兵"
+           data-author="" >
+            <span class="post-title" title="英雄">英雄</span>
+            <span class="post-date" title="2020-07-27 21:22:31">2020/07/27</span>
+        </a>
+        
+        <a  class="全部文章 其他 boombeach "
+           href="/2020/07/27/other/boombeach/jzbz/"
+           data-tag="海岛奇兵"
+           data-author="" >
+            <span class="post-title" title="建筑兵种升级数据">建筑兵种升级数据</span>
+            <span class="post-date" title="2020-07-27 21:14:45">2020/07/27</span>
+        </a>
+        
+        <a  class="全部文章 其他 boombeach "
+           href="/2020/07/27/other/boombeach/bbbk/"
+           data-tag="海岛奇兵"
+           data-author="" >
+            <span class="post-title" title="海岛奇兵百科">海岛奇兵百科</span>
+            <span class="post-date" title="2020-07-27 20:08:43">2020/07/27</span>
+        </a>
+        
+        <a  class="全部文章 工具 "
+           href="/2020/07/23/tools/china-map/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="中国地图">中国地图</span>
+            <span class="post-date" title="2020-07-23 22:26:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 windows "
+           href="/2020/07/23/notes/windows/windows-ubuntu/"
+           data-tag="windows"
+           data-author="" >
+            <span class="post-title" title="windows子系统ubuntu">windows子系统ubuntu</span>
+            <span class="post-date" title="2020-07-23 22:12:38">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-status/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn状态详解">svn状态详解</span>
+            <span class="post-date" title="2020-07-23 22:06:39">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-cmd/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn命令">svn命令</span>
+            <span class="post-date" title="2020-07-23 22:04:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/signal/"
+           data-tag="linux,signal"
+           data-author="" >
+            <span class="post-title" title="信号表">信号表</span>
+            <span class="post-date" title="2020-07-23 21:58:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/htop/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="htop命令详解">htop命令详解</span>
+            <span class="post-date" title="2020-07-23 21:33:32">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/23/notes/cpp/cmake-base/"
+           data-tag="cmake"
+           data-author="" >
+            <span class="post-title" title="cmake基础">cmake基础</span>
+            <span class="post-date" title="2020-07-23 21:26:14">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql-efficiency/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql30种提升sql查询效率方法">mysql30种提升sql查询效率方法</span>
+            <span class="post-date" title="2020-07-23 21:22:53">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql-backup/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql备份">mysql备份</span>
+            <span class="post-date" title="2020-07-23 21:20:53">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/sqlserver-page-query/"
+           data-tag="sqlserver"
+           data-author="" >
+            <span class="post-title" title="sqlserver几种分页查询">sqlserver几种分页查询</span>
+            <span class="post-date" title="2020-07-23 21:19:26">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql-forget/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="sql记不住">sql记不住</span>
+            <span class="post-date" title="2020-07-23 21:17:41">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql-table/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql表操作">mysql表操作</span>
+            <span class="post-date" title="2020-07-23 21:14:08">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql-user/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql用户操作">mysql用户操作</span>
+            <span class="post-date" title="2020-07-23 21:11:50">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 数据库 "
+           href="/2020/07/23/notes/db/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="mysql事务定时器">mysql事务定时器</span>
+            <span class="post-date" title="2020-07-23 21:07:06">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 学习 架构 "
+           href="/2020/07/23/study/kafkaAndRocketMQ/"
+           data-tag="架构"
+           data-author="" >
+            <span class="post-title" title="kafka和RocketMQ区别">kafka和RocketMQ区别</span>
+            <span class="post-date" title="2020-07-23 21:03:23">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 阅读 "
+           href="/2020/07/21/readAndThink/read/"
+           data-tag="阅读"
+           data-author="" >
+            <span class="post-title" title="阅读">阅读</span>
+            <span class="post-date" title="2020-07-21 21:07:33">2020/07/21</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 思考 "
+           href="/2020/07/12/readAndThink/think/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="思考">思考</span>
+            <span class="post-date" title="2020-07-12 11:02:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 工具 "
+           href="/2020/07/12/tools/city-code/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="中国城市编码对照表">中国城市编码对照表</span>
+            <span class="post-date" title="2020-07-12 10:55:09">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 regex "
+           href="/2020/07/12/notes/regex/regex/"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则手册">正则手册</span>
+            <span class="post-date" title="2020-07-12 10:53:58">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 windows "
+           href="/2020/07/12/notes/windows/windows/"
+           data-tag="windows"
+           data-author="" >
+            <span class="post-title" title="windows">windows</span>
+            <span class="post-date" title="2020-07-12 10:39:33">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nodejs "
+           href="/2020/07/12/notes/nodejs/nodejs/"
+           data-tag="nodejs"
+           data-author="" >
+            <span class="post-title" title="nodejs安装与使用">nodejs安装与使用</span>
+            <span class="post-date" title="2020-07-12 10:34:40">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/linux-dns/"
+           data-tag="linux,dns"
+           data-author="" >
+            <span class="post-title" title="linux配置dns">linux配置dns</span>
+            <span class="post-date" title="2020-07-12 10:31:36">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nginx "
+           href="/2020/07/12/notes/nginx/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx配置">nginx配置</span>
+            <span class="post-date" title="2020-07-12 10:26:42">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/linux-look/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux查看cpu,磁盘,内存信息">linux查看cpu,磁盘,内存信息</span>
+            <span class="post-date" title="2020-07-12 10:24:31">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/linux-performance/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux常用性能检测命令">linux常用性能检测命令</span>
+            <span class="post-date" title="2020-07-12 10:20:02">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/ftp/"
+           data-tag="linux,ftp"
+           data-author="" >
+            <span class="post-title" title="ftp服务器搭建">ftp服务器搭建</span>
+            <span class="post-date" title="2020-07-12 10:08:24">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/centos7-user-config/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="centos7用户账户配置">centos7用户账户配置</span>
+            <span class="post-date" title="2020-07-12 10:03:18">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 vim "
+           href="/2020/07/12/notes/vim/vim-cmd/"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="vim命令">vim命令</span>
+            <span class="post-date" title="2020-07-12 09:55:26">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 shell "
+           href="/2020/07/12/notes/shell/shell-forget/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="shell记不住">shell记不住</span>
+            <span class="post-date" title="2020-07-12 09:48:21">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 docker "
+           href="/2020/07/12/notes/docker/docker-config/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker配置">docker配置</span>
+            <span class="post-date" title="2020-07-12 09:30:18">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 docker "
+           href="/2020/07/12/notes/docker/docker-cmd/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker命令">docker命令</span>
+            <span class="post-date" title="2020-07-12 09:30:06">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 docker "
+           href="/2020/07/12/notes/docker/docker-install/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker安装">docker安装</span>
+            <span class="post-date" title="2020-07-12 09:29:53">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp-mutex/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++并发并行">c++并发并行</span>
+            <span class="post-date" title="2020-07-12 09:16:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp_knowledge/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++知识点">c++知识点</span>
+            <span class="post-date" title="2020-07-12 09:05:50">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/linux_cmd_line/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux命令行">linux命令行</span>
+            <span class="post-date" title="2020-07-12 01:31:51">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp11/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++11特性">c++11特性</span>
+            <span class="post-date" title="2020-07-12 01:13:33">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/12/study/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown语法">markdown语法</span>
+            <span class="post-date" title="2020-07-12 01:11:22">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 架构 "
+           href="/2020/07/11/study/architect/"
+           data-tag="架构"
+           data-author="" >
+            <span class="post-title" title="架构师基础学习">架构师基础学习</span>
+            <span class="post-date" title="2020-07-11 20:09:23">2020/07/11</span>
+        </a>
+        
+        <a  class="全部文章 其他 test "
+           href="/2020/07/11/other/first-write/"
+           data-tag="test"
+           data-author="" >
+            <span class="post-title" title="first_write">first_write</span>
+            <span class="post-date" title="2020-07-11 19:51:51">2020/07/11</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-notes/linux/linux_cmd_line" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">linux命令行</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-10-26 21:38:34'>2020-07-12 01:31</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:7.1k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令用法"><span class="toc-text">命令用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打印-查看"><span class="toc-text">打印(查看)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-text">ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clear"><span class="toc-text">clear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#whoami"><span class="toc-text">whoami</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检索"><span class="toc-text">检索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wc"><span class="toc-text">wc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sed"><span class="toc-text">sed</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件-目录"><span class="toc-text">文件(目录)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-text">cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-text">mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-text">rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-text">touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-text">cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail"><span class="toc-text">tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-text">head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">tar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-text">find</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程"><span class="toc-text">进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nohup"><span class="toc-text">nohup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ps"><span class="toc-text">ps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pstack"><span class="toc-text">pstack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kill"><span class="toc-text">kill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pstree"><span class="toc-text">pstree</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间"><span class="toc-text">时间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tzselect"><span class="toc-text">tzselect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源"><span class="toc-text">资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TOP"><span class="toc-text">TOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ulimit"><span class="toc-text">ulimit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络"><span class="toc-text">网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ifconfig"><span class="toc-text">ifconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ethtool"><span class="toc-text">ethtool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wget"><span class="toc-text">wget</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#netstat"><span class="toc-text">netstat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nc"><span class="toc-text">nc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-text">工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chkconfig"><span class="toc-text">chkconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pidstat"><span class="toc-text">pidstat</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p><font size=5><a href="https://man.linuxde.net" target="_blank" rel="noopener"><strong>linux命令大全</strong></a></font></p>
+<hr>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令用法"><span class="toc-text">命令用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打印-查看"><span class="toc-text">打印(查看)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ls"><span class="toc-text">ls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clear"><span class="toc-text">clear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#whoami"><span class="toc-text">whoami</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检索"><span class="toc-text">检索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wc"><span class="toc-text">wc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sed"><span class="toc-text">sed</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件-目录"><span class="toc-text">文件(目录)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cp"><span class="toc-text">cp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv"><span class="toc-text">mv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm"><span class="toc-text">rm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mkdir"><span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch"><span class="toc-text">touch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat"><span class="toc-text">cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail"><span class="toc-text">tail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-text">head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">tar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-text">find</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进程"><span class="toc-text">进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nohup"><span class="toc-text">nohup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ps"><span class="toc-text">ps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pstack"><span class="toc-text">pstack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kill"><span class="toc-text">kill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pstree"><span class="toc-text">pstree</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间"><span class="toc-text">时间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tzselect"><span class="toc-text">tzselect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源"><span class="toc-text">资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TOP"><span class="toc-text">TOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ulimit"><span class="toc-text">ulimit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络"><span class="toc-text">网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ifconfig"><span class="toc-text">ifconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ethtool"><span class="toc-text">ethtool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wget"><span class="toc-text">wget</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#netstat"><span class="toc-text">netstat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nc"><span class="toc-text">nc</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-text">工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chkconfig"><span class="toc-text">chkconfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pidstat"><span class="toc-text">pidstat</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div></p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ul>
+<li><a href="#ls">ls</a></li>
+<li><a href="#pwd">pwd</a></li>
+<li><a href="#cd">cd</a></li>
+<li><a href="#cp">cp</a></li>
+<li><a href="#mv">mv</a></li>
+<li><a href="#rm">rm</a></li>
+<li><a href="#mkdir">mkdir</a></li>
+<li><a href="#touch">touch</a></li>
+<li><a href="#tail">tail</a></li>
+<li><a href="#head">head</a></li>
+<li><a href="#tar">tar</a></li>
+<li><a href="#find">find</a></li>
+<li><a href="#grep">grep</a></li>
+<li><a href="#nohup">nohup</a></li>
+<li><a href="#ps">ps</a></li>
+<li><a href="#kill">kill</a></li>
+<li><a href="#ifconfig">ifconfig</a></li>
+</ul>
+<h1 id="命令用法"><a href="#命令用法" class="headerlink" title="命令用法"></a>命令用法</h1><blockquote>
+<p>“()”为选填 “[]” 为必填  </p>
+</blockquote>
+<h2 id="打印-查看"><a href="#打印-查看" class="headerlink" title="打印(查看)"></a>打印(查看)</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><pre><code>ls (选项) (参数)      // 展示文件夹下内容
+// 常用选项
+-a      // 显示所有文件和目录(ls内定将档案名或目录名称为“.”的视为影藏，不会列出)
+-l      // 所有输出信息用单列格式输出, 不输出为多列
+-t      // 用文件和目录的更改时间排序
+-r      // 反序(默认文件名排序)排列并输出目录内容列表
+// 参数
+目录: 指定要显示列表的目录，也可以是具体的文件</code></pre><h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><pre><code>pwd (选项)     // 显示绝对路径</code></pre><h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><pre><code>clear       // 用于清除当前屏幕终端上的任何信息</code></pre><h3 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h3><pre><code>whoami      // 用于打印当前有效的用户名称</code></pre><h2 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h2><h3 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h3><pre><code>wc (选项) (参数)    // 计算数字
+// 常用选项
+-c          // 只显示Bytes数
+-l          // 只显示列数
+-w          // 只显示字数
+// 参数
+文件: 需要统计的文件列表</code></pre><h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><pre><code>grep (选项) (参数)        // 内容过滤分析
+// 常用选项
+-i          // 忽略字符大小写的差别
+-n          // 在显示符合范本样式的那一列之前, 标示出该列的编号
+-r          // 递归检索文件夹
+-s          // 不显示错误信息
+-o          // 只输出文件中匹配到的部分
+-v          // 反转查找
+-w          // 只显示全字符合的列
+-x          // 只显示全列符合的列
+-E          // 可使用扩展正则表达式
+// 参数
+检索内容: 要筛选出的内容字符串
+文件: 要检索的文件</code></pre><p><strong>使用示例</strong> </p>
+<pre><code class="shell"># 输出匹配到hello world的行
+grep &quot;hello world&quot; test.log</code></pre>
+<h3 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h3><pre><code>sed [options] &#39;command&#39; file(s)
+
+sed [options] -f scriptfile file(s)
+
+// 选项
+-e      // 以选项中的指定的script来处理输入的文本文件.
+-f      // 与选项中的指定的script文件来处理输入的文本文件
+-h      // 显示帮助
+-n      // 仅显示script处理后的结果
+-V      // 显示版本信息
+-r      // 在脚本中使用正则表达式
+
+// 参数
+文件: 指定待处理的文本文件列表
+
+// sed命令
+a\       // 在当前行下面插入文本.
+i\      // 在当前行上面插入文本
+c\      // 把选定的行改为新的文本
+d       // 删除, 删除选择的行
+D       // 删除模板块的第一行.
+s       // 替换指定字符
+p       // 打印模板块的行
+P       // (大写)打印模板块的第一行
+
+// sed替换标记
+g       // 表示行内全面替换
+p       // 表示打印行
+w       // 表示把行写入一个文件
+x       // 表示互换默默块中的文本和缓冲区中的文本
+y       // 表示把一个字符翻译为另外的字符(但是不用正则表达式)
+\1      // 子串匹配标记
+&amp;       // 已匹配字符串标记
+</code></pre><p><strong>示例</strong></p>
+<pre><code class="shell"># 打印9:00-12:00的日志
+sed -n &#39;/2019:09:00/,/2019:12:00/&#39;p test.log
+
+# 打印2－5行内容
+sed -n &#39;2,5p&#39; test.log</code></pre>
+<h2 id="文件-目录"><a href="#文件-目录" class="headerlink" title="文件(目录)"></a>文件(目录)</h2><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><pre><code>cd (选项) (参数)      // 切换目录
+// 常用选项
+-       // 当仅实用&quot;-&quot;一个选项时, 当前工作目录将被切换到上次所在的目录
+~       // 切换到当前用户的家目录下
+// 参数
+路径</code></pre><hr>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><pre><code>cp (选项) [参数]     // 拷贝文件夹或文件
+// 常用选项
+-a      // 复制文件夹下所有内容(包括隐藏文件)
+-r      // 递归处理, 将指定目录下的所有文件与子目录一并处理
+-p      // 保留源文件或目录的属性
+// 参数
+源文件: 制定源文件列表. 默认情况下, cp命令不能复制目录, 如果要复制目录，则必须使用-R选项;
+目标文件: 指定目标文件. 当&quot;源文件&quot;为多个文件时, 要求&quot;目标文件&quot;为指定的目录.</code></pre><hr>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><pre><code>mv (选项) [参数]      // 移动文件夹或文件
+// 常用选项
+-b      // 当文件存在时, 覆盖前, 为其创建一个备份
+-f      // 若目标文件或目录与现有的文件或目录重复, 则直接覆盖现有的文件或目录
+// 参数
+源文件: 源文件列表
+目标文件: 如果&quot;目标文件&quot;是文件名则在移动文件的同时, 将其改名为&quot;目标文件&quot;; 如果&quot;目标文件&quot;是目录名则将源文件移动到&quot;目标文件&quot;下</code></pre><h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><pre><code>rm (选项) [参数]     // 删除文件夹或文件
+// 常用选项
+-r      // 递归处理, 将指定目录下的所有文件与子目录一并处理
+-f      // 强制删除文件或目录
+-v      // 显示指令执行的详细过程
+// 参数
+文件: 指定被删除的文件列表, 如果参数中含有目录, 则必须加上-r或者-R选项
+
+// rm 一次性删除文件太多会失败. 可以配合find使用
+find  ./xx  -type f | xargs rm -f</code></pre><hr>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><pre><code>mkdir (选项) [参数]      // 创建文件夹
+// 常用选项
+-p          // 若所要建立目录的上层目录目前尚未建立, 则会一并建立上层目录
+// 参数
+目录: 指定要创建的目录列表, 多个目录之间用空格隔开</code></pre><hr>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><pre><code>touch (选项) [参数]      // 创建文件或把已存在文件的时间标签更新为系统当前的时间(默认方式)
+// 参数
+文件: 要创建的文件名或指定要设置时间属性的文件列表</code></pre><hr>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><pre><code>cat (选项)(参数)
+
+// 常用选项
+-n或-number             // 有1开始对所有输出的行数编号；
+-b或--number-nonblank   // 和-n相似，只不过对于空白行不编号；
+-s或--squeeze-blank     // 当遇到有连续两行以上的空白行，就代换为一行的空白行；
+-A              // 显示不可打印字符，行尾显示“$”；
+-e              // 等价于&quot;-vE&quot;选项；
+-t              // 等价于&quot;-vT&quot;选项；
+
+// 参数
+文件列表</code></pre><hr>
+<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><pre><code>tail (选项) (参数)        // 输入文件中的尾部内容
+// 常用选项
+-f &lt;filename&gt;         // 显示文件最新追加的内容
+-n &lt;N&gt;                // 输出文件的尾部N(N位数字)行内容
+// 参数
+文件列表: 指定要显示尾部内容的文件列表</code></pre><hr>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><pre><code>head (选项) (参数)      // 显示文件的开头的内容, 默认显示10行
+// 常用选项
+-n &lt;N&gt;         // 指定显示头部内容的行数
+// 参数
+文件列表: 指定显示头部内容的文件列表</code></pre><hr>
+<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><pre><code>tar [选项] [参数]        // 压缩解压打包解包
+// 常用选项
+-c      // 建立新的备份(打包, 压缩)文件
+-d      // 记录文件的差别
+-f      // 指定备份文件, 必须是最后一个选项
+-p      // 用原来的文件权限还原文件
+-r      // 添加文件到已经压缩的文件
+-t      // 列出备份文件的内容
+-v      // 显示操作过程
+-x      // 从备份文件中还原文件
+-z      // 通过gzip指令处理备份文件
+// 参数
+文件或目录: 指定要打包的文件或目录列表
+// 示例
+tar -cf x.tar a.txt b.txt c.txt     // 将a,b,c三个txt文件打包到x.tar
+tar -cf x.tar m/                    // 将m文件夹下所有文件打包成x.tar
+tar -zcf x.tar.gz m/                // 将m文件夹下所有文件打包并压缩成x.tar.gz
+tar -xpf x.tar                      // 将x.tar以原来的文件权限解包到当前文件夹下</code></pre><p><strong>linux下以系统当前时间前一天命名文件并打包压缩</strong></p>
+<pre><code>tar --remove-files -zcvf /data/log1/`date -d&quot;1 day ago&quot; +&quot;%Y%m%d&quot;`.tar.gz  /data/log2/`date -d&quot;1 day ago&quot; +&quot;%Y%m%d&quot;`*.log</code></pre><blockquote>
+<ul>
+<li>–remove-files &emsp; &emsp; &emsp; 打包压缩后删除源文件.</li>
+<li>-zcvf &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;打包压缩.</li>
+<li>`date -d”1 day ago” +”%Y%m%d”` &emsp; &emsp;获取系统当前时间前一天.  </li>
+</ul>
+</blockquote>
+<p>命令解析: 把<code>/data/log2/</code>目录下以当前系统时间前一天为前缀且以<code>.log</code> 为后缀的文件打包压缩到 <code>/data/log1/</code>目录下,并把归档名字名命为系统当前时间的前一天.如,今天是<code>20191203</code>则文件名为<code>20191203</code>打包完后,删除源文件.</p>
+<p><strong>分卷打包压缩</strong>:</p>
+<pre><code>tar czf - ./path | split -d -b 1024m -  out</code></pre><blockquote>
+<ul>
+<li>./path  [文件或者路径]</li>
+<li>1024m  [分卷的单卷大小(单位m)]</li>
+<li>out    [分卷的名字, 以(out + 序号)命名]</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><pre><code>find (选项) (参数)        // 查找文件夹或文件
+// 常用选项
+-ctime &lt;24小时数&gt;         // 查找在指定时间之时被更改的文件或目录, 单位以24小时计算
+-exec &lt;执行指令&gt;          // 假设find指令的回传值为True, 就执行该指令
+-name  &lt;范本样式&gt;         // 指定字符串作为寻找文件或目录的范本样式
+-type &lt;文件类型&gt;          // 只寻找符合指定的文件类型的文件  f: 普通文件. d: 文件夹
+-maxdepth &lt;目录层级&gt;      // 设置最大目录层级
+-mindepth &lt;目录层级&gt;      // 设置最小目录层级
+-mmin &lt;分钟&gt;              // 查找在指定时间曾被更改过的文件或目录, 单位以分钟计算
+-mtime &lt;24小时数&gt;         // 查找在指定时间曾被更改过的文件或目录, 单位以24小时计算
+-size &lt;文件大小&gt;          // 查找符合指定的文件大小的文件
+// 参数
+起始目录: 查找文件的起始目录
+// 示例
+find ./ -type f -name &quot;hello*&quot;      // 查找当前路径下所有已&quot;hello&quot;开头的普通文件</code></pre><p><strong>find 过滤掉 指定目录, 并用grep查找指定内容, 并过滤掉二进制文件和目录</strong></p>
+<pre><code>find . -path &#39;./ChatRobot_parseChat&#39; -prune -o -print | xargs grep -snI &quot;exit&quot;</code></pre><p><strong>找到一个文件夹下深度为1的所有子目录下所包含的文件个数, 每个子文件夹单独列出</strong></p>
+<pre><code>find . -maxdepth 1 -type d | while read dir; do count=$(find &quot;$dir&quot; -type f | wc -l); echo &quot;$dir : $count&quot;; done</code></pre><hr>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h3><pre><code>nohup (选项) (参数)     // 将程序以忽略挂起信号的方式运行起来, 被运行的程序的输出信息将不会显示到终端
+// 参数
+cmd: 要执行的命令或脚本
+// 示例
+nohup ls            // ls的输出将会定向到当前文件夹下的nohup.out文件
+nohup ./shell &amp;     // 后台运行shell可执行程序, shell的输出将会定向到当前文件夹下的nohup.out文件
+nohup ./shell &gt;/dev/null 2&gt;&amp;1 &amp;     // 后台运行shell可执行程序, 并把标准输出和错误输出重定向到/dev/null</code></pre><hr>
+<h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><pre><code>ps (选项)     // 显示运行的进程信息
+// 常用选项
+-a          // 显示所有终端机下执行的程序, 除了阶段作业领导者之外
+a           // 显示现行终端机下的所有程序, 包括其他用户的程序
+e           // 列出程序时, 显示每个程序所使用的环境变量
+-e          // 显示所有程序
+f           // 用ASCII字符显示树状结构, 表达程序间的相互关系
+-f          // 显示UID, PPIP, C与STIME栏位
+-l          // 采用详细的格式来显示程序状况
+u           // 以用户为主的格式来显示程序状况
+x           // 显示所有程序, 不以终端机来区分</code></pre><p><strong>示例</strong></p>
+<pre><code class="shell"># 进程启动时间
+ps -p ${pid} -o lstart
+
+# 进程运行已运行时间
+ps -p ${pid} -o etime</code></pre>
+<hr>
+<h3 id="pstack"><a href="#pstack" class="headerlink" title="pstack"></a>pstack</h3><blockquote>
+<p>显示每个进程的栈跟踪。pstack必须由相应进程的属主或root运行。<br>可以使用pstack来确定进程挂起的位置<br>该命令允许使用的唯一选项是要检查的进程的pid</p>
+</blockquote>
+<p><strong>使用示例</strong></p>
+<pre><code class="shell">pstack ${pid}</code></pre>
+<hr>
+<h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h3><pre><code>kill (选项) (参数)        // 将信号发送给进程, 默认发送编号15信号
+// 常用选项
+-l &lt;信息编号&gt;         // 若不加&lt;信息编号&gt;选项, 则-l参数会列出全部的信息名称
+// 参数
+进程或作业识别号: 指定要删除的进程或作业
+// 示例
+kill -9 12345        // 给进程号为12345的进程发送编号为9的信号</code></pre><blockquote>
+<p><strong>常用信号</strong>  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>信号名</th>
+<th>编号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HUP</td>
+<td>1</td>
+<td>终端断线</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>2</td>
+<td>中断（同 Ctrl + C）</td>
+</tr>
+<tr>
+<td>QUIT</td>
+<td>3</td>
+<td>退出（同 Ctrl + \）</td>
+</tr>
+<tr>
+<td>TERM</td>
+<td>15</td>
+<td>终止</td>
+</tr>
+<tr>
+<td>KILL</td>
+<td>9</td>
+<td>强制终止</td>
+</tr>
+<tr>
+<td>CONT</td>
+<td>18</td>
+<td>继续（与STOP相反， fg/bg命令）</td>
+</tr>
+<tr>
+<td>STOP</td>
+<td>19</td>
+<td>暂停（同 Ctrl + Z）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="pstree"><a href="#pstree" class="headerlink" title="pstree"></a>pstree</h3><pre><code>pstree (选项)        // 以树状图的方式展现进程之间的派生关系
+
+// 选项
+-a          // 显示每个程序的完整指令，包含路径，参数或是常驻服务的标示；
+-c          // 不使用精简标示法；
+-G          // 使用VT100终端机的列绘图字符；
+-h          // 列出树状图时，特别标明现在执行的程序；
+-H&lt;程序识别码&gt;          // 此参数的效果和指定&quot;-h&quot;参数类似，但特别标明指定的程序；
+-l          // 采用长列格式显示树状图；
+-n          // 用程序识别码排序。预设是以程序名称来排序；
+-p          // 显示程序识别码; (可以显示出线程)
+-u          // 显示用户名称；
+-U          // 使用UTF-8列绘图字符；
+-V          // 显示版本信息。
+-T          // 隐藏线程, 仅显示进程.
+
+// 示例
+pstree -p 12345 | wc -l        // 输出进程号12345进程的线程数量</code></pre><hr>
+<h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><h3 id="tzselect"><a href="#tzselect" class="headerlink" title="tzselect"></a>tzselect</h3><pre><code>// - 设置时区为亚洲上海
+timedatectl set-timezone Asia/Shanghai
+
+// ---------------------------------------------------
+
+// 1. 修改时区
+tzselect  
+依次选择4-&gt;9-&gt;1-&gt;1 #Asia-&gt;China-&gt; Beijing-&gt;yes
+
+sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+
+// 2. 检查时间, 时区 
+date -R
+
+
+sudo date -s MM/DD/YY //修改日期  
+sudo date -s hh:mm:ss //修改时间  
+sudo hwclock --systohc //修改生效  </code></pre><hr>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><h3 id="TOP"><a href="#TOP" class="headerlink" title="TOP"></a>TOP</h3><blockquote>
+<p>可以实时动态的查看系统的整体运行情况，也可以查看单独进程的运行情况   </p>
+</blockquote>
+<pre><code class="shell">top (选项)
+
+// 选项
+-b              // 以批处理模式操作
+-c              // 显示完整的命令
+-d              // 屏幕刷新时间间隔
+-I              // 忽略失效过程
+-s              // 保密模式
+-S              // 累积模式
+-i&lt;时间&gt;        // 设置时间间隔
+-u&lt;用户名&gt;      // 指定用户名
+-p&lt;进程号&gt;      // 指定进程
+-n&lt;次数&gt;        // 循环显示的次数</code></pre>
+<p><strong>使用示例</strong> </p>
+<pre><code class="shell"># 显示进程1两次
+top -n 2 -p 1</code></pre>
+<p><strong>输出示例</strong></p>
+<pre><code class="shell">$ top -b -n 1
+top - 21:12:13 up 86 days,  9:01,  3 users,  load average: 0.69, 0.57, 0.40
+Tasks: 148 total,   2 running, 145 sleeping,   1 stopped,   0 zombie
+%Cpu(s): 25.0 us,  6.2 sy,  0.0 ni, 56.2 id, 12.5 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  3880196 total,   744480 free,   608440 used,  2527276 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.  2974328 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+26191 dingfang  20   0  161996   2084   1532 R   6.2  0.1   0:00.01 top
+    1 root      20   0   51832   3784   2356 S   0.0  0.1  83:13.27 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:01.20 kthreadd
+    4 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:0H</code></pre>
+<p><strong>输出说明</strong></p>
+<p>前五行是当前系统情况整体的统计信息区<br>第一行: 任务队列信息, 同 <code>uptime</code> 命令的执行结果.  </p>
+<table>
+<thead>
+<tr>
+<th>列</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>21:12:13</td>
+<td>当前体统时间</td>
+</tr>
+<tr>
+<td>up 86 days, 9:01</td>
+<td>系统运行的时间</td>
+</tr>
+<tr>
+<td>3 users</td>
+<td>当前登录的用户数量</td>
+</tr>
+<tr>
+<td>load average …</td>
+<td>分别为1分钟、5分钟、15分钟系统负载情况</td>
+</tr>
+</tbody></table>
+<p>第二行: 分别指总进程数量、正在运行的进程数量、睡眠的进程数量、stoped状态的进程数量、僵尸进程数量。   </p>
+<p>第三行: cpu状态信息   </p>
+<table>
+<thead>
+<tr>
+<th>列</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>25.0 us</td>
+<td>用户空间占用cpu百分比</td>
+</tr>
+<tr>
+<td>6.2 sy</td>
+<td>内核占用cpu百分比</td>
+</tr>
+<tr>
+<td>0.0 ni</td>
+<td>改变过优先级的进程占用cpu百分比</td>
+</tr>
+<tr>
+<td>56.2 id</td>
+<td>空闲cpu百分比</td>
+</tr>
+<tr>
+<td>12.5 wa</td>
+<td>io等待占用cpu百分比</td>
+</tr>
+<tr>
+<td>0.0 hi</td>
+<td>硬中断占用cpu百分比</td>
+</tr>
+<tr>
+<td>0.0 si</td>
+<td>软中断占用cpu百分比</td>
+</tr>
+<tr>
+<td>0.0 st</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>第四行: 内存状态<br>分别是 物理内存总量、空闲内存总量、使用中的内存总量、缓存内存量</p>
+<p>第五行: swap交换区信息<br>分别是 交换区总量、空闲交换区总量、使用的交换区总量、可用的交换区总量</p>
+<p>下面是显示各个进程的状态监控   </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PID</td>
+<td>进程id</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>进程所有者</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>进程优先级</td>
+</tr>
+<tr>
+<td>NI</td>
+<td>nice值. 越大表示优先级越低</td>
+</tr>
+<tr>
+<td>VIRT</td>
+<td>虚拟内存总量</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>物理内存占用</td>
+</tr>
+<tr>
+<td>SHR S</td>
+<td>共享内存</td>
+</tr>
+<tr>
+<td>%CPU</td>
+<td>上次更新到现在cpu时间占用百分比</td>
+</tr>
+<tr>
+<td>%MEM</td>
+<td>进程占用物理内存百分比</td>
+</tr>
+<tr>
+<td>TIME+</td>
+<td>进程使用cpu时间总计</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>进程名称(命令名/命令行)</td>
+</tr>
+</tbody></table>
+<p>使用 <code>shift + 方向键</code> 可以更换排序列，默认为cpu列由大到小排序<br><code>x</code> 可以高亮显示排序列<br><code>b</code> 可以高亮当前运行进程</p>
+<h3 id="ulimit"><a href="#ulimit" class="headerlink" title="ulimit"></a>ulimit</h3><blockquote>
+<p>ulimit 用于限制 shell 启动进程所占用的资源，支持以下各种类型的限制：</p>
+<ul>
+<li>所创建的内核文件的大小</li>
+<li>进程数据块的大小</li>
+<li>Shell 进程创建文件的大小</li>
+<li>内存锁住的大小</li>
+<li>常驻内存集的大小</li>
+<li>打开文件描述符的数量</li>
+<li>分配堆栈的最大大小</li>
+<li>CPU 时间</li>
+<li>单个用户的最大线程数</li>
+<li>Shell 进程所能使用的最大虚拟内存。</li>
+</ul>
+<p>同时，它支持硬资源和软资源的限制。  </p>
+</blockquote>
+<pre><code class="shell">ulimit (选项)          // 限制系统用户对shell资源的访问  
+
+// 选项
+-a                        // 显示目前资源限制的设定；
+-c &lt;core文件上限&gt;         // 设定core文件的最大值，单位为区块；
+-d &lt;数据节区大小&gt;         // 程序数据节区的最大值，单位为KB；
+-f &lt;文件大小&gt;             // shell所能建立的最大文件，单位为区块；
+-H                        // 设定资源的硬性限制，也就是管理员所设下的限制；
+-m &lt;内存大小&gt;             // 指定可使用内存的上限，单位为KB；
+-n &lt;文件数目&gt;             // 指定同一时间最多可开启的文件数；
+-p &lt;缓冲区大小&gt;           // 指定管道缓冲区的大小，单位512字节；
+-s &lt;堆叠大小&gt;             // 指定堆叠的上限，单位为KB；
+-S                        // 设定资源的弹性限制；
+-t &lt;CPU时间&gt;              // 指定CPU使用时间的上限，单位为秒；
+-u &lt;程序数目&gt;             // 用户最多可开启的程序数目；
+-v &lt;虚拟内存大小&gt;         // 指定可使用的虚拟内存上限，单位为KB。</code></pre>
+<hr>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h3><pre><code>ifconfig (参数)     // 配置和显示Linux内核中网络接口的网络参数
+
+// 参数
+add&lt;地址&gt;           // 设置网络设备IPv6的ip地址；
+del&lt;地址&gt;           // 删除网络设备IPv6的IP地址；
+down                // 关闭指定的网络设备；
+&lt;hw&lt;网络设备类型&gt;&lt;硬件地址&gt;          // 设置网络设备的类型与硬件地址；
+io_addr&lt;I/O地址&gt;          // 设置网络设备的I/O地址；
+irq&lt;IRQ地址&gt;              // 设置网络设备的IRQ；
+media&lt;网络媒介类型&gt;       // 设置网络设备的媒介类型；
+mem_start&lt;内存地址&gt;       // 设置网络设备在主内存所占用的起始地址；
+metric&lt;数目&gt;          // 指定在计算数据包的转送次数时，所要加上的数目；
+mtu&lt;字节&gt;             // 设置网络设备的MTU；
+netmask&lt;子网掩码&gt;     // 设置网络设备的子网掩码；
+tunnel&lt;地址&gt;          // 建立IPv4与IPv6之间的隧道通信地址；
+up                    // 启动指定的网络设备；
+-broadcast&lt;地址&gt;      // 将要送往指定地址的数据包当成广播数据包来处理；
+-pointopoint&lt;地址&gt;    // 与指定地址的网络设备建立直接连线，此模式具有保密功能；
+-promisc              // 关闭或启动指定网络设备的promiscuous模式；
+IP地址                // 指定网络设备的IP地址；
+网络设备              // 指定网络设备的名称。</code></pre><h3 id="ethtool"><a href="#ethtool" class="headerlink" title="ethtool"></a>ethtool</h3><pre><code>ethtool             // 获取以太网卡的配置信息，或者修改这些配置
+// 语法
+ethtool [ -a | -c | -g | -i | -d | -k | -r | -S |] ethX
+
+// 基本使用
+ethool eth0         // 查看eth0网卡的的速度.</code></pre><h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h3><pre><code>wget (选项) (参数)      // 从指定的URL下载文件
+
+// 选项
+-a&lt;日志文件&gt;        // 在指定的日志文件中记录资料的执行过程；
+-A&lt;后缀名&gt;          // 指定要下载文件的后缀名，多个后缀名之间使用逗号进行分隔；
+-b                  // 进行后台的方式运行wget；
+-B&lt;连接地址&gt;        // 设置参考的连接地址的基地地址；
+-c                  // 继续执行上次终端的任务；
+-C&lt;标志&gt;            // 设置服务器数据块功能标志on为激活，off为关闭，默认值为on；
+-d                  // 调试模式运行指令；
+-D&lt;域名列表&gt;        // 设置顺着的域名列表，域名之间用“，”分隔；
+-e&lt;指令&gt;            // 作为文件“.wgetrc”中的一部分执行指定的指令；
+-h                  // 显示指令帮助信息；
+-i&lt;文件&gt;            // 从指定文件获取要下载的URL地址；
+-l&lt;目录列表&gt;        // 设置顺着的目录列表，多个目录用“，”分隔；
+-L                  // 仅顺着关联的连接；
+-r                  // 递归下载方式；
+-nc                 // 文件存在时，下载文件不覆盖原有文件；
+-nv                 // 下载时只显示更新和出错信息，不显示指令的详细执行过程；
+-q                  // 不显示指令执行过程；
+-nh                 // 不查询主机名称；
+-v                  // 显示详细执行过程；
+-V                  // 显示版本信息；
+--passive-ftp       // 使用被动模式PASV连接FTP服务器；
+--follow-ftp        // 从HTML文件中下载FTP连接文件。</code></pre><h3 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h3><pre><code>netstat (选项)          // 打印Linux中网络系统的状态信息
+
+// 常用选项
+-a或--all               // 显示所有连线中的Socket；
+-c或--continuous        // 持续列出网络状态；
+-C或--cache             // 显示路由器配置的快取信息；
+-e或--extend            // 显示网络其他相关信息；
+-F或--fib               // 显示FIB；
+-g或--groups            // 显示多重广播功能群组组员名单；
+-i或--interfaces        // 显示网络界面信息表单；
+-l或--listening         // 显示监控中的服务器的Socket；
+-M或--masquerade        // 显示伪装的网络连线；
+-n或--numeric           // 直接使用ip地址，而不通过域名服务器；
+-N或--netlink或--symbolic   // 显示网络硬件外围设备的符号连接名称；
+-o或--timers            // 显示计时器；
+-p或--programs          // 显示正在使用Socket的程序识别码和程序名称；
+-r或--route             // 显示Routing Table；
+-s或--statistice        // 显示网络工作信息统计表；
+-t或--tcp               // 显示TCP传输协议的连线状况；
+-u或--udp               // 显示UDP传输协议的连线状况；
+-v或--verbose           // 显示指令执行过程；
+-w或--raw               // 显示RAW传输协议的连线状况；
+-x或--unix              // 此参数的效果和指定&quot;-A unix&quot;参数相同；
+--ip或--inet            // 此参数的效果和指定&quot;-A inet&quot;参数相同。
+
+// 示例
+netstat -tunlp | grep 端口号        // 显示tcp, udp的连接情况</code></pre><hr>
+<h3 id="nc"><a href="#nc" class="headerlink" title="nc"></a>nc</h3><pre><code>nc/netcat(选项)(参数)       // nc命令是netcat命令的简称, 都是用来设置路由器
+
+// 选项
+-g&lt;网关&gt;                // 设置路由器跃程通信网关，最多设置8个；
+-G&lt;指向器数目&gt;          // 设置来源路由指向器，其数值为4的倍数；
+-h：在线帮助；
+-i&lt;延迟秒数&gt;            // 设置时间间隔，以便传送信息及扫描通信端口；
+-l                      // 使用监听模式，监控传入的资料；
+-n                      // 直接使用ip地址，而不通过域名服务器；
+-o&lt;输出文件&gt;            // 指定文件名称，把往来传输的数据以16进制字码倾倒成该文件保存；
+-p&lt;通信端口&gt;            // 设置本地主机使用的通信端口；
+-r                      // 指定源端口和目的端口都进行随机的选择；
+-s&lt;来源位址&gt;            // 设置本地主机送出数据包的IP地址；
+-u                      // 使用UDP传输协议；
+-v                      // 显示指令执行过程；
+-w&lt;超时秒数&gt;            // 设置等待连线的时间；
+-z                      // 使用0输入/输出模式，只在扫描通信端口时使用。
+
+// 参数
+主机: 指定主机ip地址或主机名称
+端口号: 可以是单个整数或者是一个范围
+
+// 示例
+// 远程拷贝文件
+// 从server1拷贝文件到server2上。需要先在server2上，用nc激活监听。
+// server2上运行：
+nc -lp 1234 &gt; install.log
+// server1上运行：
+nc -w 1 192.168.228.222 1234 &lt; install.log</code></pre><hr>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="chkconfig"><a href="#chkconfig" class="headerlink" title="chkconfig"></a>chkconfig</h3><pre><code>chkconfig (选项)
+
+// 选项
+--add           // 增加所指定的系统服务，让chkconfig指令得以管理它，并同时在系统启动的叙述文件内增加相关数据；
+--del           // 删除所指定的系统服务，不再由chkconfig指令管理，并同时在系统启动的叙述文件内删除相关数据；
+--level&lt;等级代号&gt;       // 指定读系统服务要在哪一个执行等级中开启或关毕。
+
+// 等级level
+0：表示关机
+1：单用户模式
+2：无网络连接的多用户命令行模式
+3：有网络连接的多用户命令行模式
+4：不可用
+5：带图形界面的多用户模式
+6：重新启动
+
+// 你可能会在脚本文件见到这样的写法
+---------------
+# chkconfig 2345 20 60
+---------------
+2345表示等级2,3,4,5
+20 表示开启是优先级20
+60表示关闭是优先级60
+优先级范围:0 ~ 100, 越大优先级越低</code></pre><h3 id="pidstat"><a href="#pidstat" class="headerlink" title="pidstat"></a>pidstat</h3><p>pidstat 用于监控全部或指定进程的cpu、内存、线程、设备io等系统资源的占用情况。  </p>
+<p>刚运行时显示自系统启动开始的各项统计信息，之后运行显示各统计信息。</p>
+<p><strong>安装</strong> </p>
+<pre><code class="shell"># ubuntu
+apt-get install sysstat
+
+# centos
+yum install sysstat</code></pre>
+<pre><code class="shell">pidstat [选项] [&lt;时间间隔&gt;] [&lt;次数&gt;]
+
+// 选项
+-u      // 默认的参数，显示各个进程的cpu使用统计
+-r      // 显示各个进程的内存使用统计
+-d      // 显示各个进程的io使用情况
+-p      // 指定进程号
+-w      // 显示每个进程的上下文切换情况
+-t      // 显示选择任务的线程的统计信息的额外信息
+-T {TASK|CHILD|ALL}     // 这个选项指定了pidstat监控。 
+                        // TASK 表示报告独立的task
+                        // CHILD表示报告进程下所有线程统计信息
+                        // ALL 表示报告独立task和task下面的所有线程
+        // task和子线程的全局统计信息和pidstat选项无关，这些统计信息不会
+        // 对应到当前的统计间隔，这些统计信息只有在子线程kill或完成时才会被收集
+-l      // 在SMP环境，表示任务的cpu使用率/内核数量</code></pre>
+<p><strong>示例1</strong></p>
+<pre><code class="shell">$pidstat
+Linux 3.10.0-1127.18.2.el7.x86_64 (izuf63269bclc8z39n3t2cz)     10/21/2020     _x86_64_    (2 CPU)
+
+06:29:09 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command
+06:29:09 PM     0         1    0.03    0.04    0.00    0.07     1  systemd</code></pre>
+<p><strong>说明</strong></p>
+<pre><code>PID:        进程id
+%usr:       进程在用户空间占用cpu的百分比
+%system:    进程在内核空间占用的cpu的百分比
+%guest:     进程在虚拟机占用的cpu的百分比
+%CPU:       进程占用的cpu百分比
+CPU:        处理进程的cpu编号
+Command:    当前进程对应的命令</code></pre><p><strong>示例2</strong></p>
+<pre><code class="shell">$pidstat -w
+Linux 3.10.0-1127.18.2.el7.x86_64 (izuf63269bclc8z39n3t2cz)     10/21/2020     _x86_64_    (2 CPU)
+
+06:36:13 PM   UID       PID   cswch/s nvcswch/s  Command
+06:36:13 PM     0         1      1.82      0.05  systemd
+06:36:13 PM     0         2      0.01      0.00  kthreadd</code></pre>
+<p><strong>说明</strong></p>
+<pre><code class="shell">PID:            进程id
+cswch/s:        每秒主动任务上下文切换数量
+nvcswch/s:      每秒被动任务上下文切换数量
+Command:        当前进程对应的命令</code></pre>
+<p><strong>示例3</strong></p>
+<pre><code class="shell">$pidstat -d
+Linux 3.10.0-1127.18.2.el7.x86_64 (izuf63269bclc8z39n3t2cz)     10/21/2020     _x86_64_    (2 CPU)
+
+06:38:34 PM   UID       PID   kB_rd/s   kB_wr/s kB_ccwr/s  Command
+06:38:34 PM  1002      1771      0.05      0.15      0.01  bash
+06:38:34 PM  1002     25746      0.00      0.06      0.00  bash
+06:38:34 PM  1002     32349      0.00      0.00      0.00  vim</code></pre>
+<p><strong>说明</strong></p>
+<pre><code class="shell">PID:            进程id
+kB_rd/s:        每秒从磁盘读取的KB
+kB_wr/s:        每秒写入磁盘KB
+kB_ccwr/s:      任务取消的写入磁盘的KB,当任务截断pagecache的时候会发生
+Command:        当前进程对应的命令</code></pre>
+<p><strong>示例4</strong></p>
+<pre><code class="shell">$pidstat -r
+Linux 3.10.0-1127.18.2.el7.x86_64 (izuf63269bclc8z39n3t2cz)     10/21/2020     _x86_64_    (2 CPU)
+
+06:41:24 PM   UID       PID  minflt/s  majflt/s     VSZ    RSS   %MEM  Command
+06:41:24 PM     0         1     16.30      0.00   51832   3796   0.10  systemd
+06:41:24 PM     0       374      0.00      0.00  116644    308   0.01  lvmetad
+06:41:24 PM     0       481      0.00      0.00   55532    784   0.02  auditd</code></pre>
+<p><strong>说明</strong></p>
+<pre><code class="shell">PID:            进程id
+minflt/s:       任务每秒发生的次要错误，不需要从磁盘中加载页
+majflt/s:       任务每秒发生的主要错误，需要从磁盘中加载页
+VSZ:            虚拟内存大小KB
+RSS:            物理内存大小KB
+Command:        当前进程对应的命令</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://man.linuxde.net" target="_blank" rel="noopener">linux命令大全</a><br><a href="https://cnblogs.com/peida/archive/2012/12/24/2831353.html" target="_blank" rel="noopener">每天一个命令行</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 245292011@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>linux命令行</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">7.1k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="常丁方">常丁方</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-07-12, 01:31:51</p>
+    <p><span class="copy-title">最后更新:</span>2020-10-26, 21:38:34</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/07/12/notes/linux/linux_cmd_line/" title="linux命令行">http://changdingfang.com/2020/07/12/notes/linux/linux_cmd_line/</a>
+	<!--
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+	-->
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+    <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+	<a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18043145号-2</a>
+	</span>
+	
+	©2020-2020 ChangDingFang
+	</p>
+
+
+
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 建站时间 -->
+	<span style="color: #666;padding-left: 20px;">
+	<i class="fa fa-clock-o" aria-hidden="true"></i>
+	<span id="time" align="center">载入时间中...</span>
+	<script>
+	var now = new Date(); 
+	function createtime() { 
+	    var grt= new Date("07/11/2020 19:50:00");//在此处修改你的建站时间
+	    now.setTime(now.getTime()+250); 
+	    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+	    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+	    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+	    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+	    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+	    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+	    document.getElementById("time").innerHTML = "小站已经苟活 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+setInterval("createtime()",250);
+</script>
+<span style="padding-left: 20px; color:#666;"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></span>
+	<!-- 站长统计 -->
+	<script type="text/javascript">
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1279142429'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279142429%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</span>
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+	
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 底部显示 -->
+	<link rel="stylesheet" href="/css/github-badge.css">
+	<div style="text-align:center; padding-top: 20px;">
+	<div class="github-badge">
+	<a rel="license" href="https://hexo.io/" target="_blank" title="由Hexo强力驱动">
+	<span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+	</div>
+
+	<!-- 
+	<div class="github-badge">
+	<a rel="license" href="https://github.io/" target="_blank" title="静态网页托管于Github">
+	<span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a>
+	</div>
+	-->
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="https://coding.net/" target="_blank" title="静态网页托管于CODING">
+	<span class="badge-subject"><i class="fa fa-heart" aria-hidden="true"></i> Hosted</span>
+	<span class="badge-value bg-gray">CODING</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+	<span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span><span class="badge-value bg-cdn">Github&jsDelivr</span></a>
+	</div>
+	<div class="github-badge">
+	<a rel="license" href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" title="站点使用 Sakura 主题，作者：Mashiro & Hojun">
+	<span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span><span class="badge-value bg-theme">3-blog</span></a>
+	</div>
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+	<span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
+	<span  class="site_uv badge-value bg-orange"></span>
+	</div>
+
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
+	<span class="site_pv badge-value bg-brightgreen"></span>
+	</div>
+
+	</div>  
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+fetch('https://v1.hitokoto.cn/?c=h')
+.then(function (res){
+		return res.json();
+		})
+.then(function (data) {
+		var hitokoto = document.getElementById('hitokoto');
+		var afrom = document.getElementById('afrom');
+		hitokoto.innerText = data.hitokoto;
+		f = data.from;
+		f_w = data.from_who;
+		afrom.innerText =  '——【';
+		if (!(f == null || f == 'null'))
+		{
+			afrom.innerText += f;
+		}
+		if (!(f_w == null || f_w == 'null'))
+		{
+			if (f == null || f == 'null')
+			{
+				afrom.innerText += f_w;
+			}
+			else
+			{
+				afrom.innerText += ' ' + f_w;
+			}
+		}
+		if ((f == null || f == 'null') && (f_w == null || f_w == 'null'))
+		{
+			afrom.innerText += '佚名';
+		}
+		afrom.innerText += '】';
+		})
+.catch(function (err) {
+		console.error(err);
+		})
+</script>
+
+
+<style>
+.cdf {
+position: relative;
+margin: 20px auto;
+width: 4em;
+height: 48px;
+		line-height: 48px;
+		text-align: center;
+color: #eee;
+	   font-size: 48px;
+	   font-weight: 600;
+	   font-family:Helvetica;
+}
+.cdf::after {
+content: attr(data-spotlight);
+color: transparent;
+position: absolute;
+left: 0;top: 0;
+display: block;
+width: 100%;
+height: 100%;
+		line-height: 100%;
+		text-align: center;
+margin: auto;
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+animation: spotlight 10s infinite;
+		   background-image: linear-gradient(to right, red, skyblue, green,black);
+		   background-size: 150%;
+		   background-position: center center;
+		   -webkit-background-clip: text;
+		   background-clip: text;
+}
+@keyframes spotlight{
+	0%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+	50%{
+		-webkit-clip-path: ellipse(32px 32px at 100% 50%);
+		clip-path: ellipse(32px 32px at 100% 50%);
+	}
+	100%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+}
+</style>
+
+
+
+
+
+
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 547px;
+    }
+    .nav.fullscreen {
+        margin-left: -547px;
+    }
+    .nav-left {
+        width: 125px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 497px;
+        }
+        .nav.fullscreen {
+            margin-left: -497px;
+        }
+        .nav-left {
+            width: 105px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 497px;
+            margin-left: -497px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #f36c21;
+    }
+    
+    
+    .nav-right nav a.hover > span{
+        color: #7bbfea !important;
+    }
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+background: url("/img/article-list-background/0.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/blog_files">资源</a>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 底部音乐 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+.aplayer .aplayer-lrc {
+height: 35px;
+}
+.aplayer .aplayer-lrc p{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current{
+color: #FF1493;
+}
+.aplayer.aplayer-narrow .aplayer-body{
+left: -66px !important;
+}
+.aplayer.aplayer-fixed .aplayer-lrc {
+display: none;
+}
+.aplayer .aplayer-lrc.aplayer-lrc-hide {
+display:none !important;
+}
+.aplayer.aplayer-fixed .lrc-show {
+display: block;
+background: rgba(255, 255, 255, 0.8);
+}
+</style>
+<div class="aplayer"
+data-id="5142495258"
+data-server="netease"
+data-type="playlist"
+data-fixed="true"
+data-autoplay="false"
+data-loop="all"
+data-order="random"
+data-preload="auto"
+data-volume="0.7"
+data-mutex="false"
+>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<script>
+$(function(){
+		$('body').on('click', '.aplayer', function(){
+			if($('.aplayer-button').hasClass('aplayer-play')) {
+			$('.aplayer-lrc').removeClass('lrc-show');
+			} else {
+			$('.aplayer-lrc').addClass('lrc-show');
+			}
+			})
+		});
+</script>
+
+
+
+<!-- // 文字
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+-->
+
+<!-- // 爱心
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+-->
+
+<!-- // 按键屏蔽 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js"></script>
+-->
+
+
+</html>

@@ -3,7 +3,7 @@
 " Author:       dingfang
 " CreateDate:   2020-07-11 19:50:00
 " ModifyAuthor: dingfang
-" ModifyDate:   2020-09-14 19:51:40
+" ModifyDate:   2020-12-01 20:33:32
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 "退出vim后, 使得下次打开vim  把光标定位到上次退出位置
@@ -13,7 +13,14 @@ endif
 
 set number "显示行号
 "set relativenumber "显示当前行号，其他行都是相对于改行的行号。
+"
+"cterm 原生vim设置样式
+"ctermbg 终端vim的背景色
+"ctermfg 终端vim前景色
 set cursorline   "突出显示当前行
+" hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+set cursorcolumn "突出显示当前列
+" hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=NONE
 
 "set smartindent
 "set whichwrap+=<,>,h,l    "左右移动,突破行首行尾限制.

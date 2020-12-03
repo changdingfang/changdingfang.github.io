@@ -1,10 +1,10 @@
-" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-" FileName:     file_title.vim
-" Author:       dingfang
-" CreateDate:   2020-09-12 14:22:35
-" ModifyAuthor: dingfang
-" ModifyDate:   2020-09-14 21:03:47
-" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+" ======================================================================
+"  FileName:     file_title.vim
+"  Author:       dingfang
+"  CreateDate:   2020-09-12 14:22:35
+"  ModifyAuthor: dingfang
+"  ModifyDate:   2020-12-03 20:50:32
+" ======================================================================
 
 if exists("g:loaded_file_title")
     finish
@@ -23,7 +23,7 @@ let g:loaded_file_title = 1
 
 " 保存(:w)时更新修改者信息和修改时间(ModifyAuthor 和 ModifyDate)
 " 1: 开启, 0: 关闭, 默认开启
-" let g:file_title_modify_title = 0
+let g:file_title_modify_title = 1
 
 " title的时间格式(CreateDate 和 ModifyDate), 默认'%Y-%m-%d %H:%M:%S'
 " let g:file_title_time_format = '%Y-%m-%d %H:%M:%S'
@@ -46,10 +46,16 @@ let s:FileType = '*.pl,
 
 execute 'autocmd BufNewFile ' . s:FileType . ' exec ":call SetTitle()"'
 
+
 if !exists('g:file_title_modify_title') || g:file_title_modify_title == 1
+    " 该时间为了防止短时间内多次保存，导致回退困难
+    let s:lastModifyTime = 0
+    " 修改检测时间间隔(s)
+    let s:ModifyInterval = 60
     " 文件更新时,更新修改者和修改时间
     execute 'autocmd BufWrite ' . s:FileType . ' exec ":call ModifyTitle()"'
 endif
+
 
 " Author
 let s:author = $USER
@@ -117,19 +123,45 @@ endfunc
 func SetTitle_common(sline, cm)
     let l:num = []
 
-    call setline(a:sline + len(add(l:num, 0)), a:cm .  " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
-    call setline(a:sline + len(add(l:num, 0)), a:cm . " FileName:     " . s:fn)
-    call setline(a:sline + len(add(l:num, 0)), a:cm . " Author:       " . s:author)
-    call setline(a:sline + len(add(l:num, 0)), a:cm . " CreateDate:   " . strftime(s:timeFormat))
-    call setline(a:sline + len(add(l:num, 0)), a:cm . " ModifyAuthor: ")
-    call setline(a:sline + len(add(l:num, 0)), a:cm . " ModifyDate:   " . strftime(s:timeFormat))
-    call setline(a:sline + len(add(l:num, 0)), a:cm .  " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
+    call setline(a:sline + len(add(l:num, 0)), a:cm . " =======================================================================")
+    call setline(a:sline + len(add(l:num, 0)), a:cm . "  FileName:     " . s:fn)
+    call setline(a:sline + len(add(l:num, 0)), a:cm . "  Author:       " . s:author)
+    call setline(a:sline + len(add(l:num, 0)), a:cm . "  CreateDate:   " . strftime(s:timeFormat))
+    call setline(a:sline + len(add(l:num, 0)), a:cm . "  ModifyAuthor: ")
+    call setline(a:sline + len(add(l:num, 0)), a:cm . "  ModifyDate:   " . strftime(s:timeFormat))
+    call setline(a:sline + len(add(l:num, 0)), a:cm .  " =======================================================================")
     call setline(a:sline + len(add(l:num, 0)), "")
     return len(l:num)
 endfunc
 
 
 func ModifyTitle()
+    " 检查是否有修改
+    let l:tableCount = 0
+    let l:bufs = getbufinfo({'buflisted': 1})
+    for buf in l:bufs
+        if buf.changed == 1
+            break
+            " return 0
+        endif
+        let l:tableCount += 1
+    endfor
+
+    if tableCount == len(l:bufs)
+        return 0
+    endif
+
+    " 更新频率
+    let l:lastTime = strftime("%s")
+    if l:lastTime - s:lastModifyTime < s:ModifyInterval
+        return 0
+    endif
+
+
+    let s:lastModifyTime = l:lastTime
+
+    " 如果有多个标签，使用 :wqa 只会对当前窗口标签进行修改,这里有修改空间
+    " 不过 :wqa 极少使用的
     for l:line_num in range(4, 10 ,1)
         let l:ma_line = split(getline(l:line_num), '')
         let l:md_line = split(getline(l:line_num + 1), '')
@@ -138,8 +170,8 @@ func ModifyTitle()
         endif
 
         if l:ma_line[1] == 'ModifyAuthor:' && l:md_line[1] == 'ModifyDate:'
-            let l:new_ma = ma_line[0] . ' ' . ma_line[1] . ' ' . s:author
-            let l:new_md = md_line[0] . ' ' . md_line[1] . '   ' . strftime(s:timeFormat)
+            let l:new_ma = ma_line[0] . '  ' . ma_line[1] . ' ' . s:author
+            let l:new_md = md_line[0] . '  ' . md_line[1] . '   ' . strftime(s:timeFormat)
             if len(l:ma_line) < 3 || len(l:ma_line) >= 3 && l:ma_line[2] != s:author
                 call setline(l:line_num, l:new_ma)
             endif

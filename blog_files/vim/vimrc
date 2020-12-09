@@ -3,7 +3,7 @@
 " Author:       dingfang
 " CreateDate:   2020-07-11 19:50:00
 " ModifyAuthor: dingfang
-" ModifyDate:   2020-12-01 20:33:32
+"  ModifyDate:   2020-12-04 20:35:07
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 "退出vim后, 使得下次打开vim  把光标定位到上次退出位置
@@ -19,7 +19,7 @@ set number "显示行号
 "ctermfg 终端vim前景色
 set cursorline   "突出显示当前行
 " hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
-set cursorcolumn "突出显示当前列
+" set cursorcolumn "突出显示当前列
 " hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=NONE
 
 "set smartindent

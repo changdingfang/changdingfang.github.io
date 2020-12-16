@@ -1,14 +1,14 @@
-" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-" FileName:     .vimrc
-" Author:       dingfang
-" CreateDate:   2020-07-11 19:50:00
-" ModifyAuthor: dingfang
-"  ModifyDate:   2020-12-04 20:35:07
-" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+" ======================================================================
+"  FileName:     .vimrc
+"  Author:       dingfang
+"  CreateDate:   2020-07-11 19:50:00
+"  ModifyAuthor: dingfang
+"  ModifyDate:   2020-12-16 20:38:31
+" ======================================================================
 
 "退出vim后, 使得下次打开vim  把光标定位到上次退出位置
 if has("autocmd") 
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif 
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif 
 endif
 
 set number "显示行号
@@ -101,6 +101,5 @@ source ~/.vim/my_config/file_title.vim
 
 " 插件配置(使用该配置需要安装配置中的插件)
 source ~/.vim/my_config/config.vim
-
 
 

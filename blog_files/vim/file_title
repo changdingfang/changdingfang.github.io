@@ -3,7 +3,7 @@
 "  Author:       dingfang
 "  CreateDate:   2020-09-12 14:22:35
 "  ModifyAuthor: dingfang
-"  ModifyDate:   2020-12-03 20:50:32
+"  ModifyDate:   2020-12-16 19:59:50
 " ======================================================================
 
 if exists("g:loaded_file_title")
@@ -138,17 +138,22 @@ endfunc
 func ModifyTitle()
     " 检查是否有修改
     let l:tableCount = 0
-    let l:bufs = getbufinfo({'buflisted': 1})
-    for buf in l:bufs
-        if buf.changed == 1
-            break
-            " return 0
-        endif
-        let l:tableCount += 1
-    endfor
 
-    if tableCount == len(l:bufs)
-        return 0
+    " 704版本不支持getbufinfo方法
+    " 802版本以上支持getbufinfo方法
+    if v:version >= 802
+        let l:bufs = getbufinfo({'buflisted': 1})
+        for buf in l:bufs
+            if buf.changed == 1
+                break
+                " return 0
+            endif
+            let l:tableCount += 1
+        endfor
+
+        if tableCount == len(l:bufs)
+            return 0
+        endif
     endif
 
     " 更新频率

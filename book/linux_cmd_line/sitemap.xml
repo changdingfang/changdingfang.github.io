@@ -34,6 +34,7 @@
 <url> <loc>https://changdingfang.com/docs/net/wget.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/net/curl.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/net/netstat.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/net/lsof.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/net/nc.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/net/scp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/other/clear.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

@@ -10,4 +10,6 @@
 <url> <loc>https://changdingfang.com/docs/apply/logger.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/apply/module_info.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/apply/url.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/apply/socket.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/apply/struct.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

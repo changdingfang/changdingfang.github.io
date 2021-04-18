@@ -4,10 +4,12 @@
 <url> <loc>https://changdingfang.com/docs/linux/fork.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/linux/zero_copy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/linux/lock.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/linux/func_r.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/cpp/define.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/protocol/https.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/protocol/tcp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/protocol/sctp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/other/cloud.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/other/btree.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/style.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

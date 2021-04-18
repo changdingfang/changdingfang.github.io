@@ -7,5 +7,7 @@
 <url> <loc>https://changdingfang.com/docs/mysql/mysql.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/mysql/mysql-efficiency.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/mysql/mysql-forget.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/mysql/select.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/sqlserver/page_query.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/other/precautions.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

@@ -9,7 +9,9 @@
 <url> <loc>https://changdingfang.com/docs/protocol/https.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/protocol/tcp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/protocol/sctp.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/protocol/mtu_find.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/other/cloud.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/other/btree.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://changdingfang.com/docs/other/raid.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://changdingfang.com/docs/style.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

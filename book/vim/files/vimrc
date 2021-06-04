@@ -95,10 +95,6 @@ set wildmode=longest,list
 "set selectmode=mouse,key
 
 
-
-" 新建文件时自动生成文件title
-source ~/.vim/my_config/file_title.vim
-
 " 插件配置(使用该配置需要安装配置中的插件)
 source ~/.vim/my_config/config.vim
 

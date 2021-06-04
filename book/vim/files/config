@@ -8,6 +8,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" 添加title插件
+Plug 'changdingfang/vim-title'
+
 if v:version >= 802
     " 热键提示
     Plug 'liuchengxu/vim-which-key'

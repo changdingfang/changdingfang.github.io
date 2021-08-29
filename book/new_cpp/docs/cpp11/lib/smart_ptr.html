@@ -1,0 +1,1078 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>智能指针 · c++11/14/17特性</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="dingfang">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-js-sequence-diagram/styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pthread.html" />
+    
+    
+    <link rel="prev" href="regex.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../../img/favicon.jpg'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://changdingfang.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">c++11</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../language/nullptr.html">
+            
+                <a href="../language/nullptr.html">
+            
+                    
+                    nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../language/strong_enum.html">
+            
+                <a href="../language/strong_enum.html">
+            
+                    
+                    强枚举类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../language/auto_type.html">
+            
+                <a href="../language/auto_type.html">
+            
+                    
+                    类型推断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../language/foreach.html">
+            
+                <a href="../language/foreach.html">
+            
+                    
+                    基于范围的遍历操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../language/default_member.html">
+            
+                <a href="../language/default_member.html">
+            
+                    
+                    委托和成员默认初始值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../language/alias_template.html">
+            
+                <a href="../language/alias_template.html">
+            
+                    
+                    类型别名模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../language/default_template.html">
+            
+                <a href="../language/default_template.html">
+            
+                    
+                    默认模板来参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../language/template_param.html">
+            
+                <a href="../language/template_param.html">
+            
+                    
+                    模板可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../language/constexpr.html">
+            
+                <a href="../language/constexpr.html">
+            
+                    
+                    constexpr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../language/default_delete.html">
+            
+                <a href="../language/default_delete.html">
+            
+                    
+                    显示默认和禁用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../language/override_final.html">
+            
+                <a href="../language/override_final.html">
+            
+                    
+                    override和final修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../language/new_str.html">
+            
+                <a href="../language/new_str.html">
+            
+                    
+                    新的字符类型和字符串字面值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="../language/gt.html">
+            
+                <a href="../language/gt.html">
+            
+                    
+                    改进大于号解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="../language/lambda.html">
+            
+                <a href="../language/lambda.html">
+            
+                    
+                    lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="../language/right_ref.html">
+            
+                <a href="../language/right_ref.html">
+            
+                    
+                    右值引用和移动构造语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="../language/noexcept.html">
+            
+                <a href="../language/noexcept.html">
+            
+                    
+                    noexcept异常说明和noexcept运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="../language/constructor.html">
+            
+                <a href="../language/constructor.html">
+            
+                    
+                    继承的构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="../language/string_value.html">
+            
+                <a href="../language/string_value.html">
+            
+                    
+                    string和数值之间的转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="init_list.html">
+            
+                <a href="init_list.html">
+            
+                    
+                    初始化列表和统一初始化方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="static_assert.html">
+            
+                <a href="static_assert.html">
+            
+                    
+                    静态断言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="func.html">
+            
+                <a href="func.html">
+            
+                    
+                    函数对象包装器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="begin_end.html">
+            
+                <a href="begin_end.html">
+            
+                    
+                    标准库函数begin、end和容器内的cbegin、cend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="array_forward.html">
+            
+                <a href="array_forward.html">
+            
+                    
+                    array和forward_list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="tuple.html">
+            
+                <a href="tuple.html">
+            
+                    
+                    结构化绑定tuple
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="unordered_con.html">
+            
+                <a href="unordered_con.html">
+            
+                    
+                    无序关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="regex.html">
+            
+                <a href="regex.html">
+            
+                    
+                    正则表达式regex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.9" data-path="smart_ptr.html">
+            
+                <a href="smart_ptr.html">
+            
+                    
+                    智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="future.html">
+            
+                <a href="future.html">
+            
+                    
+                    future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.12" data-path="condition.html">
+            
+                <a href="condition.html">
+            
+                    
+                    条件变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.13" data-path="atomic.html">
+            
+                <a href="atomic.html">
+            
+                    
+                    原子操作和内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">c++14</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../cpp14/auto_type.html">
+            
+                <a href="../../cpp14/auto_type.html">
+            
+                    
+                    类型推导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../cpp14/constexpr.html">
+            
+                <a href="../../cpp14/constexpr.html">
+            
+                    
+                    constexpr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../cpp14/lambda.html">
+            
+                <a href="../../cpp14/lambda.html">
+            
+                    
+                    lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../cpp14/uniqueptr.html">
+            
+                <a href="../../cpp14/uniqueptr.html">
+            
+                    
+                    unique_ptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../cpp14/tuple.html">
+            
+                <a href="../../cpp14/tuple.html">
+            
+                    
+                    tuple
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >智能指针</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x667A;&#x80FD;&#x6307;&#x9488;"><b></b>&#x667A;&#x80FD;&#x6307;&#x9488;</a></li><ul><li><span class="title-icon "></span><a href="#sharedptr&#x548C;uniquetr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;"><b></b>shared_ptr&#x548C;unique_tr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#sharedptr&#x7684;&#x64CD;&#x4F5C;"><b></b>shared_ptr&#x7684;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#uniqueptr&#x7684;&#x64CD;&#x4F5C;"><b></b>unique_ptr&#x7684;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#weakptr&#x7684;&#x64CD;&#x4F5C;"><b></b>weak_ptr&#x7684;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#sharedptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><b></b>shared_ptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><b></b>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#&#x667A;&#x80FD;&#x6307;&#x9488;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x667A;&#x80FD;&#x6307;&#x9488;"><a name="&#x667A;&#x80FD;&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#&#x667A;&#x80FD;&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x667A;&#x80FD;&#x6307;&#x9488;</h1>
+<ul>
+<li>shared_ptr &#x57FA;&#x4E8E;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488;, &#x4F1A;&#x7EDF;&#x8BA1;&#x5F53;&#x524D;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;&#x540C;&#x65F6;&#x62E5;&#x6709;&#x8BE5;&#x5185;&#x90E8;&#x6307;&#x9488;; &#x5F53;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x964D;&#x4E3A;0&#x65F6;, &#x81EA;&#x52A8;&#x91CA;&#x653E;.</li>
+<li>weak_ptr &#x4E00;&#x79CD;&#x5F31;&#x5F15;&#x7528;, &#x6307;&#x5411;shared_ptr&#x6240;&#x7BA1;&#x7406;&#x7684;&#x5BF9;&#x8C61;; weak_ptr&#x53EA;&#x5F15;&#x7528;, &#x4E0D;&#x8BA1;&#x6570;.</li>
+<li>unique_ptr &#x72EC;&#x5360;&#x8BED;&#x4E49;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488;, &#x8D44;&#x6E90;&#x53EA;&#x80FD;&#x552F;&#x4E00;&#x7684;&#x88AB;&#x4E00;&#x4E2A;unique_ptr&#x6240;&#x5360;&#x6709;, &#x5F53;&#x5176;&#x79BB;&#x5F00;&#x4F5C;&#x7528;&#x57DF;&#x65F6;&#x81EA;&#x52A8;&#x6790;&#x6784;.  </li>
+</ul>
+<h2 id="sharedptr&#x548C;uniquetr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;"><a name="sharedptr&#x548C;uniquetr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#sharedptr&#x548C;uniquetr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>shared_ptr&#x548C;unique_tr&#x90FD;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;</h2>
+<table>
+    <tr>
+        <td>
+            shared_ptr<t> sp <br>
+            unique_prt<t> up
+        </t></t></td>
+        <td>&#x7A7A;&#x667A;&#x80FD;&#x6307;&#x9488;, &#x53EF;&#x4EE5;&#x6307;&#x5411;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;.</td>
+    </tr>
+    <tr>
+        <td>p</td>
+        <td>&#x5C06;p&#x7528;&#x4F5C;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x5224;&#x65AD;, &#x82E5;p&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;, &#x5219;&#x4E3A;true</td>
+    </tr>
+    <tr>
+        <td>*p</td>
+        <td>&#x89E3;&#x5F15;&#x7528;p, &#x83B7;&#x5F97;&#x5B83;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;</td>
+    </tr>
+    <tr>
+        <td>p-&gt;mem</td>
+        <td>&#x7B49;&#x4EF7;&#x4E8E;(*p).mem</td>
+    </tr>
+    <tr>
+        <td>p.get()</td>
+        <td>&#x8FD4;&#x56DE;p&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x6307;&#x9488;. </td>
+    </tr>
+    <tr>
+        <td>swap(p, q) <br> p.swap(q)</td>
+        <td>&#x4EA4;&#x6362;p&#x548C;q&#x4E2D;&#x7684;&#x6307;&#x9488;</td>
+    </tr>
+    <tr>
+        <td>p.reset()</td>
+        <td>shared_ptr&#x5C06;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x9012;&#x51CF;, unique_ptr&#x5C06;&#x91CA;&#x653E;p&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;</td>
+    </tr>
+    <tr>
+        <td>p.reset(q) <br> p.reset(nullptr)</td>
+        <td>shared_ptr&#x5C06;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x9012;&#x51CF;, unique_ptr&#x5C06;&#x91CA;&#x653E;p&#x6240;&#x6307;&#x7684;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;&#x5185;&#x7F6E;&#x6307;&#x9488;q, &#x5219;&#x5C06;p&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;.</td>
+    </tr>
+</table>
+
+<h2 id="sharedptr&#x7684;&#x64CD;&#x4F5C;"><a name="sharedptr&#x7684;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#sharedptr&#x7684;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>shared_ptr&#x7684;&#x64CD;&#x4F5C;</h2>
+<table>
+<tbody style="margin-left: 30px;">
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">make_shared&lt;T&gt;(args)</td>
+<td style="margin-left: 30px;">&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;shared_ptr, &#x6307;&#x5411;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x5206;&#x914D;&#x7684;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;. &#x4F7F;&#x7528;args&#x521D;&#x59CB;&#x5316;&#x6B64;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">shared_ptr&lt;T&gt;p(q)</td>
+<td style="margin-left: 30px;">p&#x662F;shared_ptr q&#x7684;&#x62F7;&#x8D1D;; &#x6B64;&#x64CD;&#x4F5C;&#x4F1A;&#x9012;&#x589E;q&#x4E2D;&#x7684;&#x8BA1;&#x6570;&#x5668;. q&#x4E2D;&#x7684;&#x6307;&#x9488;&#x5FC5;&#x987B;&#x80FD;&#x8F6C;&#x6362;&#x4E3A;T\*</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">p = q</td>
+<td style="margin-left: 30px;">p&#x548C;q&#x90FD;&#x662F;shared_ptr, &#x6240;&#x4FDD;&#x5B58;&#x7684;&#x6307;&#x9488;&#x5FC5;&#x987B;&#x80FD;&#x76F8;&#x4E92;&#x8F6C;&#x6362;. &#x6B64;&#x64CD;&#x4F5C;&#x4F1A;&#x9012;&#x51CF;p&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;, &#x9012;&#x589E;q&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">p.unique()</td>
+<td style="margin-left: 30px;">
+<p style="margin-left: 30px;">&#x82E5;p.use_count()&#x4E3A;1, &#x8FD4;&#x56DE;true; &#x5426;&#x5219;&#x8FD4;&#x56DE;false</p>
+</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">p.use_count()</td>
+<td style="margin-left: 30px;">&#x8FD4;&#x56DE;&#x4E0E;p&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488;&#x6570;&#x91CF;(&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x503C;)</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 id="uniqueptr&#x7684;&#x64CD;&#x4F5C;"><a name="uniqueptr&#x7684;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#uniqueptr&#x7684;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>unique_ptr&#x7684;&#x64CD;&#x4F5C;</h2>
+<table>
+<tbody style="margin-left: 30px;">
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">unique_ptr&lt;T, D&gt; u(d)</td>
+<td style="margin-left: 30px;">&#x7A7A;unique_ptr, &#x6307;&#x5411;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;, &#x7528;&#x7C7B;&#x578B;&#x4E3A;D&#x7684;&#x5BF9;&#x8C61;d&#x4EE3;&#x66FF;delete</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">u = nullptr</td>
+<td style="margin-left: 30px;">&#x91CA;&#x653E;u&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;, &#x5C06;u&#x7F6E;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">u.release()</td>
+<td style="margin-left: 30px;">u&#x653E;&#x5F03;&#x5BF9;&#x6307;&#x9488;&#x7684;&#x63A7;&#x5236;&#x6743;, &#x8FD4;&#x56DE;&#x6307;&#x9488;, &#x5E76;&#x5C06;u&#x7F6E;&#x4E3A;&#x7A7A;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="weakptr&#x7684;&#x64CD;&#x4F5C;"><a name="weakptr&#x7684;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#weakptr&#x7684;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>weak_ptr&#x7684;&#x64CD;&#x4F5C;</h2>
+<table>
+<tbody style="margin-left: 30px;">
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">weak_ptr&lt;T&gt; wp</td>
+<td style="margin-left: 30px;">&#x7A7A;&#x7684;weak_ptr &#x53EF;&#x4EE5;&#x6307;&#x5411;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">weak_ptr&lt;T&gt; wp(sp)</td>
+<td style="margin-left: 30px;">&#x4E0E;shared_ptr sp&#x6307;&#x5411;&#x76F8;&#x540C;&#x5BF9;&#x8C61;&#x7684;weak_ptr. T&#x5FC5;&#x9700;&#x80FD;&#x8F6C;&#x6362;&#x6210;sp&#x6307;&#x5411;&#x7684;&#x7C7B;&#x578B;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">wp = p</td>
+<td style="margin-left: 30px;">p&#x53EF;&#x4EE5;&#x6307;&#x5411;&#x4E00;&#x4E2A;shared_ptr&#x6216;weak_ptr. &#x8D4B;&#x503C;&#x540E;wp &#x4E0E; p&#x5171;&#x4EAB;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">wp.reset()</td>
+<td style="margin-left: 30px;">&#x5C06;wp&#x7F6E;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">wp.use_count()</td>
+<td style="margin-left: 30px;">
+<p style="margin-left: 30px;">&#x4E0E;wp&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#x7684;shared_ptr&#x7684;&#x6570;&#x91CF;</p>
+</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">wp.expired()</td>
+<td style="margin-left: 30px;">&#x82E5;wp.use_count()&#x4E3A;0, &#x8FD4;&#x56DE;true, &#x5426;&#x5219;&#x8FD4;&#x56DE;false</td>
+</tr>
+<tr style="margin-left: 30px;">
+<td style="margin-left: 30px;">wp.lock()</td>
+<td style="margin-left: 30px;">&#x5982;&#x679C;expired&#x4E3A;true, &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;shared_ptr; &#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;wp&#x7684;&#x5BF9;&#x8C61;&#x7684;shared_ptr</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2 id="sharedptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="sharedptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#sharedptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>shared_ptr&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<ul>
+<li>&#x4E0D;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5185;&#x7F6E;&#x6307;&#x9488;&#x521D;&#x59CB;&#x5316;(&#x6216;reset)&#x591A;&#x4E2A;&#x667A;&#x80FD;&#x6307;&#x9488;.  </li>
+<li>&#x4E0D;delete get() &#x8FD4;&#x56DE;&#x7684;&#x6307;&#x9488;  </li>
+<li>&#x4E0D;&#x4F7F;&#x7528;get()&#x521D;&#x59CB;&#x5316;&#x6216;reset&#x53E6;&#x4E00;&#x4E2A;&#x667A;&#x80FD;&#x6307;&#x9488;<br>  &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;get()&#x8FD4;&#x56DE;&#x7684;&#x6307;&#x9488;, &#x8BB0;&#x4F4F;&#x5F53;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488;&#x9500;&#x6BC1;&#x540E;,   &#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x5C31;&#x53D8;&#x4E3A;&#x4E86;&#x65E0;&#x6548;&#x6307;&#x9488;&#x4E86;.<br>  &#x5982;&#x679C;&#x4F7F;&#x7528;&#x667A;&#x80FD;&#x6307;&#x9488;&#x7BA1;&#x7406;&#x7684;&#x8D44;&#x6E90;&#x4E0D;&#x662F;new&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;, &#x8BB0;&#x4F4F;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x5220;&#x9664;&#x5668;.     </li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><a name="&#x4F7F;&#x7528;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;memory&gt;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dealloc</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Dealloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">default</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//&#x62EC;&#x53F7;()&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x91CD;&#x8F7D;</span>
+    <span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> p <span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">delete</span> p<span class="token punctuation">;</span>
+            p <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">shared_ptr_func</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//1. &#x521B;&#x5EFA;</span>
+    std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> sp0<span class="token punctuation">;</span> <span class="token comment">/* &#x7A7A;&#x667A;&#x80FD;&#x6307;&#x9488; */</span>
+    std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> sp1 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">shared_ptr</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> sp2 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">make_shared</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//2. &#x81EA;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;&#x91CA;&#x653E;&#x51FD;&#x6570;</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">auto</span> sp4 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">shared_ptr</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword">delete</span><span class="token punctuation">[</span> <span class="token punctuation">]</span> p<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x62EC;&#x53F7;()&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x91CD;&#x8F7D;</span>
+        <span class="token keyword">auto</span> sp5 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">shared_ptr</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">Dealloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//3. &#x590D;&#x5236;</span>
+    <span class="token keyword">auto</span> <span class="token function">sp6</span><span class="token punctuation">(</span>sp1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">auto</span> sp7 <span class="token operator">=</span> sp1<span class="token punctuation">;</span>
+
+    <span class="token comment">//4. &#x83B7;&#x53D6;&#x4FDD;&#x5B58;&#x7684;&#x6307;&#x9488;</span>
+    <span class="token keyword">int</span><span class="token operator">*</span> pRaw <span class="token operator">=</span> sp2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//5. &#x8FD4;&#x56DE;&#x5171;&#x4EAB;&#x5BF9;&#x8C61;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488;&#x6570;&#x91CF;.</span>
+    <span class="token keyword">long</span> nCount1 <span class="token operator">=</span> sp1<span class="token punctuation">.</span><span class="token function">use_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">long</span> nCount2 <span class="token operator">=</span> sp2<span class="token punctuation">.</span><span class="token function">use_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//6. &#x662F;&#x5426;&#x662F;&#x72EC;&#x4EAB;</span>
+    <span class="token keyword">bool</span> b1 <span class="token operator">=</span> sp1<span class="token punctuation">.</span><span class="token function">unique</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">bool</span> b2 <span class="token operator">=</span> sp2<span class="token punctuation">.</span><span class="token function">unique</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//7. swap</span>
+    sp1<span class="token punctuation">.</span><span class="token function">swap</span><span class="token punctuation">(</span>sp2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//8. reset &#x91CD;&#x7F6E;&#x6307;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;, &#x539F;&#x6307;&#x9488;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x51CF;&#x4E00;</span>
+    sp1<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">del</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>p<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">delete</span> p<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">unique_ptr_func</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> up0<span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">up1</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//std::unique_ptr&lt;int&gt; up2(up1); /* &#x4E0D;&#x652F;&#x6301;&#x62F7;&#x8D1D; */</span>
+    std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">up2</span><span class="token punctuation">(</span>up1<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    up2<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span>up0<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//up0 = up1; /* error &#x4E0D;&#x652F;&#x6301;&#x8D4B;&#x503C; */</span>
+
+    std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">decltype</span><span class="token punctuation">(</span>del<span class="token punctuation">)</span> <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token function">up3</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span> del<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">weak_ptr_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> sp0 <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">make_shared</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">wp0</span><span class="token punctuation">(</span>sp0<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* &#x4E0D;&#x4F1A;&#x6539;&#x53D8;sp0&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570; */</span>
+
+    <span class="token keyword">bool</span> b1 <span class="token operator">=</span> wp0<span class="token punctuation">.</span><span class="token function">expired</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> sp1 <span class="token operator">=</span> wp0<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> wp1 <span class="token operator">=</span> wp0<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">shared_ptr_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">unique_ptr_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">weak_ptr_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2020-2021 ChangDingFang all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-25 18:31:45
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="regex.html" class="navigation navigation-prev " aria-label="Previous page: 正则表达式regex">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pthread.html" class="navigation navigation-next " aria-label="Next page: 多线程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"智能指针","level":"2.2.9","depth":2,"next":{"title":"多线程","level":"2.2.10","depth":2,"path":"docs/cpp11/lib/pthread.md","ref":"docs/cpp11/lib/pthread.md","articles":[]},"previous":{"title":"正则表达式regex","level":"2.2.8","depth":2,"path":"docs/cpp11/lib/regex.md","ref":"docs/cpp11/lib/regex.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","expandable-chapters-small","emphasize","-lunr","-search","search-plus","splitter","tbfed-pagefooter","-sharing","advanced-emoji","github","-github-buttons","favicon","image-captions","multipart","code","hide-element","insert-logo","popup","js-sequence-diagram","-highlight","prism","prism-themes","autotheme","redirect"],"root":"./new_cpp","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2020-2021 ChangDingFang","modify_label":"最近一次修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"c++":"cpp","conf":"cpp","shell":"bash","txt":"bash","Dockerfile":"bash"},"ignore":["none"],"//备用主题":["prism-themes/themes/prism-vsc-dark-plus.css","prism-themes/themes/prism-atom-dark.css","// 青蓝色","prism-themes/themes/prism-coldark-cold.css","// 非主流字体","prism-themes/themes/prism-material-oceanic.css"],"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"emphasize":{},"github":{"url":"https://github.com/changdingfang"},"splitter":{},"js-sequence-diagram":{},"popup":{},"multipart":{},"code":{"copyButtons":true},"sitemap-general":{"prefix":"https://changdingfang.com/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"showGoTop":true,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{"shortcut":"../../img/favicon.jpg","bookmark":"../../img/favicon.jpg","appleTouch":"../../img/favicon.jpg"},"prism-themes":{},"//github-buttons":{"buttons":[{"user":"changdingfang","repo":"changdingfang","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"autotheme":{"night":[20,21,22,23,0,1,2,3,4,5],"sepia":[0,1,2,3,4,5,6,7,21,22,23],"white":[8,9,10,11,12,13,14,15,16,17,18,19,20]},"advanced-emoji":{"embedEmojis":false},"sharing":{"weibo":false,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":[]},"redirect":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://changdingfang.com/img/avatar.jpg"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"//plugins: 插件功能说明":{"tbfed-pagefooter":"添加页脚,修改时间，版权等","prism":"代码高亮","emphasize":"给文子加底纹颜色","splitter":"使侧边栏的宽度可以自由调节","-highlight":"去除自带高亮","js-sequence-diagram":"时序图","popup":"点击图片放大","multipart":"分章显示","code":"代码可复制","-sharing":"禁用gitbook默认分享插件","sitemap-general":"生成sitemap","hide-element":"y隐藏一些不想看到的元素，如果published with GitBook","anchor-navigation-ex":"(已经包含anchors功能)添加侧边悬浮导航以及回到顶部按钮(只会提取1~3级,且必须按照1、2、3顺序写，不能跳级)","favicon":"图标","-search":"为支持中文搜索插件给删掉","pageview-count":"显示访问量","prism-themes":"代码高亮样式","github-buttons":"github按钮","expandable-chapters-small":"章节栏带有略微缩进，看起来更美观(##开头顶格, * 开头的缩进)","autotheme":"自动换肤，根据时间来换","-lunr":"为支持中文搜索插件给删掉","advanced-emoji":"emoji表情","redirect":"重定向页面 !REDIRECT \"new path\"","anchors":"添加github风格锚点样式(h1~h6前面带有锚点图标)","insert-logo":"插入logo","search-plus":"支持中文搜索","image-captions":"显示图片名称"},"theme":"default","author":"dingfang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"//structure":"配置readme,summary,glossary,languages对应的文件名","variables":{"_pictures":[]},"title":"c++11/14/17特性","language":"zh-hans","links":{"sidebar":{"我的博客":"https://changdingfang.com"}},"gitbook":">=3.0.0","description":"遇见更好的自己","direction":"ltr"},"file":{"path":"docs/cpp11/lib/smart_ptr.md","mtime":"2021-08-25T10:31:45.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-25T11:57:51.067Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-autotheme/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

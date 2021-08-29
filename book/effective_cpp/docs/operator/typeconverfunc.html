@@ -1,0 +1,1173 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>"类型转换函数" · 改善c++编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="dingfang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-js-sequence-diagram/styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="in_de_crement.html" />
+    
+    
+    <link rel="prev" href="assignment.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../img/favicon.jpg'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://changdingfang.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../basic/pointer.html">
+            
+                <a href="../basic/pointer.html">
+            
+                    
+                    指针和引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../basic/typeconver.html">
+            
+                <a href="../basic/typeconver.html">
+            
+                    
+                    类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../basic/define.html">
+            
+                <a href="../basic/define.html">
+            
+                    
+                    尽量以const,enum,inline替换#define
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../basic/initialization.html">
+            
+                <a href="../basic/initialization.html">
+            
+                    
+                    确定对象被使用前已先被初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../basic/polymorphism.html">
+            
+                <a href="../basic/polymorphism.html">
+            
+                    
+                    多态和指针算数不要混用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../basic/default_constructor.html">
+            
+                <a href="../basic/default_constructor.html">
+            
+                    
+                    非必要不提供default constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../basic/virtual_destruct.html">
+            
+                <a href="../basic/virtual_destruct.html">
+            
+                    
+                    virtual析构函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">操作符</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="assignment.html">
+            
+                <a href="assignment.html">
+            
+                    
+                    赋值操作注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="typeconverfunc.html">
+            
+                <a href="typeconverfunc.html">
+            
+                    
+                    "类型转换函数"
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="in_de_crement.html">
+            
+                <a href="in_de_crement.html">
+            
+                    
+                    increment/decrement操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="and_or_comma.html">
+            
+                <a href="and_or_comma.html">
+            
+                    
+                    不要重载"&&","||",","操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="new_delete.html">
+            
+                <a href="new_delete.html">
+            
+                    
+                    new和delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="nd/">
+            
+                <a href="nd/">
+            
+                    
+                    定制new和delete
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="nd/new_handle.html">
+            
+                <a href="nd/new_handle.html">
+            
+                    
+                    new-handler的行为
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="nd/replace.html">
+            
+                <a href="nd/replace.html">
+            
+                    
+                    new和delete的替换时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">异常</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../exception/smart_pointer.html">
+            
+                <a href="../exception/smart_pointer.html">
+            
+                    
+                    使用智能指针避免资源泄露
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../exception/exception_destruct.html">
+            
+                <a href="../exception/exception_destruct.html">
+            
+                    
+                    尽量阻止异常流出析构之外
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../exception/throw_and_param.html">
+            
+                <a href="../exception/throw_and_param.html">
+            
+                    
+                    抛出一个exception与传递一个参数的差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../exception/by_reference.html">
+            
+                <a href="../exception/by_reference.html">
+            
+                    
+                    以by reference方式捕捉exception
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../exception/except_cost.html">
+            
+                <a href="../exception/except_cost.html">
+            
+                    
+                    异常处理的成本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../exception/except_safe.html">
+            
+                <a href="../exception/except_safe.html">
+            
+                    
+                    做好"异常安全"
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">效率</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../efficiency/lazy_evaluation.html">
+            
+                <a href="../efficiency/lazy_evaluation.html">
+            
+                    
+                    使用lazy evaluation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../efficiency/share.html">
+            
+                <a href="../efficiency/share.html">
+            
+                    
+                    分期摊还预期的计算成本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../efficiency/tempobject.html">
+            
+                <a href="../efficiency/tempobject.html">
+            
+                    
+                    临时对象的来源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../efficiency/overload.html">
+            
+                <a href="../efficiency/overload.html">
+            
+                    
+                    使用函数重载避免隐私类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../efficiency/operator_complex.html">
+            
+                <a href="../efficiency/operator_complex.html">
+            
+                    
+                    操作符复合形式取代独身形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../efficiency/more_cost.html">
+            
+                <a href="../efficiency/more_cost.html">
+            
+                    
+                    虚函数、多重继承、虚基类、运行时类型的成本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="../efficiency/inline.html">
+            
+                <a href="../efficiency/inline.html">
+            
+                    
+                    inline的里里外外
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="../efficiency/smart_pointer.html">
+            
+                <a href="../efficiency/smart_pointer.html">
+            
+                    
+                    智能指针选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">技术</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../technology/blur.html">
+            
+                <a href="../technology/blur.html">
+            
+                    
+                    constructor和non-member function虚化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../technology/non_heap_object.html">
+            
+                <a href="../technology/non_heap_object.html">
+            
+                    
+                    要求(禁止)对象产生于heap中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../technology/reference_count.html">
+            
+                <a href="../technology/reference_count.html">
+            
+                    
+                    引用计数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../technology/proxy.html">
+            
+                <a href="../technology/proxy.html">
+            
+                    
+                    代理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../technology/rvo.html">
+            
+                <a href="../technology/rvo.html">
+            
+                    
+                    RVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../design/easy_use_api.html">
+            
+                <a href="../design/easy_use_api.html">
+            
+                    
+                    让接口容易使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../design/class.html">
+            
+                <a href="../design/class.html">
+            
+                    
+                    设计class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../design/member_func.html">
+            
+                <a href="../design/member_func.html">
+            
+                    
+                    以non-member、non-friend替换member函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../design/use_non_member.html">
+            
+                <a href="../design/use_non_member.html">
+            
+                    
+                    何时采用non-member函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../design/delay.html">
+            
+                <a href="../design/delay.html">
+            
+                    
+                    延迟变量定义式的出现时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../design/less_transfer_type.html">
+            
+                <a href="../design/less_transfer_type.html">
+            
+                    
+                    尽量少做转型动作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../design/oo/">
+            
+                <a href="../design/oo/">
+            
+                    
+                    继承和面向对象设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.7.1" data-path="../design/oo/is-a.html">
+            
+                <a href="../design/oo/is-a.html">
+            
+                    
+                    确定public继承塑模出is-a关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.2" data-path="../design/oo/cover_name.html">
+            
+                <a href="../design/oo/cover_name.html">
+            
+                    
+                    避免遮掩继承而来的名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.3" data-path="../design/oo/api_achieve.html">
+            
+                <a href="../design/oo/api_achieve.html">
+            
+                    
+                    区分接口继承和实现继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.4" data-path="../design/oo/non_default.html">
+            
+                <a href="../design/oo/non_default.html">
+            
+                    
+                    不要重新定义继承而来的缺省参数值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.5" data-path="../design/oo/private.html">
+            
+                <a href="../design/oo/private.html">
+            
+                    
+                    谨慎使用private继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模板与泛型编程</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../template/features.html">
+            
+                <a href="../template/features.html">
+            
+                    
+                    模板编程特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../template/typename.html">
+            
+                <a href="../template/typename.html">
+            
+                    
+                    了解typename的双重意义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../template/template_base.html">
+            
+                <a href="../template/template_base.html">
+            
+                    
+                    处理模板化基类的名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../template/type_conver_non_member.html">
+            
+                <a href="../template/type_conver_non_member.html">
+            
+                    
+                    需要类型转换时为模板定义非成员函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../template/template_metaprogramming.html">
+            
+                <a href="../template/template_metaprogramming.html">
+            
+                    
+                    初识模板元编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂项</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../other/variety.html">
+            
+                <a href="../other/variety.html">
+            
+                    
+                    唯一不变的是变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../other/feel.html">
+            
+                <a href="../other/feel.html">
+            
+                    
+                    忽略感觉
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../other/warning.html">
+            
+                <a href="../other/warning.html">
+            
+                    
+                    不要太忽视警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >"类型转换函数"</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;"><b></b>&#x201C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x201D;</a></li></ul></div><a href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;"><a name="&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x201C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;&#x201D;</h1>
+<p>&#x6700;&#x597D;&#x4E0D;&#x8981;&#x63D0;&#x4F9B;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x4E0D;&#x9884;&#x671F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x7C7B;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x800C;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x6B63;&#x786E;&#x3001;&#x4E0D;&#x76F4;&#x89C2;&#x7684;&#x7A0B;&#x5E8F;&#x884C;&#x4E3A;&#xFF0C;&#x5F88;&#x96BE;&#x8C03;&#x8BD5;</p>
+<p>&#x4E24;&#x79CD;&#x51FD;&#x6570;&#x5141;&#x8BB8;&#x7F16;&#x8BD1;&#x5668;&#x6267;&#x884C;&#x8F6C;&#x6362;</p>
+<ul>
+<li>&#x5355;&#x81EA;&#x53D8;&#x91CF;constructors</li>
+<li>&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;</li>
+</ul>
+<p><strong>&#x5355;&#x53D8;&#x91CF;constructors</strong>&#x4E3E;&#x4F8B;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">A</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">A</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// explicit A(int num) { }; /* &#x907F;&#x514D;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362; */</span>
+
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword">const</span> A <span class="token operator">&amp;</span>r<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    A <span class="token function">a</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 
+     * &#x53D1;&#x751F;&#x4E86;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;n&#x4F1A;&#x8C03;&#x7528;A(int num)&#x5B9E;&#x4F8B;&#x5316;&#x6210;A&#x7684;&#xFF0C;&#x518D;&#x8C03;&#x7528;==&#x91CD;&#x8F7D;&#x7B26;&#x53F7;&#x6BD4;&#x8F83; 
+     * &#x8FD9;&#x6837;&#x7684;&#x884C;&#x4E3A;&#x662F;&#x5F88;&#x5371;&#x9669;&#x7684;&#xFF0C;&#x5E94;&#x5F53;&#x907F;&#x514D;&#xFF0C;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E0A;&#x52A0;&#x4E0A;explicit&#x5373;&#x53EF;&#x3002;
+     * */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</strong>&#x4E3E;&#x4F8B;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token keyword">class</span> <span class="token class-name">A</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">operator</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> 
+    <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">double</span> <span class="token function">asDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span>
+    <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    A a<span class="token punctuation">;</span>
+    <span class="token keyword">double</span> d <span class="token operator">=</span> <span class="token number">0.5</span> <span class="token operator">*</span> a<span class="token punctuation">;</span> <span class="token comment">/* &#x53D1;&#x751F;&#x4E86;&#x9690;&#x5F0F;&#x7C7B;&#x578B;&#x8F6C;&#x6362; */</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> d <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+
+    <span class="token comment">/* 
+     * &#x5728;&#x6CA1;&#x6709;operator&lt;&lt; &#x91CD;&#x8F7D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x8C03;&#x7528;double&#xFF0C;&#x4ECE;&#x800C;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#x3002;
+     * &#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x4E0D;&#x53EF;&#x9884;&#x671F;&#x7684;&#x9519;&#x8BEF;
+     * */</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+
+    <span class="token comment">/* &#x5E94;&#x5F53;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B49;&#x4EF7;operator double()&#x7684;&#x65B9;&#x6CD5;&#x66FF;&#x4EE3; */</span>
+    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuation">.</span><span class="token function">asDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2020-2021 ChangDingFang all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-25 18:31:45
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="assignment.html" class="navigation navigation-prev " aria-label="Previous page: 赋值操作注意事项">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="in_de_crement.html" class="navigation navigation-next " aria-label="Next page: increment/decrement操作符">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"\"类型转换函数\"","level":"3.2","depth":1,"next":{"title":"increment/decrement操作符","level":"3.3","depth":1,"path":"docs/operator/in_de_crement.md","ref":"docs/operator/in_de_crement.md","articles":[]},"previous":{"title":"赋值操作注意事项","level":"3.1","depth":1,"path":"docs/operator/assignment.md","ref":"docs/operator/assignment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","expandable-chapters-small","emphasize","-lunr","-search","search-plus","splitter","tbfed-pagefooter","-sharing","advanced-emoji","github","-github-buttons","favicon","image-captions","multipart","code","hide-element","insert-logo","popup","js-sequence-diagram","-highlight","prism","prism-themes","autotheme","redirect"],"root":"./effective_cpp","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2020-2021 ChangDingFang","modify_label":"最近一次修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"c++":"cpp","conf":"cpp","shell":"bash","txt":"bash","Dockerfile":"bash"},"ignore":["none"],"//备用主题":["prism-themes/themes/prism-vsc-dark-plus.css","prism-themes/themes/prism-atom-dark.css","// 青蓝色","prism-themes/themes/prism-coldark-cold.css","// 非主流字体","prism-themes/themes/prism-material-oceanic.css"],"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"emphasize":{},"github":{"url":"https://github.com/changdingfang"},"splitter":{},"js-sequence-diagram":{},"popup":{},"multipart":{},"code":{"copyButtons":true},"sitemap-general":{"prefix":"https://changdingfang.com/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"showGoTop":true,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{"shortcut":"../../img/favicon.jpg","bookmark":"../../img/favicon.jpg","appleTouch":"../../img/favicon.jpg"},"prism-themes":{},"//github-buttons":{"buttons":[{"user":"changdingfang","repo":"changdingfang","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"autotheme":{"night":[20,21,22,23,0,1,2,3,4,5],"sepia":[0,1,2,3,4,5,6,7,21,22,23],"white":[8,9,10,11,12,13,14,15,16,17,18,19,20]},"advanced-emoji":{"embedEmojis":false},"sharing":{"weibo":false,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":[]},"redirect":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://changdingfang.com/img/avatar.jpg"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"//plugins: 插件功能说明":{"tbfed-pagefooter":"添加页脚,修改时间，版权等","prism":"代码高亮","emphasize":"给文子加底纹颜色","splitter":"使侧边栏的宽度可以自由调节","-highlight":"去除自带高亮","js-sequence-diagram":"时序图","popup":"点击图片放大","multipart":"分章显示","code":"代码可复制","-sharing":"禁用gitbook默认分享插件","sitemap-general":"生成sitemap","hide-element":"y隐藏一些不想看到的元素，如果published with GitBook","anchor-navigation-ex":"(已经包含anchors功能)添加侧边悬浮导航以及回到顶部按钮(只会提取1~3级,且必须按照1、2、3顺序写，不能跳级)","favicon":"图标","-search":"为支持中文搜索插件给删掉","pageview-count":"显示访问量","prism-themes":"代码高亮样式","github-buttons":"github按钮","expandable-chapters-small":"章节栏带有略微缩进，看起来更美观(##开头顶格, * 开头的缩进)","autotheme":"自动换肤，根据时间来换","-lunr":"为支持中文搜索插件给删掉","advanced-emoji":"emoji表情","redirect":"重定向页面 !REDIRECT \"new path\"","anchors":"添加github风格锚点样式(h1~h6前面带有锚点图标)","insert-logo":"插入logo","search-plus":"支持中文搜索","image-captions":"显示图片名称"},"theme":"default","author":"dingfang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"//structure":"配置readme,summary,glossary,languages对应的文件名","variables":{"_pictures":[]},"title":"改善c++编程","language":"zh-hans","links":{"sidebar":{"我的博客":"https://changdingfang.com"}},"gitbook":">=3.0.0","description":"遇见更好的自己","direction":"ltr"},"file":{"path":"docs/operator/typeconverfunc.md","mtime":"2021-08-25T10:31:45.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-25T11:58:27.660Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-autotheme/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

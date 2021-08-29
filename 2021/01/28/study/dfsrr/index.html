@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>系统资源采集dfsrr | 常丁方的博客</title>
+  <meta name="keywords" content=" cpp , 资源采集 ">
+  <meta name="description" content="系统资源采集dfsrr | 常丁方的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="没找到页面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://changdingfang.com/404.html">
+<meta property="og:site_name" content="常丁方的博客">
+<meta property="og:description" content="没找到页面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-28T10:25:25.000Z">
+<meta property="article:modified_time" content="2021-08-25T10:31:45.464Z">
+<meta property="article:author" content="常丁方">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="架构">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/favicon.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="/js/js/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/js/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>常丁方</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="gitee" href="https://gitee.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-gitee"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:245292011@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=245292011&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(39)</small></div></li>
+    
+        
+            
+            <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(20)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="笔记<--->cpp">cpp<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->linux">linux<small>(10)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nginx">nginx<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nodejs">nodejs<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->regex">regex<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="学习">学习<small>(12)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="阅读思考">阅读思考<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="其他"><i class="fold iconfont icon-right"></i>其他<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="其他<--->DIY">DIY<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->test">test<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->标签">标签<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="39">
+<input type="hidden" id="yelog_site_word_count" value="47.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/tools/">工具</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/test/">记事本</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/boombeach/">海岛奇兵百科</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://hexo.io/zh-cn/">hexo</a></li>
+            
+            <li><a target="_blank" href="http://wallleap.cn">wallleap</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>books</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmake</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>compiler</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cpp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>DIY</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,svn</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,turn,stun</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nodejs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>test</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思考</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日志</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>架构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标签</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源采集</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>阅读</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 其他 标签 "
+           href="/2020/07/23/other/label/"
+           data-tag="标签"
+           data-author="" >
+            <span class="post-title" title="网页标签">网页标签</span>
+            <span class="post-date" title="2020-07-23 22:48:03">2020/07/23</span>
+        </a>
+        
+        <a id="top" class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_cmd_line/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux命令行">linux命令行</span>
+            <span class="post-date" title="2020-07-12 01:31:51">2020/07/12</span>
+        </a>
+        
+        <a id="top" class="全部文章 其他 DIY "
+           href="/2021/03/20/other/diy_computer/"
+           data-tag="DIY"
+           data-author="" >
+            <span class="post-title" title="DIY-电脑组装">DIY-电脑组装</span>
+            <span class="post-date" title="2021-03-20 07:28:09">2021/03/20</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/08/01/books/av/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="音视频">音视频</span>
+            <span class="post-date" title="2021-08-01 10:16:21">2021/08/01</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/07/08/books/leetcode/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="力扣">力扣</span>
+            <span class="post-date" title="2021-07-08 20:26:33">2021/07/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/05/19/books/grafana/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="Grafana">Grafana</span>
+            <span class="post-date" title="2021-05-19 18:36:36">2021/05/19</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/03/14/books/python/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="python快查">python快查</span>
+            <span class="post-date" title="2021-03-14 14:20:33">2021/03/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/01/28/study/dfsrr/"
+           data-tag="cpp,资源采集"
+           data-author="" >
+            <span class="post-title" title="系统资源采集dfsrr">系统资源采集dfsrr</span>
+            <span class="post-date" title="2021-01-28 19:19:19">2021/01/28</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/13/books/promotion_pn/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="晋升指北">晋升指北</span>
+            <span class="post-date" title="2020-12-13 15:24:33">2020/12/13</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/08/books/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2020-12-08 19:29:53">2020/12/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/04/books/why/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="什么为什么">什么为什么</span>
+            <span class="post-date" title="2020-12-04 19:47:33">2020/12/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/11/30/notes/linux/linux-program/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux环境编程">linux环境编程</span>
+            <span class="post-date" title="2020-11-30 19:12:32">2020/11/30</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/10/14/notes/linux/git/"
+           data-tag="linux,git"
+           data-author="" >
+            <span class="post-title" title="理解和使用git">理解和使用git</span>
+            <span class="post-date" title="2020-10-14 19:50:08">2020/10/14</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/19/notes/linux/stun-turn/"
+           data-tag="linux,turn,stun"
+           data-author="" >
+            <span class="post-title" title="stun-turn服务器搭建">stun-turn服务器搭建</span>
+            <span class="post-date" title="2020-09-19 15:36:36">2020/09/19</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/10/notes/linux/linux-proc/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux下/proc文件夹">linux下/proc文件夹</span>
+            <span class="post-date" title="2020-09-10 22:14:51">2020/09/10</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/effective_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="改善c++编程">改善c++编程</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/new_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="c++11/14/17特性">c++11/14/17特性</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/14/books/modern_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="现代c++">现代c++</span>
+            <span class="post-date" title="2020-08-14 19:47:33">2020/08/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/08/04/study/dflog/"
+           data-tag="cpp,日志"
+           data-author="" >
+            <span class="post-title" title="一个简单的c++日志库">一个简单的c++日志库</span>
+            <span class="post-date" title="2020-08-04 19:38:21">2020/08/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/01/notes/cpp/cpp-compiler/"
+           data-tag="cpp,compiler"
+           data-author="" >
+            <span class="post-title" title="cpp编译器安装">cpp编译器安装</span>
+            <span class="post-date" title="2020-08-01 11:02:23">2020/08/01</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/29/books/vim/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="vim手册">vim手册</span>
+            <span class="post-date" title="2020-07-29 20:18:31">2020/07/29</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-status/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn状态详解">svn状态详解</span>
+            <span class="post-date" title="2020-07-23 22:06:39">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-cmd/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn命令">svn命令</span>
+            <span class="post-date" title="2020-07-23 22:04:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/23/notes/cpp/cmake-base/"
+           data-tag="cmake"
+           data-author="" >
+            <span class="post-title" title="cmake基础">cmake基础</span>
+            <span class="post-date" title="2020-07-23 21:26:14">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/23/books/db/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="数据库">数据库</span>
+            <span class="post-date" title="2020-07-23 19:47:33">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/23/books/windows/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="windows系统">windows系统</span>
+            <span class="post-date" title="2020-07-23 19:15:32">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/21/readAndThink/read/"
+           data-tag="阅读"
+           data-author="" >
+            <span class="post-title" title="阅读">阅读</span>
+            <span class="post-date" title="2020-07-21 21:07:33">2020/07/21</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/12/readAndThink/think/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="思考">思考</span>
+            <span class="post-date" title="2020-07-12 11:02:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 regex "
+           href="/2020/07/12/notes/regex/regex/"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则手册">正则手册</span>
+            <span class="post-date" title="2020-07-12 10:53:58">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nodejs "
+           href="/2020/07/12/notes/nodejs/nodejs/"
+           data-tag="nodejs"
+           data-author="" >
+            <span class="post-title" title="nodejs安装与使用">nodejs安装与使用</span>
+            <span class="post-date" title="2020-07-12 10:34:40">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_sortout/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux整合">linux整合</span>
+            <span class="post-date" title="2020-07-12 10:31:36">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nginx "
+           href="/2020/07/12/notes/nginx/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx配置">nginx配置</span>
+            <span class="post-date" title="2020-07-12 10:26:42">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/ftp/"
+           data-tag="linux,ftp"
+           data-author="" >
+            <span class="post-title" title="ftp服务器搭建">ftp服务器搭建</span>
+            <span class="post-date" title="2020-07-12 10:08:24">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/shell-forget/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="shell记不住">shell记不住</span>
+            <span class="post-date" title="2020-07-12 09:48:21">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp-mutex/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++并发并行">c++并发并行</span>
+            <span class="post-date" title="2020-07-12 09:16:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp_knowledge/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++知识点">c++知识点</span>
+            <span class="post-date" title="2020-07-12 09:05:50">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/12/study/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown语法">markdown语法</span>
+            <span class="post-date" title="2020-07-12 01:11:22">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/11/books/architect/"
+           data-tag="架构,books"
+           data-author="" >
+            <span class="post-title" title="架构师基础">架构师基础</span>
+            <span class="post-date" title="2020-07-11 20:09:33">2020/07/11</span>
+        </a>
+        
+        <a  class="全部文章 其他 test "
+           href="/2020/07/11/other/first-write/"
+           data-tag="test"
+           data-author="" >
+            <span class="post-title" title="first_write">first_write</span>
+            <span class="post-date" title="2020-07-11 19:51:51">2020/07/11</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-study/dfsrr" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">系统资源采集dfsrr</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="学习">学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">cpp</a>
+            
+            <a class="color5">资源采集</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-08-25 18:31:45'>2021-01-28 19:19</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:598</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么写"><span class="toc-text">为什么写</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#功能"><span class="toc-text">功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构图"><span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用示例"><span class="toc-text">使用示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行使用示例"><span class="toc-text">命令行使用示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#为什么写"><span class="toc-text">为什么写</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#功能"><span class="toc-text">功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构图"><span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用示例"><span class="toc-text">使用示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行使用示例"><span class="toc-text">命令行使用示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div></p>
+<h1 id="为什么写"><a href="#为什么写" class="headerlink" title="为什么写"></a>为什么写</h1><p>看了淘宝的tsar，想写一个类似功能练练手，于是就写了这个dfsrr(DingFang System Resourece Report)。   </p>
+<p>在一个是不想让自己的手和脑子停下来，最近也没什么加班，就充实一下自己的空闲时间。   </p>
+<p>没事就折腾折腾，也是挺好玩的一件事情。   </p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p><strong><a href="https://github.com/changdingfang/dfsrr" target="_blank" rel="noopener">代码仓库</a></strong></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>可以采集cpu、内存、网络、磁盘、系统负载等信息，把这些信息记录到本地sqlite数据库，或者上报到服务端，由服务端统一处理。   <ul>
+<li>支持通过配置文件指定采集需要的模块，每个模块可以设置不同的采集间隔   </li>
+</ul>
+</li>
+<li>命令行工具    <ul>
+<li>支持本地sqlite读取数据格式化打印到终端      <ul>
+<li>支持读取最新的n条数据    </li>
+<li>支持读取指定时间的数据   </li>
+</ul>
+</li>
+<li>实时获取系统资源数据输出到终端。     </li>
+<li>支持显示指定字段   </li>
+</ul>
+</li>
+<li>web服务，包含一个基础的web服务程序，可以通过http调用接口获取指定数据   </li>
+<li>dfsrr服务端，一个基础dfsrr服务端，支持dfsrr客户端上报的数据，把数据存储到msyql数据库   </li>
+</ul>
+<h2 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h2><p><img src="/blog_imgs/study/dfsrr.png" alt="dflog"></p>
+<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><h3 id="命令行使用示例"><a href="#命令行使用示例" class="headerlink" title="命令行使用示例"></a>命令行使用示例</h3><p>打印帮助信息    </p>
+<pre><code class="shell">$ dfsrrTool --help
+Usage: dfsrrTool [Module] [options]
+Options:
+    -w / --watch    打印最近的n条数据:    dfsrrTool --cpu -w 10
+    -l / --live    实时打印:        dfsrrTool --cpu -l
+    -i / --interval    指定时间间隔(s):    dfsrrTool --cpu -l -i 5
+    -t / --time    打印指定时间数据:    dfsrrTool --cpu -t 20201001
+                        dfsrrTool --cpu -t 2020100108
+                        dfsrrTool --cpu -t 202010010800
+    -f / --file    从文件中读取数据:    dfsrrTool --cpu -f filename
+    -s / --spec    指定显示指标字段:    dfsrrTool --cpu -s util,sys,user
+    -h / --help    帮助
+Modules:
+    --cpu        CPU
+    --memory    内存
+    --load        系统运行队列和平均负载
+    --partition    磁盘分区
+    --tcp        tcp流量
+    --udp        udp流量
+    --traffic    流量</code></pre>
+<p>以间隔1秒打印cpu资源使用情况   </p>
+<pre><code class="shell">$ dfsrrTool --cpu -l -i 1
+--------------------------------cpu--------------------------------
+Time              user     sys    wait    hirq    sirq    util    idle
+28/01 19:38:23    1.00    1.00    0.00    0.00    0.00    1.99   98.01
+28/01 19:38:24    0.51    0.00    0.00    0.00    0.00    0.51   99.49
+
+...
+</code></pre>
+<p>以间隔1秒打印系统负载信息，且仅显示1分钟和5分钟的平均负载</p>
+<pre><code class="shell">$ dfsrrTool  --load -l -i 1 -s load1,load5
+------------load------------
+Time             load1   load5
+28/01 19:40:58    0.10    0.11
+28/01 19:40:59    0.10    0.11
+28/01 19:41:00    0.10    0.11
+
+...
+</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://github.com/alibaba/tsar" target="_blank" rel="noopener">tasr</a></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 245292011@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>系统资源采集dfsrr</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">623</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="常丁方">常丁方</a></p>
+    <p><span class="copy-title">发布时间:</span>2021-01-28, 19:19:19</p>
+    <p><span class="copy-title">最后更新:</span>2021-08-25, 18:31:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/01/28/study/dfsrr/" title="系统资源采集dfsrr">http://changdingfang.com/2021/01/28/study/dfsrr/</a>
+	<!--
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+	-->
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+    <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+	<a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18043145号-2</a>
+	</span>
+	
+	©2020-2021 ChangDingFang
+	</p>
+
+
+
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 建站时间 -->
+	<span style="color: #666;padding-left: 20px;">
+	<i class="fa fa-clock-o" aria-hidden="true"></i>
+	<span id="time" align="center">载入时间中...</span>
+	<script>
+	var now = new Date(); 
+	function createtime() { 
+	    var grt= new Date("07/11/2020 19:50:00");//在此处修改你的建站时间
+	    now.setTime(now.getTime()+250); 
+	    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+	    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+	    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+	    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+	    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+	    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+	    document.getElementById("time").innerHTML = "小站已经苟活 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+setInterval("createtime()",250);
+</script>
+<span style="padding-left: 20px; color:#666;"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></span>
+	<!-- 站长统计 -->
+	<script type="text/javascript">
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1279142429'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279142429%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</span>
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+	
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 底部显示 -->
+	<link rel="stylesheet" href="/css/github-badge.css">
+	<div style="text-align:center; padding-top: 20px;">
+	<div class="github-badge">
+	<a rel="license" href="https://hexo.io/" target="_blank" title="由Hexo强力驱动">
+	<span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+	</div>
+
+	<!-- 
+	<div class="github-badge">
+	<a rel="license" href="https://github.io/" target="_blank" title="静态网页托管于Github">
+	<span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a>
+	</div>
+	-->
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="https://coding.net/" target="_blank" title="静态网页托管于CODING">
+	<span class="badge-subject"><i class="fa fa-heart" aria-hidden="true"></i> Hosted</span>
+	<span class="badge-value bg-gray">CODING</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+	<span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span><span class="badge-value bg-cdn">Github&jsDelivr</span></a>
+	</div>
+	<div class="github-badge">
+	<a rel="license" href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" title="站点使用 Sakura 主题，作者：Mashiro & Hojun">
+	<span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span><span class="badge-value bg-theme">3-blog</span></a>
+	</div>
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+	<span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
+	<span  class="site_uv badge-value bg-orange"></span>
+	</div>
+
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
+	<span class="site_pv badge-value bg-brightgreen"></span>
+	</div>
+
+	</div>  
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+fetch('https://v1.hitokoto.cn/?c=h')
+.then(function (res){
+		return res.json();
+		})
+.then(function (data) {
+		var hitokoto = document.getElementById('hitokoto');
+		var afrom = document.getElementById('afrom');
+		hitokoto.innerText = data.hitokoto;
+		f = data.from;
+		f_w = data.from_who;
+		afrom.innerText =  '——【';
+		if (!(f == null || f == 'null'))
+		{
+			afrom.innerText += f;
+		}
+		if (!(f_w == null || f_w == 'null'))
+		{
+			if (f == null || f == 'null')
+			{
+				afrom.innerText += f_w;
+			}
+			else
+			{
+				afrom.innerText += ' ' + f_w;
+			}
+		}
+		if ((f == null || f == 'null') && (f_w == null || f_w == 'null'))
+		{
+			afrom.innerText += '佚名';
+		}
+		afrom.innerText += '】';
+		})
+.catch(function (err) {
+		console.error(err);
+		})
+</script>
+
+
+<style>
+.cdf {
+position: relative;
+margin: 20px auto;
+width: 4em;
+height: 48px;
+		line-height: 48px;
+		text-align: center;
+color: #eee;
+	   font-size: 48px;
+	   font-weight: 600;
+	   font-family:Helvetica;
+}
+.cdf::after {
+content: attr(data-spotlight);
+color: transparent;
+position: absolute;
+left: 0;top: 0;
+display: block;
+width: 100%;
+height: 100%;
+		line-height: 100%;
+		text-align: center;
+margin: auto;
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+animation: spotlight 10s infinite;
+		   background-image: linear-gradient(to right, red, skyblue, green,black);
+		   background-size: 150%;
+		   background-position: center center;
+		   -webkit-background-clip: text;
+		   background-clip: text;
+}
+@keyframes spotlight{
+	0%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+	50%{
+		-webkit-clip-path: ellipse(32px 32px at 100% 50%);
+		clip-path: ellipse(32px 32px at 100% 50%);
+	}
+	100%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+}
+</style>
+
+
+
+
+
+
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 547px;
+    }
+    .nav.fullscreen {
+        margin-left: -547px;
+    }
+    .nav-left {
+        width: 125px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 497px;
+        }
+        .nav.fullscreen {
+            margin-left: -497px;
+        }
+        .nav-left {
+            width: 105px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 497px;
+            margin-left: -497px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #f36c21;
+    }
+    
+    
+    .nav-right nav a.hover > span{
+        color: #7bbfea !important;
+    }
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+background: url("/img/article-list-background/2.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 底部音乐 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+.aplayer .aplayer-lrc {
+height: 35px;
+}
+.aplayer .aplayer-lrc p{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current{
+color: #FF1493;
+}
+.aplayer.aplayer-narrow .aplayer-body{
+left: -66px !important;
+}
+.aplayer.aplayer-fixed .aplayer-lrc {
+display: none;
+}
+.aplayer .aplayer-lrc.aplayer-lrc-hide {
+display:none !important;
+}
+.aplayer.aplayer-fixed .lrc-show {
+display: block;
+background: rgba(255, 255, 255, 0.8);
+}
+</style>
+<div class="aplayer"
+data-id="5142495258"
+data-server="netease"
+data-type="playlist"
+data-fixed="true"
+data-autoplay="false"
+data-loop="all"
+data-order="random"
+data-preload="auto"
+data-volume="0.7"
+data-mutex="false"
+>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<script>
+$(function(){
+		$('body').on('click', '.aplayer', function(){
+			if($('.aplayer-button').hasClass('aplayer-play')) {
+			$('.aplayer-lrc').removeClass('lrc-show');
+			} else {
+			$('.aplayer-lrc').addClass('lrc-show');
+			}
+			})
+		});
+</script>
+
+
+
+<!-- // 文字
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+-->
+
+<!-- // 爱心
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+-->
+
+<!-- // 按键屏蔽 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js"></script>
+-->
+
+
+</html>

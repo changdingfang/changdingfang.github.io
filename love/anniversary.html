@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>纪念日</title>
+
+    <link type="text/css" rel="stylesheet" href="./index_files/default.css">
+    <script type="text/javascript" src="./index_files/lunar-calendar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./index_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./index_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./index_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./index_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./index_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./index_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./index_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./index_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./index_files/love.js" charset="utf-8"></script>
+    <style type="text/css">
+        <!--
+        .STYLE1 {
+            color: #666666
+        }
+        -->
+    </style>
+</head>
+
+<body>
+    <audio autoplay="autopaly">
+        <source src="http://sc.111ttt.com/up/mp3/.mp3" type="audio/mp3" />
+    </audio>
+    <div id="main">
+        <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a
+                href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+                href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
+        <div id="wrap">
+            <div id="clock-box-anniversary">
+                <h2>生日</h2>
+                <span class="STYLE1">距离她的生日还有</span>
+                <span id="girl-birthday"></span><br><br>
+                <span class="STYLE1">距离他的生日还有</span>
+                <span id="boy-birthday"></span><br><br>
+                
+                <h2>里程碑</h2>
+                <span class="STYLE1">第一次见面已经过了</span>
+                <span id="first-meet-up"></span><br>
+                
+                <h2>节假日</h2>
+                <span class="STYLE1">距离春节还有</span>
+                <span id="spring"></span><br>
+
+                <span class="STYLE1">距离元宵节还有</span>
+                <span id="lantern"></span><br>
+
+                <span class="STYLE1">距离情人节还有</span>
+                <span id="valentine"></span><br>
+                
+                <span class="STYLE1">距离劳动节还有</span>
+                <span id="labor"></span><br>
+                
+                <span class="STYLE1">距离端午节还有</span>
+                <span id="dragon-boat"></span><br>
+                
+                <span class="STYLE1">距离七夕还有</span>
+                <span id="qixi"></span><br>
+                
+                <span class="STYLE1">距离中秋节还有</span>
+                <span id="mid-autumn"></span><br>
+                
+                <span class="STYLE1">距离国庆节还有</span>
+                <span id="national"></span><br>
+                
+                <span class="STYLE1">距离圣诞节还有</span>
+                <span id="christmas"></span><br>
+                
+                <span class="STYLE1">距离元旦还有</span>
+                <span id="new-year"></span><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <!-- <span class="STYLE1">第一次接吻已经过了</span> -->
+                <!-- <span id="first-kiss"></span><br> -->
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+
+    <script>
+        (function () {
+            var textAnimate = eval(Jscex.compile("async", function () {
+                var boy_lunar_birthday  = new Date("1994-12-16 00:00:00");
+                var girl_lunar_birthday = new Date("1995-12-20 00:00:00");
+
+                var first_obj = {
+                    "first-meet-up": "2021-06-12 09:51:00",
+                    "first-kiss": "2021-06-12"
+                };
+
+                var festivals_solar = {
+                    "valentine": "2021-02-14",
+                    "national": "2021-10-01",
+                    "christmas": "2021-12-25",
+                    "new-year": "2021-01-01"
+                };
+
+                var festivals_lunar = {
+                    "spring": "2021-01-01",
+                    "lantern": "2021-01-15",
+                    "labor": "2021-05-01",
+                    "dragon-boat": "2021-05-05",
+                    "qixi": "2021-07-07",
+                    "mid-autumn": "2021-08-15"
+                };
+
+                // $("#code").show().typewriter();
+                $("#clock-box-anniversary").fadeIn(500);
+                while (true) {
+                    countdownLunar("boy-birthday", boy_lunar_birthday);
+                    countdownLunar("girl-birthday", girl_lunar_birthday);
+                    for (var k in first_obj) {
+                        firstTime(k, first_obj[k]);
+                    }
+
+                    for (var k in festivals_solar) {
+                        countdownSolar(k, festivals_solar[k]);
+                    }
+
+                    for (var k in festivals_lunar) {
+                        countdownLunar(k, festivals_lunar[k]);
+                    }
+                    $await(Jscex.Async.sleep(1000));
+                }
+            }));
+
+            var runAsync = eval(Jscex.compile("async", function () {
+                textAnimate().start();
+            }));
+
+            runAsync().start();
+        })();
+    </script>
+</body>
+
+</html>

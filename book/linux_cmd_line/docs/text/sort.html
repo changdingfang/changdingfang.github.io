@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sort · linux命令行</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="dingfang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-js-sequence-diagram/styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="uniq.html" />
+    
+    
+    <link rel="prev" href="wc.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../img/favicon.jpg'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://changdingfang.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文件目录管理</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../filemanager/ls.html">
+            
+                <a href="../filemanager/ls.html">
+            
+                    
+                    ls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../filemanager/pwd.html">
+            
+                <a href="../filemanager/pwd.html">
+            
+                    
+                    pwd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../filemanager/cd.html">
+            
+                <a href="../filemanager/cd.html">
+            
+                    
+                    cd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../filemanager/touch.html">
+            
+                <a href="../filemanager/touch.html">
+            
+                    
+                    touch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../filemanager/mkdir.html">
+            
+                <a href="../filemanager/mkdir.html">
+            
+                    
+                    mkdir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../filemanager/mv.html">
+            
+                <a href="../filemanager/mv.html">
+            
+                    
+                    mv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../filemanager/cp.html">
+            
+                <a href="../filemanager/cp.html">
+            
+                    
+                    cp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../filemanager/rm.html">
+            
+                <a href="../filemanager/rm.html">
+            
+                    
+                    rm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../filemanager/find.html">
+            
+                <a href="../filemanager/find.html">
+            
+                    
+                    find
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文本处理</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="cat.html">
+            
+                <a href="cat.html">
+            
+                    
+                    cat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="tail.html">
+            
+                <a href="tail.html">
+            
+                    
+                    tail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="head.html">
+            
+                <a href="head.html">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="grep.html">
+            
+                <a href="grep.html">
+            
+                    
+                    grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="sed.html">
+            
+                <a href="sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="wc.html">
+            
+                <a href="wc.html">
+            
+                    
+                    wc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7" data-path="sort.html">
+            
+                <a href="sort.html">
+            
+                    
+                    sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="uniq.html">
+            
+                <a href="uniq.html">
+            
+                    
+                    uniq
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">用户</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../user/whoami.html">
+            
+                <a href="../user/whoami.html">
+            
+                    
+                    whoami
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../user/su.html">
+            
+                <a href="../user/su.html">
+            
+                    
+                    su
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../user/user.html">
+            
+                <a href="../user/user.html">
+            
+                    
+                    user
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">打包压缩</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../package/tar.html">
+            
+                <a href="../package/tar.html">
+            
+                    
+                    tar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../package/zip.html">
+            
+                <a href="../package/zip.html">
+            
+                    
+                    zip/unzip
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进程管理</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../process/nohup.html">
+            
+                <a href="../process/nohup.html">
+            
+                    
+                    nohup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../process/ps.html">
+            
+                <a href="../process/ps.html">
+            
+                    
+                    ps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../process/pstack.html">
+            
+                <a href="../process/pstack.html">
+            
+                    
+                    pstack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../process/taskset.html">
+            
+                <a href="../process/taskset.html">
+            
+                    
+                    taskset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../process/kill.html">
+            
+                <a href="../process/kill.html">
+            
+                    
+                    kill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../process/pstree.html">
+            
+                <a href="../process/pstree.html">
+            
+                    
+                    pstree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../process/top.html">
+            
+                <a href="../process/top.html">
+            
+                    
+                    top
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../process/htop.html">
+            
+                <a href="../process/htop.html">
+            
+                    
+                    htop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">网络</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../net/ifconfig.html">
+            
+                <a href="../net/ifconfig.html">
+            
+                    
+                    ifconfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../net/ethtool.html">
+            
+                <a href="../net/ethtool.html">
+            
+                    
+                    ethtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../net/wget.html">
+            
+                <a href="../net/wget.html">
+            
+                    
+                    wget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../net/curl.html">
+            
+                <a href="../net/curl.html">
+            
+                    
+                    curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../net/netstat.html">
+            
+                <a href="../net/netstat.html">
+            
+                    
+                    netstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../net/lsof.html">
+            
+                <a href="../net/lsof.html">
+            
+                    
+                    lsof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../net/nc.html">
+            
+                <a href="../net/nc.html">
+            
+                    
+                    nc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../net/scp.html">
+            
+                <a href="../net/scp.html">
+            
+                    
+                    scp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他工具</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../other/clear.html">
+            
+                <a href="../other/clear.html">
+            
+                    
+                    clear
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../other/chkconfig.html">
+            
+                <a href="../other/chkconfig.html">
+            
+                    
+                    chkconfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../other/pidstat.html">
+            
+                <a href="../other/pidstat.html">
+            
+                    
+                    pidstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../other/tzselect.html">
+            
+                <a href="../other/tzselect.html">
+            
+                    
+                    tzselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../other/ulimit.html">
+            
+                <a href="../other/ulimit.html">
+            
+                    
+                    ulimit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../other/date.html">
+            
+                <a href="../other/date.html">
+            
+                    
+                    date
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >sort</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#sort"><b></b>sort</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BED;&#x6CD5;"><b></b>&#x8BED;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x9009;&#x9879;"><b></b>&#x9009;&#x9879;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x6570;"><b></b>&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><b></b>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#sort" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sort"><a name="sort" class="anchor-navigation-ex-anchor" href="#sort"><i class="fa fa-link" aria-hidden="true"></i></a>sort</h1>
+<p>&#x5C06;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5E76;&#x5C06;&#x6392;&#x5E8F;&#x7ED3;&#x679C;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;  </p>
+<p>&#x5373;&#x53EF;&#x4EE5;&#x4ECE;&#x7279;&#x5B9A;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;stdin&#x4E2D;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x3002;  </p>
+<h2 id="&#x8BED;&#x6CD5;"><a name="&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BED;&#x6CD5;</h2>
+<pre class="language-"><code class="lang-shell"><span class="token function">sort</span> <span class="token punctuation">(</span>&#x9009;&#x9879;<span class="token punctuation">)</span> <span class="token punctuation">(</span>&#x53C2;&#x6570;<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x9009;&#x9879;"><a name="&#x9009;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x9879;</h2>
+<ul>
+<li>-b<br>  &#x5FFD;&#x7565;&#x6BCF;&#x884C;&#x524D;&#x9762;&#x7684;&#x5F00;&#x59CB;&#x51FA;&#x73B0;&#x7684;&#x7A7A;&#x683C;&#x5B57;&#x7B26;  </li>
+<li>-c<br>  &#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6392;&#x5E8F;  </li>
+<li>-d<br>  &#x6392;&#x5E8F;&#x65F6;&#xFF0C;&#x5904;&#x7406;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#x5916;&#xFF0C;&#x5FFD;&#x7565;&#x5176;&#x4ED6;&#x5B57;&#x7B26;  </li>
+<li>-f<br>  &#x6392;&#x5E8F;&#x65F6;&#xFF0C;&#x5C06;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x89C6;&#x4E3A;&#x5927;&#x5199;&#x5B57;&#x6BCD;  </li>
+<li>-i<br>  &#x6392;&#x5E8F;&#x65F6;&#xFF0C;&#x9664;&#x4E86;040&#x81F3;176&#x4E4B;&#x95F4;&#x7684;ascii&#x5B57;&#x7B26;&#x5916;&#xFF0C;&#x5FFD;&#x7565;&#x5176;&#x4ED6;&#x5B57;&#x7B26;  </li>
+<li>-m<br>  &#x5C06;&#x51E0;&#x4E2A;&#x6392;&#x5E8F;&#x53F7;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5408;&#x5E76;  </li>
+<li>-M<br>  &#x5C06;&#x524D;&#x9762;3&#x4E2A;&#x5B57;&#x6BCD;&#x4F9D;&#x7167;&#x6708;&#x4EFD;&#x7684;&#x7F29;&#x5199;&#x8FDB;&#x884C;&#x6392;&#x5E8F;  </li>
+<li>-n<br>  &#x4F9D;&#x7167;&#x6570;&#x503C;&#x7684;&#x5927;&#x5C0F;&#x6392;&#x5E8F;  </li>
+<li>-o&lt;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&gt;<br>  &#x5C06;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5B58;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;  </li>
+<li>-r<br>  &#x4EE5;&#x76F8;&#x53CD;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;  </li>
+<li>-t&lt;&#x5206;&#x9694;&#x5B57;&#x7B26;&gt;<br>  &#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x65F6;&#x6240;&#x7528;&#x7684;&#x680F;&#x4F4D;&#x5206;&#x9694;&#x5B57;&#x7B26;  </li>
+<li>+&lt;&#x8D77;&#x59CB;&#x680F;&#x4F4D;&gt;-&lt;&#x7ED3;&#x675F;&#x680F;&#x4F4D;&gt;<br>  &#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x680F;&#x4F4D;&#x6765;&#x6392;&#x5E8F;&#xFF0C;&#x8303;&#x56F4;&#x7531;&#x8D77;&#x59CB;&#x680F;&#x4F4D;&#x5230;&#x7ED3;&#x675F;&#x680F;&#x4F4D;&#x7684;&#x524D;&#x4E00;&#x4F4D;  </li>
+</ul>
+<h2 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h2>
+<p>&#x6587;&#x4EF6;: &#x6307;&#x5B9A;&#x5F85;&#x6392;&#x5E8F;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;  </p>
+<h2 id="&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><a name="&#x4F7F;&#x7528;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x793A;&#x4F8B;</h2>
+<p>&#x65E0;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2020-2021 ChangDingFang all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-25 18:31:45
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="wc.html" class="navigation navigation-prev " aria-label="Previous page: wc">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="uniq.html" class="navigation navigation-next " aria-label="Next page: uniq">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sort","level":"3.7","depth":1,"next":{"title":"uniq","level":"3.8","depth":1,"path":"docs/text/uniq.md","ref":"docs/text/uniq.md","articles":[]},"previous":{"title":"wc","level":"3.6","depth":1,"path":"docs/text/wc.md","ref":"docs/text/wc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","expandable-chapters-small","emphasize","-lunr","-search","search-plus","splitter","tbfed-pagefooter","-sharing","advanced-emoji","github","-github-buttons","favicon","image-captions","multipart","code","hide-element","insert-logo","popup","js-sequence-diagram","-highlight","prism","prism-themes","autotheme","redirect"],"root":"./linux_cmd_line","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2020-2021 ChangDingFang","modify_label":"最近一次修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"c++":"cpp","conf":"cpp","shell":"bash","txt":"bash","Dockerfile":"bash"},"ignore":["none"],"//备用主题":["prism-themes/themes/prism-vsc-dark-plus.css","prism-themes/themes/prism-atom-dark.css","// 青蓝色","prism-themes/themes/prism-coldark-cold.css","// 非主流字体","prism-themes/themes/prism-material-oceanic.css"],"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"emphasize":{},"github":{"url":"https://github.com/changdingfang"},"splitter":{},"js-sequence-diagram":{},"popup":{},"multipart":{},"code":{"copyButtons":true},"sitemap-general":{"prefix":"https://changdingfang.com/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"showGoTop":true,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{"shortcut":"../../img/favicon.jpg","bookmark":"../../img/favicon.jpg","appleTouch":"../../img/favicon.jpg"},"prism-themes":{},"//github-buttons":{"buttons":[{"user":"changdingfang","repo":"changdingfang","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"autotheme":{"night":[20,21,22,23,0,1,2,3,4,5],"sepia":[0,1,2,3,4,5,6,7,21,22,23],"white":[8,9,10,11,12,13,14,15,16,17,18,19,20]},"advanced-emoji":{"embedEmojis":false},"sharing":{"weibo":false,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":[]},"redirect":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://changdingfang.com/img/avatar.jpg"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"//plugins: 插件功能说明":{"tbfed-pagefooter":"添加页脚,修改时间，版权等","prism":"代码高亮","emphasize":"给文子加底纹颜色","splitter":"使侧边栏的宽度可以自由调节","-highlight":"去除自带高亮","js-sequence-diagram":"时序图","popup":"点击图片放大","multipart":"分章显示","code":"代码可复制","-sharing":"禁用gitbook默认分享插件","sitemap-general":"生成sitemap","hide-element":"y隐藏一些不想看到的元素，如果published with GitBook","anchor-navigation-ex":"(已经包含anchors功能)添加侧边悬浮导航以及回到顶部按钮(只会提取1~3级,且必须按照1、2、3顺序写，不能跳级)","favicon":"图标","-search":"为支持中文搜索插件给删掉","pageview-count":"显示访问量","prism-themes":"代码高亮样式","github-buttons":"github按钮","expandable-chapters-small":"章节栏带有略微缩进，看起来更美观(##开头顶格, * 开头的缩进)","autotheme":"自动换肤，根据时间来换","-lunr":"为支持中文搜索插件给删掉","advanced-emoji":"emoji表情","redirect":"重定向页面 !REDIRECT \"new path\"","anchors":"添加github风格锚点样式(h1~h6前面带有锚点图标)","insert-logo":"插入logo","search-plus":"支持中文搜索","image-captions":"显示图片名称"},"theme":"default","author":"dingfang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"//structure":"配置readme,summary,glossary,languages对应的文件名","variables":{"_pictures":[{"backlink":"docs/process/htop.html#fig6.8.1","level":"6.8","list_caption":"Figure: install","alt":"install","nro":1,"url":"/imgs/htop/install.png","index":1,"caption_template":"Figure: _CAPTION_","label":"install","attributes":{},"skip":false,"key":"6.8.1"},{"backlink":"docs/process/htop.html#fig6.8.2","level":"6.8","list_caption":"Figure: yum-install","alt":"yum-install","nro":2,"url":"/imgs/htop/install-yum.png","index":2,"caption_template":"Figure: _CAPTION_","label":"yum-install","attributes":{},"skip":false,"key":"6.8.2"},{"backlink":"docs/process/htop.html#fig6.8.3","level":"6.8","list_caption":"Figure: htop","alt":"htop","nro":3,"url":"/imgs/htop/htop.png","index":3,"caption_template":"Figure: _CAPTION_","label":"htop","attributes":{},"skip":false,"key":"6.8.3"}]},"title":"linux命令行","language":"zh-hans","links":{"sidebar":{"我的博客":"https://changdingfang.com"}},"gitbook":">=3.0.0","description":"遇见更好的自己","direction":"ltr"},"file":{"path":"docs/text/sort.md","mtime":"2021-08-25T10:31:45.200Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-27T02:09:55.840Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-autotheme/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,560 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>分页查询 · 数据库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="dingfang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-js-sequence-diagram/styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../other/precautions.html" />
+    
+    
+    <link rel="prev" href="../mysql/select.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../img/favicon.jpg'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://changdingfang.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../mysql/user.html">
+            
+                <a href="../mysql/user.html">
+            
+                    
+                    用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../mysql/table.html">
+            
+                <a href="../mysql/table.html">
+            
+                    
+                    字段和表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../mysql/mysql-backup.html">
+            
+                <a href="../mysql/mysql-backup.html">
+            
+                    
+                    备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../mysql/mysql.html">
+            
+                <a href="../mysql/mysql.html">
+            
+                    
+                    事务定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../mysql/mysql-efficiency.html">
+            
+                <a href="../mysql/mysql-efficiency.html">
+            
+                    
+                    30种提升sql查询效率方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../mysql/mysql-forget.html">
+            
+                <a href="../mysql/mysql-forget.html">
+            
+                    
+                    记不住的sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../mysql/select.html">
+            
+                <a href="../mysql/select.html">
+            
+                    
+                    查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SQLServer</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="page_query.html">
+            
+                <a href="page_query.html">
+            
+                    
+                    分页查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../other/precautions.html">
+            
+                <a href="../other/precautions.html">
+            
+                    
+                    注意注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >分页查询</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6848;&#x4E00;"><b></b>&#x65B9;&#x6848;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6848;&#x4E8C;"><b></b>&#x65B9;&#x6848;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6848;&#x4E09;"><b></b>&#x65B9;&#x6848;&#x4E09;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6848;&#x56DB;"><b></b>&#x65B9;&#x6848;&#x56DB;</a></li><li><span class="title-icon "></span><a href="#&#x65B9;&#x6848;&#x4E94;"><b></b>&#x65B9;&#x6848;&#x4E94;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><b></b>&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</a></li></ul></div><a href="#&#x65B9;&#x6848;&#x4E00;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>sqlserver&#x51E0;&#x79CD;&#x5206;&#x9875;&#x67E5;&#x8BE2;</p>
+<h1 id="&#x65B9;&#x6848;&#x4E00;"><a name="&#x65B9;&#x6848;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6848;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6848;&#x4E00;</h1>
+<pre class="language-"><code>SELECT TOP 30 * FROM ARTICLE WHERE ID NOT IN(SELECT TOP 45000 ID FROM ARTICLE ORDER BY YEAR DESC, ID DESC) ORDER BY YEAR DESC,ID DESC;
+</code></pre><h1 id="&#x65B9;&#x6848;&#x4E8C;"><a name="&#x65B9;&#x6848;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6848;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6848;&#x4E8C;</h1>
+<pre class="language-"><code>SELECT * FROM (&#x3000;&#x3000;SELECT TOP 30 * FROM (SELECT TOP 45030 * FROM ARTICLE ORDER BY YEAR DESC, ID DESC) f ORDER BY f.YEAR ASC, f.ID DESC) s ORDER BY s.YEAR DESC,s.ID DESC
+</code></pre><h1 id="&#x65B9;&#x6848;&#x4E09;"><a name="&#x65B9;&#x6848;&#x4E09;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6848;&#x4E09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6848;&#x4E09;</h1>
+<pre class="language-"><code>SELECT * FROM ARTICLE w1, 
+(
+    SELECT TOP 30 ID FROM 
+    (
+        SELECT TOP 50030 ID, YEAR FROM ARTICLE ORDER BY YEAR DESC, ID DESC
+    ) w ORDER BY w.YEAR ASC, w.ID ASC
+) w2 WHERE w1.ID = w2.ID ORDER BY w1.YEAR DESC, w1.ID DESC
+</code></pre><h1 id="&#x65B9;&#x6848;&#x56DB;"><a name="&#x65B9;&#x6848;&#x56DB;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6848;&#x56DB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6848;&#x56DB;</h1>
+<pre class="language-"><code>SELECT * FROM ARTICLE w1 
+    WHERE ID in 
+        (
+            SELECT top 30 ID FROM 
+            (
+                SELECT top 45030 ID, YEAR FROM ARTICLE ORDER BY YEAR DESC, ID DESC
+            ) w ORDER BY w.YEAR ASC, w.ID ASC
+        ) 
+    ORDER BY w1.YEAR DESC, w1.ID DESC
+</code></pre><h1 id="&#x65B9;&#x6848;&#x4E94;"><a name="&#x65B9;&#x6848;&#x4E94;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6848;&#x4E94;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6848;&#x4E94;</h1>
+<pre class="language-"><code>SELECT w2.n, w1.* FROM ARTICLE w1, (&#x3000;&#x3000;SELECT TOP 50030 row_number() OVER (ORDER BY YEAR DESC, ID DESC) n, ID FROM ARTICLE ) w2 WHERE w1.ID = w2.ID AND w2.n &gt; 50000 ORDER BY w2.n ASC
+</code></pre><h1 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h1>
+<p>&#x5728;&#x67E5;&#x8BE2;&#x9875;&#x6570;&#x9760;&#x524D;&#x65F6;, &#x6548;&#x7387;3 &gt; 4 &gt; 5 &gt; 2 &gt; 1, &#x9875;&#x7801;&#x9760;&#x540E;&#x65F6;5 &gt; 4 &gt; 3 &gt; 1 &gt; 2, &#x518D;&#x6839;&#x636E;&#x7528;&#x6237;&#x4E60;&#x60EF;, &#x4E00;&#x822C;&#x7528;&#x6237;&#x7684;&#x68C0;&#x7D22;&#x53EA;&#x770B;&#x6700;&#x524D;&#x9762;&#x51E0;&#x9875;, &#x56E0;&#x6B64;&#x9009;&#x62E9;3 4 5&#x65B9;&#x6848;&#x5747;&#x53EF;, &#x82E5;&#x7EFC;&#x5408;&#x8003;&#x8651;&#x65B9;&#x6848;5&#x662F;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;, &#x4F46;&#x662F;&#x8981;&#x6CE8;&#x610F;SQL2000&#x4E0D;&#x652F;&#x6301; <code>row_number()</code> &#x51FD;&#x6570;  </p>
+<h1 id="&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a name="&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h1>
+<pre class="language-"><code>if exists (select * from dbo.sysobjects where id = object_id(N&apos;[dbo].[sys_Page_v2]&apos;) and OBJECTPROPERTY(id, N&apos;IsProcedure&apos;) = 1)
+drop procedure [dbo].[sys_Page_v2]
+GO
+CREATE PROCEDURE [dbo].[sys_Page_v2]
+@PCount int output,    --&#x603B;&#x9875;&#x6570;&#x8F93;&#x51FA;
+@RCount int output,    --&#x603B;&#x8BB0;&#x5F55;&#x6570;&#x8F93;&#x51FA;
+@sys_Table nvarchar(100),    --&#x67E5;&#x8BE2;&#x8868;&#x540D;
+@sys_Key varchar(50),        --&#x4E3B;&#x952E;
+@sys_Fields nvarchar(500),    --&#x67E5;&#x8BE2;&#x5B57;&#x6BB5;
+@sys_Where nvarchar(3000),    --&#x67E5;&#x8BE2;&#x6761;&#x4EF6;
+@sys_Order nvarchar(100),    --&#x6392;&#x5E8F;&#x5B57;&#x6BB5;
+@sys_Begin int,        --&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;
+@sys_PageIndex int,        --&#x5F53;&#x524D;&#x9875;&#x6570;
+@sys_PageSize int        --&#x9875;&#x5927;&#x5C0F;
+AS
+SET NOCOUNT ON
+SET ANSI_WARNINGS ON
+IF @sys_PageSize &lt; 0 OR @sys_PageIndex &lt; 0
+BEGIN        
+RETURN
+END
+DECLARE @new_where1 NVARCHAR(3000)
+DECLARE @new_order1 NVARCHAR(100)
+DECLARE @new_order2 NVARCHAR(100)
+DECLARE @Sql NVARCHAR(4000)
+DECLARE @SqlCount NVARCHAR(4000)
+DECLARE @Top int
+if(@sys_Begin &lt;=0)
+    set @sys_Begin=0
+else
+    set @sys_Begin=@sys_Begin-1
+IF ISNULL(@sys_Where,&apos;&apos;) = &apos;&apos;
+    SET @new_where1 = &apos; &apos;
+ELSE
+    SET @new_where1 = &apos; WHERE &apos; + @sys_Where
+IF ISNULL(@sys_Order,&apos;&apos;) &lt;&gt; &apos;&apos; 
+BEGIN
+    SET @new_order1 = &apos; ORDER BY &apos; + Replace(@sys_Order,&apos;desc&apos;,&apos;&apos;)
+    SET @new_order1 = Replace(@new_order1,&apos;asc&apos;,&apos;desc&apos;)
+    SET @new_order2 = &apos; ORDER BY &apos; + @sys_Order
+END
+ELSE
+BEGIN
+    SET @new_order1 = &apos; ORDER BY ID DESC&apos;
+    SET @new_order2 = &apos; ORDER BY ID ASC&apos;
+END
+SET @SqlCount = &apos;SELECT @RCount=COUNT(1),@PCount=CEILING((COUNT(1)+0.0)/&apos;
+            + CAST(@sys_PageSize AS NVARCHAR)+&apos;) FROM &apos; + @sys_Table + @new_where1
+EXEC SP_EXECUTESQL @SqlCount,N&apos;@RCount INT OUTPUT,@PCount INT OUTPUT&apos;,
+               @RCount OUTPUT,@PCount OUTPUT
+IF @sys_PageIndex &gt; CEILING((@RCount+0.0)/@sys_PageSize)    --&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x5F53;&#x524D;&#x9875;&#x6570;&#x5927;&#x4E8E;&#x5B9E;&#x9645;&#x603B;&#x9875;&#x6570;,&#x5219;&#x628A;&#x5B9E;&#x9645;&#x603B;&#x9875;&#x6570;&#x8D4B;&#x503C;&#x7ED9;&#x5F53;&#x524D;&#x9875;&#x6570;
+BEGIN
+    SET @sys_PageIndex =  CEILING((@RCount+0.0)/@sys_PageSize)
+END
+set @sql = &apos;select &apos;+ @sys_fields +&apos; from &apos; + @sys_Table + &apos; w1 &apos;
+    + &apos; where &apos;+ @sys_Key +&apos; in (&apos;
+        +&apos;select top &apos;+ ltrim(str(@sys_PageSize)) +&apos; &apos; + @sys_Key + &apos; from &apos;
+        +&apos;(&apos;
+            +&apos;select top &apos; + ltrim(STR(@sys_PageSize * @sys_PageIndex + @sys_Begin)) + &apos; &apos; + @sys_Key + &apos; FROM &apos;
+        + @sys_Table + @new_where1 + @new_order2 
+        +&apos;) w &apos; + @new_order1
+    +&apos;) &apos; + @new_order2
+print(@sql)
+Exec(@sql)
+GO
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; 2020-2021 ChangDingFang all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-25 18:31:45
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../mysql/select.html" class="navigation navigation-prev " aria-label="Previous page: 查询">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../other/precautions.html" class="navigation navigation-next " aria-label="Next page: 注意注意">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"分页查询","level":"3.1","depth":1,"next":{"title":"注意注意","level":"4.1","depth":1,"path":"docs/other/precautions.md","ref":"docs/other/precautions.md","articles":[]},"previous":{"title":"查询","level":"2.7","depth":1,"path":"docs/mysql/select.md","ref":"docs/mysql/select.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","expandable-chapters-small","emphasize","-lunr","-search","search-plus","splitter","tbfed-pagefooter","-sharing","advanced-emoji","github","-github-buttons","favicon","image-captions","multipart","code","hide-element","insert-logo","popup","js-sequence-diagram","-highlight","prism","prism-themes","autotheme","redirect"],"root":"./db","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2020-2021 ChangDingFang","modify_label":"最近一次修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"c++":"cpp","conf":"cpp","shell":"bash","txt":"bash","Dockerfile":"bash"},"ignore":["none"],"//备用主题":["prism-themes/themes/prism-vsc-dark-plus.css","prism-themes/themes/prism-atom-dark.css","// 青蓝色","prism-themes/themes/prism-coldark-cold.css","// 非主流字体","prism-themes/themes/prism-material-oceanic.css"],"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"emphasize":{},"github":{"url":"https://github.com/changdingfang"},"splitter":{},"js-sequence-diagram":{},"popup":{},"multipart":{},"code":{"copyButtons":true},"sitemap-general":{"prefix":"https://changdingfang.com/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"showGoTop":true,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{"shortcut":"../../img/favicon.jpg","bookmark":"../../img/favicon.jpg","appleTouch":"../../img/favicon.jpg"},"prism-themes":{},"//github-buttons":{"buttons":[{"user":"changdingfang","repo":"changdingfang","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"autotheme":{"night":[20,21,22,23,0,1,2,3,4,5],"sepia":[0,1,2,3,4,5,6,7,21,22,23],"white":[8,9,10,11,12,13,14,15,16,17,18,19,20]},"advanced-emoji":{"embedEmojis":false},"sharing":{"weibo":false,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":[]},"redirect":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://changdingfang.com/img/avatar.jpg"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"//plugins: 插件功能说明":{"tbfed-pagefooter":"添加页脚,修改时间，版权等","prism":"代码高亮","emphasize":"给文子加底纹颜色","splitter":"使侧边栏的宽度可以自由调节","-highlight":"去除自带高亮","js-sequence-diagram":"时序图","popup":"点击图片放大","multipart":"分章显示","code":"代码可复制","-sharing":"禁用gitbook默认分享插件","sitemap-general":"生成sitemap","hide-element":"y隐藏一些不想看到的元素，如果published with GitBook","anchor-navigation-ex":"(已经包含anchors功能)添加侧边悬浮导航以及回到顶部按钮(只会提取1~3级,且必须按照1、2、3顺序写，不能跳级)","favicon":"图标","-search":"为支持中文搜索插件给删掉","pageview-count":"显示访问量","prism-themes":"代码高亮样式","github-buttons":"github按钮","expandable-chapters-small":"章节栏带有略微缩进，看起来更美观(##开头顶格, * 开头的缩进)","autotheme":"自动换肤，根据时间来换","-lunr":"为支持中文搜索插件给删掉","advanced-emoji":"emoji表情","redirect":"重定向页面 !REDIRECT \"new path\"","anchors":"添加github风格锚点样式(h1~h6前面带有锚点图标)","insert-logo":"插入logo","search-plus":"支持中文搜索","image-captions":"显示图片名称"},"theme":"default","author":"dingfang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"//structure":"配置readme,summary,glossary,languages对应的文件名","variables":{"_pictures":[]},"title":"数据库","language":"zh-hans","links":{"sidebar":{"我的博客":"https://changdingfang.com"}},"gitbook":">=3.0.0","description":"遇见更好的自己","direction":"ltr"},"file":{"path":"docs/sqlserver/page_query.md","mtime":"2021-08-25T10:31:45.172Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-25T11:56:24.853Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-autotheme/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

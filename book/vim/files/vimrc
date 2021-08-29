@@ -1,0 +1,101 @@
+" ======================================================================
+"  FileName:     .vimrc
+"  Author:       dingfang
+"  CreateDate:   2020-07-11 19:50:00
+"  ModifyAuthor: dingfang
+"  ModifyDate:   2020-12-16 20:38:31
+" ======================================================================
+
+"退出vim后, 使得下次打开vim  把光标定位到上次退出位置
+if has("autocmd") 
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif 
+endif
+
+set number "显示行号
+"set relativenumber "显示当前行号，其他行都是相对于改行的行号。
+"
+"cterm 原生vim设置样式
+"ctermbg 终端vim的背景色
+"ctermfg 终端vim前景色
+set cursorline   "突出显示当前行
+" hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+" set cursorcolumn "突出显示当前列
+" hi CursorColumn cterm=NONE ctermbg=lightblue ctermfg=NONE
+
+"set smartindent
+"set whichwrap+=<,>,h,l    "左右移动,突破行首行尾限制.
+set wrap     "超出窗口宽度的文本行, 会被绕回来显示
+set textwidth=10000 "设置行宽。输入时,达到该字节数自动换行
+set linebreak "遇到指定符合（如空格、连词号和其他标点符号），发生折行。  
+set wrapmargin=2 "折行处于编辑窗口的有边缘空出的字符数。
+
+set clipboard+=unnamed    "共享剪切板
+"set paste  "粘贴保持格式 这样的话c++和c的缩进就会失效
+set pastetoggle=<f5>    "黏贴插入模式, 忽略c++对齐方式, 可以是系统黏贴保持原格式对齐
+
+set incsearch " 搜索时，逐字符高亮。
+set hlsearch   "搜索语法高亮,使搜索的匹配项高亮
+"任何情况都可以使用\c 或 \C  来指定是否区分大小写查找
+"set ignorecase    "查找时忽略大小写
+"set smartcase     "搜索时即区分大小写
+
+set viminfo='1000,<800 "复制行数限制,在a文件里面复制,在b文件里面粘贴, 不过我的好像没有用
+"set fdm=syntax "折叠模式
+
+set autoindent   "c++ 严格对齐自动缩进
+set cindent      "c语言 严格对齐
+set backspace=indent,eol,start "自动缩进后，添加该选项才能使用退格键回退。
+set cinoptions=g0 "在类中 使public 顶格
+"set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
+
+set expandtab " tab转换空格
+set softtabstop=4 "tab键对应的空格数
+set shiftwidth=4 "使用>>、<<或者==时，缩进的空格数。  
+syntax on "语法高亮
+hi comment ctermfg = 4
+"set showmatch "输入括号配对，当输入成对括号时，自动高亮对应的一个括号。
+
+set dictionary +=/usr/include "联想的路径
+set fileencodings=ucs-bom,utf-8,GB18030,gbk
+set encoding=utf-8
+"set history=100     "看历史代码行数
+"set autoread "打开文件监视。如果在编辑过程中文件发生了外部改变，就会发出提示。
+set noswapfile "不创建交换文件。
+set nobackup "不创建备份文件，默认情况下，文件保存时，或额外创建一个备份文件，名字为在原文件名加后缀（~）。
+"set undofile "保留操作历史。默认情况下，操作记录只在本次编辑有效，一旦文件关闭，操作历史就消失了。
+"set autochdir "自动切换工作目录。打开多个工作目录时，默认工作目录是打开的第一个文件的目录。
+
+set ruler "在状态栏显示光标当前位置（行列坐标）
+"set noshowmode "底部显示当前处于的模式状态。ariline已经有更好的提示，这个可以关掉了。 
+set showcmd "底部显示当前键入的命令。
+set cmdheight=2 "命令行高度
+set laststatus=1 "命令行的高度
+
+set completeopt=preview,menu   "代码补全
+
+"set t_Co=256 "颜色种类最多256种
+filetype on
+filetype plugin on "开启自动检测文件类型，加载插件, 自动缩进。 
+filetype plugin indent on " 自动对齐
+set novisualbell "关闭vim出错提示音
+set nocompatible "不与vi兼容，采用vim自己的操作命令
+
+"两种不同的ex命令补全方式1和2选一种使用
+"1
+set wildmode=longest,list
+
+"2
+"set wildmenu
+"set wildmode=full
+
+" 任意使用鼠标，可定位光标
+"set mouse=n
+"鼠标区域选择
+"set selection=exclusive
+"set selectmode=mouse,key
+
+
+" 插件配置(使用该配置需要安装配置中的插件)
+source ~/.vim/my_config/config.vim
+
+

@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>linux环境编程 | 常丁方的博客</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="linux环境编程 | 常丁方的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="没找到页面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://changdingfang.com/404.html">
+<meta property="og:site_name" content="常丁方的博客">
+<meta property="og:description" content="没找到页面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-28T10:25:25.000Z">
+<meta property="article:modified_time" content="2021-08-25T10:31:45.464Z">
+<meta property="article:author" content="常丁方">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="架构">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/favicon.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="/js/js/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/js/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>常丁方</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="gitee" href="https://gitee.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-gitee"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:245292011@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=245292011&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(39)</small></div></li>
+    
+        
+            
+            <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(20)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="笔记<--->cpp">cpp<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->linux">linux<small>(10)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nginx">nginx<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nodejs">nodejs<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->regex">regex<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="学习">学习<small>(12)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="阅读思考">阅读思考<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="其他"><i class="fold iconfont icon-right"></i>其他<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="其他<--->DIY">DIY<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->test">test<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->标签">标签<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="39">
+<input type="hidden" id="yelog_site_word_count" value="47.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/tools/">工具</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/test/">记事本</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/boombeach/">海岛奇兵百科</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://hexo.io/zh-cn/">hexo</a></li>
+            
+            <li><a target="_blank" href="http://wallleap.cn">wallleap</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>books</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmake</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>compiler</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cpp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>DIY</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,svn</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,turn,stun</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nodejs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>test</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思考</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日志</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>架构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标签</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源采集</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>阅读</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 其他 标签 "
+           href="/2020/07/23/other/label/"
+           data-tag="标签"
+           data-author="" >
+            <span class="post-title" title="网页标签">网页标签</span>
+            <span class="post-date" title="2020-07-23 22:48:03">2020/07/23</span>
+        </a>
+        
+        <a id="top" class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_cmd_line/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux命令行">linux命令行</span>
+            <span class="post-date" title="2020-07-12 01:31:51">2020/07/12</span>
+        </a>
+        
+        <a id="top" class="全部文章 其他 DIY "
+           href="/2021/03/20/other/diy_computer/"
+           data-tag="DIY"
+           data-author="" >
+            <span class="post-title" title="DIY-电脑组装">DIY-电脑组装</span>
+            <span class="post-date" title="2021-03-20 07:28:09">2021/03/20</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/08/01/books/av/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="音视频">音视频</span>
+            <span class="post-date" title="2021-08-01 10:16:21">2021/08/01</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/07/08/books/leetcode/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="力扣">力扣</span>
+            <span class="post-date" title="2021-07-08 20:26:33">2021/07/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/05/19/books/grafana/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="Grafana">Grafana</span>
+            <span class="post-date" title="2021-05-19 18:36:36">2021/05/19</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/03/14/books/python/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="python快查">python快查</span>
+            <span class="post-date" title="2021-03-14 14:20:33">2021/03/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/01/28/study/dfsrr/"
+           data-tag="cpp,资源采集"
+           data-author="" >
+            <span class="post-title" title="系统资源采集dfsrr">系统资源采集dfsrr</span>
+            <span class="post-date" title="2021-01-28 19:19:19">2021/01/28</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/13/books/promotion_pn/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="晋升指北">晋升指北</span>
+            <span class="post-date" title="2020-12-13 15:24:33">2020/12/13</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/08/books/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2020-12-08 19:29:53">2020/12/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/04/books/why/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="什么为什么">什么为什么</span>
+            <span class="post-date" title="2020-12-04 19:47:33">2020/12/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/11/30/notes/linux/linux-program/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux环境编程">linux环境编程</span>
+            <span class="post-date" title="2020-11-30 19:12:32">2020/11/30</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/10/14/notes/linux/git/"
+           data-tag="linux,git"
+           data-author="" >
+            <span class="post-title" title="理解和使用git">理解和使用git</span>
+            <span class="post-date" title="2020-10-14 19:50:08">2020/10/14</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/19/notes/linux/stun-turn/"
+           data-tag="linux,turn,stun"
+           data-author="" >
+            <span class="post-title" title="stun-turn服务器搭建">stun-turn服务器搭建</span>
+            <span class="post-date" title="2020-09-19 15:36:36">2020/09/19</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/10/notes/linux/linux-proc/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux下/proc文件夹">linux下/proc文件夹</span>
+            <span class="post-date" title="2020-09-10 22:14:51">2020/09/10</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/effective_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="改善c++编程">改善c++编程</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/new_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="c++11/14/17特性">c++11/14/17特性</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/14/books/modern_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="现代c++">现代c++</span>
+            <span class="post-date" title="2020-08-14 19:47:33">2020/08/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/08/04/study/dflog/"
+           data-tag="cpp,日志"
+           data-author="" >
+            <span class="post-title" title="一个简单的c++日志库">一个简单的c++日志库</span>
+            <span class="post-date" title="2020-08-04 19:38:21">2020/08/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/01/notes/cpp/cpp-compiler/"
+           data-tag="cpp,compiler"
+           data-author="" >
+            <span class="post-title" title="cpp编译器安装">cpp编译器安装</span>
+            <span class="post-date" title="2020-08-01 11:02:23">2020/08/01</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/29/books/vim/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="vim手册">vim手册</span>
+            <span class="post-date" title="2020-07-29 20:18:31">2020/07/29</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-status/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn状态详解">svn状态详解</span>
+            <span class="post-date" title="2020-07-23 22:06:39">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-cmd/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn命令">svn命令</span>
+            <span class="post-date" title="2020-07-23 22:04:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/23/notes/cpp/cmake-base/"
+           data-tag="cmake"
+           data-author="" >
+            <span class="post-title" title="cmake基础">cmake基础</span>
+            <span class="post-date" title="2020-07-23 21:26:14">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/23/books/db/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="数据库">数据库</span>
+            <span class="post-date" title="2020-07-23 19:47:33">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/23/books/windows/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="windows系统">windows系统</span>
+            <span class="post-date" title="2020-07-23 19:15:32">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/21/readAndThink/read/"
+           data-tag="阅读"
+           data-author="" >
+            <span class="post-title" title="阅读">阅读</span>
+            <span class="post-date" title="2020-07-21 21:07:33">2020/07/21</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/12/readAndThink/think/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="思考">思考</span>
+            <span class="post-date" title="2020-07-12 11:02:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 regex "
+           href="/2020/07/12/notes/regex/regex/"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则手册">正则手册</span>
+            <span class="post-date" title="2020-07-12 10:53:58">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nodejs "
+           href="/2020/07/12/notes/nodejs/nodejs/"
+           data-tag="nodejs"
+           data-author="" >
+            <span class="post-title" title="nodejs安装与使用">nodejs安装与使用</span>
+            <span class="post-date" title="2020-07-12 10:34:40">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_sortout/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux整合">linux整合</span>
+            <span class="post-date" title="2020-07-12 10:31:36">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nginx "
+           href="/2020/07/12/notes/nginx/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx配置">nginx配置</span>
+            <span class="post-date" title="2020-07-12 10:26:42">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/ftp/"
+           data-tag="linux,ftp"
+           data-author="" >
+            <span class="post-title" title="ftp服务器搭建">ftp服务器搭建</span>
+            <span class="post-date" title="2020-07-12 10:08:24">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/shell-forget/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="shell记不住">shell记不住</span>
+            <span class="post-date" title="2020-07-12 09:48:21">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp-mutex/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++并发并行">c++并发并行</span>
+            <span class="post-date" title="2020-07-12 09:16:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp_knowledge/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++知识点">c++知识点</span>
+            <span class="post-date" title="2020-07-12 09:05:50">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/12/study/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown语法">markdown语法</span>
+            <span class="post-date" title="2020-07-12 01:11:22">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/11/books/architect/"
+           data-tag="架构,books"
+           data-author="" >
+            <span class="post-title" title="架构师基础">架构师基础</span>
+            <span class="post-date" title="2020-07-11 20:09:33">2020/07/11</span>
+        </a>
+        
+        <a  class="全部文章 其他 test "
+           href="/2020/07/11/other/first-write/"
+           data-tag="test"
+           data-author="" >
+            <span class="post-title" title="first_write">first_write</span>
+            <span class="post-date" title="2020-07-11 19:51:51">2020/07/11</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-notes/linux/linux-program" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">linux环境编程</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">linux</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-08-25 18:31:45'>2020-11-30 19:12</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件属性"><span class="toc-text">文件属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字段属性"><span class="toc-text">字段属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stat获取"><span class="toc-text">stat获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设备ID和i节点号"><span class="toc-text">设备ID和i节点号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件所有权"><span class="toc-text">文件所有权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接数"><span class="toc-text">链接数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件类型及权限"><span class="toc-text">文件类型及权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件大小"><span class="toc-text">文件大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件时间戳"><span class="toc-text">文件时间戳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件属性修改方法"><span class="toc-text">文件属性修改方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件所有权-1"><span class="toc-text">文件所有权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件权限"><span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件链接数"><span class="toc-text">文件链接数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件时间戳-1"><span class="toc-text">文件时间戳</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件属性"><span class="toc-text">文件属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字段属性"><span class="toc-text">字段属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stat获取"><span class="toc-text">stat获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设备ID和i节点号"><span class="toc-text">设备ID和i节点号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件所有权"><span class="toc-text">文件所有权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接数"><span class="toc-text">链接数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件类型及权限"><span class="toc-text">文件类型及权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件大小"><span class="toc-text">文件大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件时间戳"><span class="toc-text">文件时间戳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件属性修改方法"><span class="toc-text">文件属性修改方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件所有权-1"><span class="toc-text">文件所有权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件权限"><span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件链接数"><span class="toc-text">文件链接数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件时间戳-1"><span class="toc-text">文件时间戳</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div></p>
+<h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><p>这里主要通过 <code>stat</code> 结构的成员来了解文件属性，通过各种系统调用方法来获取或修改 <code>stat</code> 包含的属性</p>
+<p><strong>stat结构</strong></p>
+<pre><code class="c">struct stat {
+   dev_t     st_dev;     /* ID of device containing file */
+   ino_t     st_ino;     /* inode number */
+   mode_t    st_mode;    /* protection */
+   nlink_t   st_nlink;   /* number of hard links */
+   uid_t     st_uid;     /* user ID of owner */
+   gid_t     st_gid;     /* group ID of owner */
+   dev_t     st_rdev;    /* device ID (if special file) */
+   off_t     st_size;    /* total size, in bytes */
+   blksize_t st_blksize; /* blocksize for file system I/O */
+   blkcnt_t  st_blocks;  /* number of 512B blocks allocated */
+   time_t    st_atime;   /* time of last access */
+   time_t    st_mtime;   /* time of last modification */
+   time_t    st_ctime;   /* time of last status change */
+};</code></pre>
+<h2 id="字段属性"><a href="#字段属性" class="headerlink" title="字段属性"></a>字段属性</h2><h3 id="stat获取"><a href="#stat获取" class="headerlink" title="stat获取"></a>stat获取</h3><p><code>stat</code> 结构信息可以通过以下方法获取</p>
+<pre><code class="c">#include &lt;sys/stat.h&gt;
+int stat(const char *pathname, struct stat *statbuf);
+int lstat(const char *pathname, struct stat *statbuf);
+int fstat(int fd, struct stat *statbuf);</code></pre>
+<ul>
+<li>stat()返回所命名文件的相关信息</li>
+<li>lstat()与stat()类似，当文件是符号链接时，那么该方法返回的事符号链接自身(stat()返回的是符号指向实际的文件)</li>
+<li>fstat()返回以某个打开的文件描述符所指的文件的相关信息</li>
+</ul>
+<blockquote>
+<p>stat()和lstat()需要有 <code>pathname</code> 父目录的执行权限；fstat()只要给提供有效的文件描述符，就可以调用成功</p>
+</blockquote>
+<p><strong>获取stat结构示例</strong>   </p>
+<pre><code class="c">#include &lt;sys/stat.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(int argc, char **argv)
+{
+    for (int i = 1; i &lt; argc; ++i)
+    {
+        struct stat st;
+        if (stat(argv[i], &amp;st) != 0)
+        {
+            printf(&quot;stat failed!\n&quot;);
+            continue;
+        }
+        printf(&quot;dev:\t%lu\n&quot;, st.st_dev);
+        printf(&quot;ino:\t%lu\n&quot;, st.st_ino);
+        printf(&quot;mode:\t%d\n&quot;, st.st_mode);
+        printf(&quot;nlink:\t%lu\n&quot;, st.st_nlink);
+        printf(&quot;uid:\t%d\n&quot;, st.st_uid);
+        printf(&quot;gid:\t%d\n&quot;, st.st_gid);
+        printf(&quot;rdev:\t%lu\n&quot;, st.st_rdev);
+        printf(&quot;size:\t%lu\n&quot;, st.st_size);
+        printf(&quot;blksize:\t%lu\n&quot;, st.st_blksize);
+        printf(&quot;blocks:\t%lu\n&quot;, st.st_blocks);
+        printf(&quot;atime:\t%ld\n&quot;, st.st_atime);
+        printf(&quot;mtime:\t%ld\n&quot;, st.st_mtime);
+        printf(&quot;ctime:\t%ld\n&quot;, st.st_ctime);
+    }
+
+    return 0;
+}</code></pre>
+<h3 id="设备ID和i节点号"><a href="#设备ID和i节点号" class="headerlink" title="设备ID和i节点号"></a>设备ID和i节点号</h3><p><code>st_dev</code> 字段标识文件所驻留的设备<br><code>st_ino</code> 字段包含了文件i节点号   </p>
+<p>使用上面两者，可在所有文件系统中唯一标识某个文件</p>
+<p>如果针对的设备是i节点，那么 <code>st_rdev</code> 字段包含设备的主、辅ID</p>
+<p>使用宏 <code>major()</code> 和 <code>minor()</code> 可以提取dev_t值的主、辅ID</p>
+<p><strong>major、minor原型</strong></p>
+<pre><code class="c">unsigned int major(dev_t dev);
+unsigned int minor(dev_t dev);</code></pre>
+<h3 id="文件所有权"><a href="#文件所有权" class="headerlink" title="文件所有权"></a>文件所有权</h3><p><code>st_uid</code> 和 <code>st_gid</code> 字段分别标识文件所有者(用户ID)和所属组(组ID)</p>
+<h3 id="链接数"><a href="#链接数" class="headerlink" title="链接数"></a>链接数</h3><p><code>st_nlink</code> 字段包含了指向文件链接数(硬链接)</p>
+<h3 id="文件类型及权限"><a href="#文件类型及权限" class="headerlink" title="文件类型及权限"></a>文件类型及权限</h3><p><code>st_mode</code> 字段内含位掩码，标识文件类型和指定文件权限的双重作用   </p>
+<pre><code>&lt;---文件类型---&gt;&lt;------------------ 权限 -----------------------&gt;
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | U | G | T | R | W | X | R | W | X | R | W | X |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</code></pre><p>可以直接通过 <code>(statbuf.st_mode &amp; S_IFMT) == S_IFREG</code> 判断文件类型，也可以通过下面测试宏来直接检查。</p>
+<p><strong>检查文件类型的宏</strong></p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>测试宏</th>
+<th>文件类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S_IFREG</td>
+<td>S_ISREG()</td>
+<td>普通文件</td>
+</tr>
+<tr>
+<td>S_IFDIR</td>
+<td>S_ISDIR()</td>
+<td>目录</td>
+</tr>
+<tr>
+<td>S_IFCHR</td>
+<td>S_ISCHR()</td>
+<td>字符设备</td>
+</tr>
+<tr>
+<td>S_IFBLK</td>
+<td>S_ISBLK()</td>
+<td>块设备</td>
+</tr>
+<tr>
+<td>S_IFIFO</td>
+<td>S_ISFIFO()</td>
+<td>FIFO或管道</td>
+</tr>
+<tr>
+<td>S_IFSOCK</td>
+<td>S_ISSOCK()</td>
+<td>套接字</td>
+</tr>
+<tr>
+<td>S_IFLNK</td>
+<td>S_ISLNK()</td>
+<td>符号链接</td>
+</tr>
+</tbody></table>
+<p><strong>文件权限</strong></p>
+<p>UGT 分别表示设置用户ID、设置组ID、粘贴位<br>rwx 分别表示读、写、执行权限，上面的9个rwx权限位分别表示所属用户、所属组、其他用户的权限</p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>其他值</th>
+<th>权限位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S_ISUID</td>
+<td>04000</td>
+<td>Set-user-ID</td>
+</tr>
+<tr>
+<td>S_ISGID</td>
+<td>02000</td>
+<td>Set-group-ID</td>
+</tr>
+<tr>
+<td>S_ISVTX</td>
+<td>01000</td>
+<td>Sticky</td>
+</tr>
+<tr>
+<td>S_IRUSR</td>
+<td>04000</td>
+<td>User-read</td>
+</tr>
+<tr>
+<td>S_IWUSR</td>
+<td>02000</td>
+<td>User-write</td>
+</tr>
+<tr>
+<td>S_IXUSR</td>
+<td>01000</td>
+<td>User-execute</td>
+</tr>
+<tr>
+<td>S_IRGRP</td>
+<td>04000</td>
+<td>Group-read</td>
+</tr>
+<tr>
+<td>S_IWGRP</td>
+<td>02000</td>
+<td>Group-write</td>
+</tr>
+<tr>
+<td>S_IXGRP</td>
+<td>01000</td>
+<td>Group-execute</td>
+</tr>
+<tr>
+<td>S_IROTH</td>
+<td>04000</td>
+<td>Other-read</td>
+</tr>
+<tr>
+<td>S_IWOTH</td>
+<td>02000</td>
+<td>Other-write</td>
+</tr>
+<tr>
+<td>S_IXOTH</td>
+<td>01000</td>
+<td>Other-execute</td>
+</tr>
+</tbody></table>
+<p><strong>目录的权限说明</strong></p>
+<ul>
+<li>读权限：可列出目录之下的内容</li>
+<li>写权限：可在目录内创建、删除文件</li>
+<li>可执行权限：可访问目录中的文件</li>
+</ul>
+<h3 id="文件大小"><a href="#文件大小" class="headerlink" title="文件大小"></a>文件大小</h3><p><code>st_size</code> 字段表示文件的字节数，对于符号链接，表示链接所指路径名的长度；对于共享内存对象，表示对象的大小。  </p>
+<p><code>st_blocks</code> 字段表示分配给文件的总块数，块大小为512字节，其中包括了指针块所分配的空间</p>
+<p><code>st_blksize</code> 字段表示文件系统上文件进行I/O操作时的最优块大小；若I/O所采用的块大小小于该值，被视为低效  </p>
+<h3 id="文件时间戳"><a href="#文件时间戳" class="headerlink" title="文件时间戳"></a>文件时间戳</h3><p><code>st_atime</code>: 上次访问时间<br><code>st_mtime</code>: 上次修改时间<br><code>st_ctime</code>: 上次文件状态发生改变的时间(i节点信息被修改就是状态发生改变)</p>
+<h2 id="文件属性修改方法"><a href="#文件属性修改方法" class="headerlink" title="文件属性修改方法"></a>文件属性修改方法</h2><h3 id="文件所有权-1"><a href="#文件所有权-1" class="headerlink" title="文件所有权"></a>文件所有权</h3><pre><code class="c">#include &lt;unistd.h&gt;
+int chown(const char *pathname, uid_t owner, gid_t group);
+int lchown(const char *pathname, uid_t owner, gid_t group);
+int fchown(int fd, uid_t owner, gid_t group);</code></pre>
+<ul>
+<li>chown()改变由pathname参数命名的文件的所有权  </li>
+<li>lchown()同上，区别pathname为符号链接时，则改变链接本身(chown改变的是链接所指文件)</li>
+<li>fchown()同上，传入的参数是文件描述符 </li>
+</ul>
+<p>如果只是打算修改用户ID或组ID之一，只需要将另一个改为-1即可</p>
+<h3 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h3><p><strong>检查文件访问权限</strong>  </p>
+<pre><code class="c">#include &lt;unistd.h&gt;
+int access(const char *pathname, int mode);</code></pre>
+<p>若参数pathname为符号链接，access()将对其解引用<br>mode是常量按位或的位掩码。满足权限则返回0， 否则返回-1   </p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F_OK</td>
+<td>文件存在</td>
+</tr>
+<tr>
+<td>R_OK</td>
+<td>文件可读</td>
+</tr>
+<tr>
+<td>W_OK</td>
+<td>文件可写</td>
+</tr>
+<tr>
+<td>X_OK</td>
+<td>文件可执行</td>
+</tr>
+</tbody></table>
+<pre><code class="c">#include &lt;sys/stat.h&gt;
+int chmod(const char *pathname, mode_t mode);
+int fchmod(int fd, mode_t mode);</code></pre>
+<ul>
+<li>chmod()更改pathname参数所指文件的权限，如果是符号链接，则修改符号链接所指向的文件权限</li>
+<li>fchmod()功能同上，修改的是文件描述符所指的文件权限</li>
+</ul>
+<h3 id="文件链接数"><a href="#文件链接数" class="headerlink" title="文件链接数"></a>文件链接数</h3><p>修改文件连接数的方法有很多，比如创建新文件(<code>create()</code>)、创建硬连接(<code>link()</code>)、删除文件、删除硬连接(<code>unlink</code>)等等，都可以改变文件的链接数目，当链接数目为0的时候，就会把文件彻底删掉</p>
+<p><code>mkdir()</code>, <code>rmdir()</code>是对目录的创建和删除方法，同样也改变目录的链接数(目录没有硬连接)</p>
+<h3 id="文件时间戳-1"><a href="#文件时间戳-1" class="headerlink" title="文件时间戳"></a>文件时间戳</h3><pre><code class="c">#include &lt;sys/stat.h&gt;
+int utime(const char*pathname, const struct utimbuf *buf);
+int utimes(const char*pathname, const struct timeval tv[2]);
+int futimens(int fd, const struct timespec time[2]);
+int lutimes(const char *pathname, const struct timeval tv[2]);</code></pre>
+<ul>
+<li>utime()如果buf为null，将文件上次访问时间和修改时间设置为当前时间，否则按照buf结构的相应字段去修改时间</li>
+<li>utimes()可以用微秒的精度来指定时间值</li>
+<li>futimes()可以使用文件描述符来修改时间(其他功能和utimes一样)</li>
+<li>lutimes()与utimes()的区别就是如果文件是符号链接，lutimes()修改的是符号链接本身</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>UNIX环境高级编程</li>
+<li>Linux/UNIX系统编程手册(上册)</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 245292011@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>linux环境编程</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.8k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="常丁方">常丁方</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-11-30, 19:12:32</p>
+    <p><span class="copy-title">最后更新:</span>2021-08-25, 18:31:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/30/notes/linux/linux-program/" title="linux环境编程">http://changdingfang.com/2020/11/30/notes/linux/linux-program/</a>
+	<!--
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+	-->
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+    <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+	<a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18043145号-2</a>
+	</span>
+	
+	©2020-2021 ChangDingFang
+	</p>
+
+
+
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 建站时间 -->
+	<span style="color: #666;padding-left: 20px;">
+	<i class="fa fa-clock-o" aria-hidden="true"></i>
+	<span id="time" align="center">载入时间中...</span>
+	<script>
+	var now = new Date(); 
+	function createtime() { 
+	    var grt= new Date("07/11/2020 19:50:00");//在此处修改你的建站时间
+	    now.setTime(now.getTime()+250); 
+	    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+	    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+	    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+	    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+	    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+	    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+	    document.getElementById("time").innerHTML = "小站已经苟活 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+setInterval("createtime()",250);
+</script>
+<span style="padding-left: 20px; color:#666;"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></span>
+	<!-- 站长统计 -->
+	<script type="text/javascript">
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1279142429'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279142429%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</span>
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+	
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 底部显示 -->
+	<link rel="stylesheet" href="/css/github-badge.css">
+	<div style="text-align:center; padding-top: 20px;">
+	<div class="github-badge">
+	<a rel="license" href="https://hexo.io/" target="_blank" title="由Hexo强力驱动">
+	<span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+	</div>
+
+	<!-- 
+	<div class="github-badge">
+	<a rel="license" href="https://github.io/" target="_blank" title="静态网页托管于Github">
+	<span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a>
+	</div>
+	-->
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="https://coding.net/" target="_blank" title="静态网页托管于CODING">
+	<span class="badge-subject"><i class="fa fa-heart" aria-hidden="true"></i> Hosted</span>
+	<span class="badge-value bg-gray">CODING</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+	<span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span><span class="badge-value bg-cdn">Github&jsDelivr</span></a>
+	</div>
+	<div class="github-badge">
+	<a rel="license" href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" title="站点使用 Sakura 主题，作者：Mashiro & Hojun">
+	<span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span><span class="badge-value bg-theme">3-blog</span></a>
+	</div>
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+	<span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
+	<span  class="site_uv badge-value bg-orange"></span>
+	</div>
+
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
+	<span class="site_pv badge-value bg-brightgreen"></span>
+	</div>
+
+	</div>  
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+fetch('https://v1.hitokoto.cn/?c=h')
+.then(function (res){
+		return res.json();
+		})
+.then(function (data) {
+		var hitokoto = document.getElementById('hitokoto');
+		var afrom = document.getElementById('afrom');
+		hitokoto.innerText = data.hitokoto;
+		f = data.from;
+		f_w = data.from_who;
+		afrom.innerText =  '——【';
+		if (!(f == null || f == 'null'))
+		{
+			afrom.innerText += f;
+		}
+		if (!(f_w == null || f_w == 'null'))
+		{
+			if (f == null || f == 'null')
+			{
+				afrom.innerText += f_w;
+			}
+			else
+			{
+				afrom.innerText += ' ' + f_w;
+			}
+		}
+		if ((f == null || f == 'null') && (f_w == null || f_w == 'null'))
+		{
+			afrom.innerText += '佚名';
+		}
+		afrom.innerText += '】';
+		})
+.catch(function (err) {
+		console.error(err);
+		})
+</script>
+
+
+<style>
+.cdf {
+position: relative;
+margin: 20px auto;
+width: 4em;
+height: 48px;
+		line-height: 48px;
+		text-align: center;
+color: #eee;
+	   font-size: 48px;
+	   font-weight: 600;
+	   font-family:Helvetica;
+}
+.cdf::after {
+content: attr(data-spotlight);
+color: transparent;
+position: absolute;
+left: 0;top: 0;
+display: block;
+width: 100%;
+height: 100%;
+		line-height: 100%;
+		text-align: center;
+margin: auto;
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+animation: spotlight 10s infinite;
+		   background-image: linear-gradient(to right, red, skyblue, green,black);
+		   background-size: 150%;
+		   background-position: center center;
+		   -webkit-background-clip: text;
+		   background-clip: text;
+}
+@keyframes spotlight{
+	0%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+	50%{
+		-webkit-clip-path: ellipse(32px 32px at 100% 50%);
+		clip-path: ellipse(32px 32px at 100% 50%);
+	}
+	100%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+}
+</style>
+
+
+
+
+
+
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 547px;
+    }
+    .nav.fullscreen {
+        margin-left: -547px;
+    }
+    .nav-left {
+        width: 125px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 497px;
+        }
+        .nav.fullscreen {
+            margin-left: -497px;
+        }
+        .nav-left {
+            width: 105px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 497px;
+            margin-left: -497px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #f36c21;
+    }
+    
+    
+    .nav-right nav a.hover > span{
+        color: #7bbfea !important;
+    }
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+background: url("/img/article-list-background/2.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 底部音乐 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+.aplayer .aplayer-lrc {
+height: 35px;
+}
+.aplayer .aplayer-lrc p{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current{
+color: #FF1493;
+}
+.aplayer.aplayer-narrow .aplayer-body{
+left: -66px !important;
+}
+.aplayer.aplayer-fixed .aplayer-lrc {
+display: none;
+}
+.aplayer .aplayer-lrc.aplayer-lrc-hide {
+display:none !important;
+}
+.aplayer.aplayer-fixed .lrc-show {
+display: block;
+background: rgba(255, 255, 255, 0.8);
+}
+</style>
+<div class="aplayer"
+data-id="5142495258"
+data-server="netease"
+data-type="playlist"
+data-fixed="true"
+data-autoplay="false"
+data-loop="all"
+data-order="random"
+data-preload="auto"
+data-volume="0.7"
+data-mutex="false"
+>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<script>
+$(function(){
+		$('body').on('click', '.aplayer', function(){
+			if($('.aplayer-button').hasClass('aplayer-play')) {
+			$('.aplayer-lrc').removeClass('lrc-show');
+			} else {
+			$('.aplayer-lrc').addClass('lrc-show');
+			}
+			})
+		});
+</script>
+
+
+
+<!-- // 文字
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+-->
+
+<!-- // 爱心
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+-->
+
+<!-- // 按键屏蔽 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js"></script>
+-->
+
+
+</html>

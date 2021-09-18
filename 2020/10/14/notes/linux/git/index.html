@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>理解和使用git | 常丁方的博客</title>
+  <meta name="keywords" content=" linux , git ">
+  <meta name="description" content="理解和使用git | 常丁方的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="没找到页面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://changdingfang.com/404.html">
+<meta property="og:site_name" content="常丁方的博客">
+<meta property="og:description" content="没找到页面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-28T10:25:25.000Z">
+<meta property="article:modified_time" content="2021-08-25T10:31:45.464Z">
+<meta property="article:author" content="常丁方">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="架构">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/favicon.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="/js/js/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/js/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>常丁方</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="gitee" href="https://gitee.com/changdingfang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-gitee"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:245292011@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=245292011&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(39)</small></div></li>
+    
+        
+            
+            <li><div data-rel="笔记"><i class="fold iconfont icon-right"></i>笔记<small>(20)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="笔记<--->cpp">cpp<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->linux">linux<small>(10)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nginx">nginx<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->nodejs">nodejs<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="笔记<--->regex">regex<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="学习">学习<small>(12)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="阅读思考">阅读思考<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="其他"><i class="fold iconfont icon-right"></i>其他<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="其他<--->DIY">DIY<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->test">test<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="其他<--->标签">标签<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="39">
+<input type="hidden" id="yelog_site_word_count" value="47.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/tools/">工具</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/test/">记事本</a></li>
+            
+            <li><a target="_blank" href="https://changdingfang.com/book/boombeach/">海岛奇兵百科</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+            <li><a target="_blank" href="https://hexo.io/zh-cn/">hexo</a></li>
+            
+            <li><a target="_blank" href="http://wallleap.cn">wallleap</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>books</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmake</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>compiler</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cpp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>DIY</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,svn</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux,turn,stun</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nodejs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>test</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思考</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日志</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>架构</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标签</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资源采集</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>阅读</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 其他 标签 "
+           href="/2020/07/23/other/label/"
+           data-tag="标签"
+           data-author="" >
+            <span class="post-title" title="网页标签">网页标签</span>
+            <span class="post-date" title="2020-07-23 22:48:03">2020/07/23</span>
+        </a>
+        
+        <a id="top" class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_cmd_line/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux命令行">linux命令行</span>
+            <span class="post-date" title="2020-07-12 01:31:51">2020/07/12</span>
+        </a>
+        
+        <a id="top" class="全部文章 其他 DIY "
+           href="/2021/03/20/other/diy_computer/"
+           data-tag="DIY"
+           data-author="" >
+            <span class="post-title" title="DIY-电脑组装">DIY-电脑组装</span>
+            <span class="post-date" title="2021-03-20 07:28:09">2021/03/20</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/08/01/books/av/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="音视频">音视频</span>
+            <span class="post-date" title="2021-08-01 10:16:21">2021/08/01</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/07/08/books/leetcode/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="力扣">力扣</span>
+            <span class="post-date" title="2021-07-08 20:26:33">2021/07/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/05/19/books/grafana/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="Grafana">Grafana</span>
+            <span class="post-date" title="2021-05-19 18:36:36">2021/05/19</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/03/14/books/python/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="python快查">python快查</span>
+            <span class="post-date" title="2021-03-14 14:20:33">2021/03/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2021/01/28/study/dfsrr/"
+           data-tag="cpp,资源采集"
+           data-author="" >
+            <span class="post-title" title="系统资源采集dfsrr">系统资源采集dfsrr</span>
+            <span class="post-date" title="2021-01-28 19:19:19">2021/01/28</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/13/books/promotion_pn/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="晋升指北">晋升指北</span>
+            <span class="post-date" title="2020-12-13 15:24:33">2020/12/13</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/08/books/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2020-12-08 19:29:53">2020/12/08</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/12/04/books/why/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="什么为什么">什么为什么</span>
+            <span class="post-date" title="2020-12-04 19:47:33">2020/12/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/11/30/notes/linux/linux-program/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux环境编程">linux环境编程</span>
+            <span class="post-date" title="2020-11-30 19:12:32">2020/11/30</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/10/14/notes/linux/git/"
+           data-tag="linux,git"
+           data-author="" >
+            <span class="post-title" title="理解和使用git">理解和使用git</span>
+            <span class="post-date" title="2020-10-14 19:50:08">2020/10/14</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/19/notes/linux/stun-turn/"
+           data-tag="linux,turn,stun"
+           data-author="" >
+            <span class="post-title" title="stun-turn服务器搭建">stun-turn服务器搭建</span>
+            <span class="post-date" title="2020-09-19 15:36:36">2020/09/19</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/09/10/notes/linux/linux-proc/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux下/proc文件夹">linux下/proc文件夹</span>
+            <span class="post-date" title="2020-09-10 22:14:51">2020/09/10</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/effective_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="改善c++编程">改善c++编程</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/25/books/new_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="c++11/14/17特性">c++11/14/17特性</span>
+            <span class="post-date" title="2020-08-25 19:06:33">2020/08/25</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/14/books/modern_cpp/"
+           data-tag="books,cpp"
+           data-author="" >
+            <span class="post-title" title="现代c++">现代c++</span>
+            <span class="post-date" title="2020-08-14 19:47:33">2020/08/14</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/08/04/study/dflog/"
+           data-tag="cpp,日志"
+           data-author="" >
+            <span class="post-title" title="一个简单的c++日志库">一个简单的c++日志库</span>
+            <span class="post-date" title="2020-08-04 19:38:21">2020/08/04</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/08/01/notes/cpp/cpp-compiler/"
+           data-tag="cpp,compiler"
+           data-author="" >
+            <span class="post-title" title="cpp编译器安装">cpp编译器安装</span>
+            <span class="post-date" title="2020-08-01 11:02:23">2020/08/01</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/29/books/vim/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="vim手册">vim手册</span>
+            <span class="post-date" title="2020-07-29 20:18:31">2020/07/29</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-status/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn状态详解">svn状态详解</span>
+            <span class="post-date" title="2020-07-23 22:06:39">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/23/notes/linux/svn-cmd/"
+           data-tag="linux,svn"
+           data-author="" >
+            <span class="post-title" title="svn命令">svn命令</span>
+            <span class="post-date" title="2020-07-23 22:04:05">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/23/notes/cpp/cmake-base/"
+           data-tag="cmake"
+           data-author="" >
+            <span class="post-title" title="cmake基础">cmake基础</span>
+            <span class="post-date" title="2020-07-23 21:26:14">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/23/books/db/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="数据库">数据库</span>
+            <span class="post-date" title="2020-07-23 19:47:33">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 其他 "
+           href="/2020/07/23/books/windows/"
+           data-tag="books"
+           data-author="" >
+            <span class="post-title" title="windows系统">windows系统</span>
+            <span class="post-date" title="2020-07-23 19:15:32">2020/07/23</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/21/readAndThink/read/"
+           data-tag="阅读"
+           data-author="" >
+            <span class="post-title" title="阅读">阅读</span>
+            <span class="post-date" title="2020-07-21 21:07:33">2020/07/21</span>
+        </a>
+        
+        <a  class="全部文章 阅读思考 "
+           href="/2020/07/12/readAndThink/think/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="思考">思考</span>
+            <span class="post-date" title="2020-07-12 11:02:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 regex "
+           href="/2020/07/12/notes/regex/regex/"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则手册">正则手册</span>
+            <span class="post-date" title="2020-07-12 10:53:58">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nodejs "
+           href="/2020/07/12/notes/nodejs/nodejs/"
+           data-tag="nodejs"
+           data-author="" >
+            <span class="post-title" title="nodejs安装与使用">nodejs安装与使用</span>
+            <span class="post-date" title="2020-07-12 10:34:40">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/books/linux_sortout/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="linux整合">linux整合</span>
+            <span class="post-date" title="2020-07-12 10:31:36">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 nginx "
+           href="/2020/07/12/notes/nginx/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx配置">nginx配置</span>
+            <span class="post-date" title="2020-07-12 10:26:42">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/ftp/"
+           data-tag="linux,ftp"
+           data-author="" >
+            <span class="post-title" title="ftp服务器搭建">ftp服务器搭建</span>
+            <span class="post-date" title="2020-07-12 10:08:24">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 linux "
+           href="/2020/07/12/notes/linux/shell-forget/"
+           data-tag="shell"
+           data-author="" >
+            <span class="post-title" title="shell记不住">shell记不住</span>
+            <span class="post-date" title="2020-07-12 09:48:21">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp-mutex/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++并发并行">c++并发并行</span>
+            <span class="post-date" title="2020-07-12 09:16:14">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 笔记 cpp "
+           href="/2020/07/12/notes/cpp/cpp_knowledge/"
+           data-tag="cpp"
+           data-author="" >
+            <span class="post-title" title="c++知识点">c++知识点</span>
+            <span class="post-date" title="2020-07-12 09:05:50">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/12/study/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown语法">markdown语法</span>
+            <span class="post-date" title="2020-07-12 01:11:22">2020/07/12</span>
+        </a>
+        
+        <a  class="全部文章 学习 "
+           href="/2020/07/11/books/architect/"
+           data-tag="架构,books"
+           data-author="" >
+            <span class="post-title" title="架构师基础">架构师基础</span>
+            <span class="post-date" title="2020-07-11 20:09:33">2020/07/11</span>
+        </a>
+        
+        <a  class="全部文章 其他 test "
+           href="/2020/07/11/other/first-write/"
+           data-tag="test"
+           data-author="" >
+            <span class="post-title" title="first_write">first_write</span>
+            <span class="post-date" title="2020-07-11 19:51:51">2020/07/11</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-notes/linux/git" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">理解和使用git</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;linux">linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">linux</a>
+            
+            <a class="color4">git</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2021-08-25 18:31:45'>2020-10-14 19:50</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git工作模型"><span class="toc-text">git工作模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新建"><span class="toc-text">新建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工作区与暂存区交互-索引"><span class="toc-text">工作区与暂存区交互(索引)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#暂存区与本地仓库交互"><span class="toc-text">暂存区与本地仓库交互</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#branch"><span class="toc-text">branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout"><span class="toc-text">checkout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#merge"><span class="toc-text">merge</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标签"><span class="toc-text">标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#远端"><span class="toc-text">远端</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信息"><span class="toc-text">信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#status"><span class="toc-text">status</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#log"><span class="toc-text">log</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法-1"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项-1"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用示例"><span class="toc-text">使用示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#blame"><span class="toc-text">blame</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#diff"><span class="toc-text">diff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#show"><span class="toc-text">show</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#临时存储代码"><span class="toc-text">临时存储代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#增加"><span class="toc-text">增加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看"><span class="toc-text">查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#撤销"><span class="toc-text">撤销</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git工作模型"><span class="toc-text">git工作模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新建"><span class="toc-text">新建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#工作区与暂存区交互-索引"><span class="toc-text">工作区与暂存区交互(索引)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#暂存区与本地仓库交互"><span class="toc-text">暂存区与本地仓库交互</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分支"><span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#branch"><span class="toc-text">branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout"><span class="toc-text">checkout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#merge"><span class="toc-text">merge</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标签"><span class="toc-text">标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#远端"><span class="toc-text">远端</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#信息"><span class="toc-text">信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#status"><span class="toc-text">status</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#log"><span class="toc-text">log</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法-1"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项-1"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用示例"><span class="toc-text">使用示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#blame"><span class="toc-text">blame</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#diff"><span class="toc-text">diff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#show"><span class="toc-text">show</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#临时存储代码"><span class="toc-text">临时存储代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#增加"><span class="toc-text">增加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看"><span class="toc-text">查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#撤销"><span class="toc-text">撤销</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></div></p>
+<h1 id="git工作模型"><a href="#git工作模型" class="headerlink" title="git工作模型"></a>git工作模型</h1><p><img src="/blog_imgs/notes/linux/git_module.png" alt=""></p>
+<h1 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h1><p>在当前目录新建一个Git代码库</p>
+<pre><code class="shell">$ git init</code></pre>
+<p>新建一个目录，将其初始化为Git代码库</p>
+<pre><code class="shell">$ git init [project-name]</code></pre>
+<p>下载一个项目和它的整个代码历史</p>
+<pre><code class="shell">$ git clone [url]</code></pre>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>生成key,用于git配置免密push</p>
+<pre><code class="shell">$ ssh-keygen -t rsa -C &quot;xxx@xx.com&quot;</code></pre>
+<p>显示当前配置列表</p>
+<pre><code class="shell">$ git config --list</code></pre>
+<p>设置提交代码时的用户信息</p>
+<pre><code class="shell">$ git config --global user.name &quot;xxx&quot;
+$ git config --global user.email &quot;xxx@xx.com&quot;</code></pre>
+<p>设置当前仓库用户信息</p>
+<pre><code class="shell">$ git config --local user.name &quot;xxx&quot;
+$ git config --local  user.email &quot;xxx@xx.com&quot;</code></pre>
+<h1 id="工作区与暂存区交互-索引"><a href="#工作区与暂存区交互-索引" class="headerlink" title="工作区与暂存区交互(索引)"></a>工作区与暂存区交互(索引)</h1><p>添加到暂存区</p>
+<pre><code class="shell">$ git add [文件或目录] ...</code></pre>
+<p>添加前需要确认</p>
+<pre><code class="shell">$ git add -p</code></pre>
+<p>删除工作区文件, 且将删除放入暂存区</p>
+<pre><code class="shell">$ git rm [文件或目录] ...</code></pre>
+<p>停止追踪指定文件，但该文件会保留在工作区</p>
+<pre><code class="shell">$ git rm --cached [文件]</code></pre>
+<p>移动文件或目录(改名)</p>
+<pre><code class="shell">$ git mv [旧名] [新名]</code></pre>
+<h1 id="暂存区与本地仓库交互"><a href="#暂存区与本地仓库交互" class="headerlink" title="暂存区与本地仓库交互"></a>暂存区与本地仓库交互</h1><p>提交到仓库</p>
+<pre><code class="shell">$ git commit [文件或目录] -m [注释评论]</code></pre>
+<p>提交时显示diff信息</p>
+<pre><code class="shell">$ git commit -v</code></pre>
+<p>使用一次新的commit, 替代上一次提交<br>如果代码没有变化, 则用来改写上一次commit的提交信息   </p>
+<pre><code class="shell">$ git commit --amend -m [注释评论]</code></pre>
+<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code class="shell">$ git branch [选项] [参数]</code></pre>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><ul>
+<li>-r<br>  列出所有远端分支   </li>
+<li>-a<br>  列出所有本地分支和远端分支   </li>
+<li>-d [本地分支]<br>  删除分支   </li>
+<li>–track [本地分支]  [远端分支]<br>  新建一个分支, 与指定的远程分支建立追踪关系   </li>
+<li>–set-upstream [本地分支]  [远端分支]<br>  建立追踪关系, 在现有分支和指定的远端分支之间   </li>
+<li>-vv<br>  查看本地分支和远端分支的关联信息  </li>
+</ul>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>分支名<br>  要列出或新建的分支名  </li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>删除远端分支  </p>
+<pre><code class="shell">$ git push origin --delete [远端分支]</code></pre>
+<p>或</p>
+<pre><code class="shell">$ git branch -dr [remote/branch]</code></pre>
+<h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><p>切换到指定分支, 并更新工作区</p>
+<pre><code class="shell">$ git checkout [分支名]</code></pre>
+<p>切换到上一个分支</p>
+<pre><code class="shell">$ git checkout -</code></pre>
+<h2 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h2><p>合并指定分支到当前分支</p>
+<pre><code class="shell">$ git merge [本地分支]</code></pre>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>新建一个tag在当前commit</p>
+<pre><code class="shell">$ git tag [tag]</code></pre>
+<p>新建一个tag在指定commit</p>
+<pre><code class="shell">$ git tag [tag] [commit]</code></pre>
+<p>删除本地tag</p>
+<pre><code class="shell">$ git tag -d [tag]</code></pre>
+<p>查看tag信息</p>
+<pre><code class="shell">$ git show [tag]</code></pre>
+<p>删除远端tag   </p>
+<pre><code class="shell">$ git push origin :refs/tags/[tag名]</code></pre>
+<p>提交指定tag</p>
+<pre><code class="shell">$ git push [remote] [tag]</code></pre>
+<p>提交所有tag</p>
+<pre><code class="shell">$ git push [remote] --tags</code></pre>
+<h1 id="远端"><a href="#远端" class="headerlink" title="远端"></a>远端</h1><p>本地仓库关联/取消关联远端仓库</p>
+<pre><code class="shell">git remote add origin git@github.com:changdingfang/test.git
+git remote remove origin</code></pre>
+<p>下载远端仓库的所有变动  </p>
+<pre><code class="shell">$ git fetch [remote]</code></pre>
+<p>显示远端仓库</p>
+<pre><code class="shell">$ git remote -v</code></pre>
+<p>显示远端仓库的信息</p>
+<pre><code class="shell">$ git remote show [remote]</code></pre>
+<p>增加一个新的仓库并命名</p>
+<pre><code class="shell">$ git remote add [名字] [url]</code></pre>
+<p>取回远程仓库的变化，并与本地分支合并</p>
+<pre><code class="shell">$ git pull [remote] [branch]</code></pre>
+<p>拉取远程仓库时，忽略不相关历史的</p>
+<pre><code class="shell">$ git pull [remote] [branch] --allow-unrelated-histories</code></pre>
+<p>上传本地指定分支到远程仓库</p>
+<pre><code class="shell">$ git push [remote] [branch]</code></pre>
+<p>强行推送当前分支到远程仓库, 即使有冲突(尽量不要这样做)</p>
+<pre><code class="shell">$ git push [remote] --force</code></pre>
+<p>推送所有分支到远程仓库</p>
+<pre><code class="shell">$ git push [remote] --all</code></pre>
+<h1 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h1><h2 id="status"><a href="#status" class="headerlink" title="status"></a>status</h2><p>显示有变更的文件</p>
+<pre><code class="shell">$ git status</code></pre>
+<h2 id="log"><a href="#log" class="headerlink" title="log"></a>log</h2><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><pre><code class="shell">$ git log [选项]</code></pre>
+<h3 id="选项-1"><a href="#选项-1" class="headerlink" title="选项"></a>选项</h3><ul>
+<li><n>   
+  显示过去n次的提交提示  </li>
+<li>-S [keyword]<br>  根据关键字搜索提交历史   </li>
+<li>–stat<br>  显示每次提交的文件修改统计信息。   </li>
+<li>–shortstat<br>  只显示 –stat 中最后的行数修改添加移除统计。   </li>
+<li>–name-only<br>  仅在提交信息后显示已修改的文件清单。   </li>
+<li>–name-status<br>  显示新增、修改、删除的文件清单。</li>
+<li>–abbrev-commit<br>  仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。   </li>
+<li>–relative-date<br>  使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。  </li>
+<li>–graph<br>  在日志旁以 ASCII 图形显示分支与合并历史。   </li>
+<li>–pretty<br>  使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。   </li>
+<li>–oneline<br>  –pretty=oneline –abbrev-commit 合用的简写。</li>
+</ul>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>显示某个commit之后的所有变动, 每个commit占据一行</p>
+<pre><code class="shell">$ git log [tag] HEAD --pretty=format:%s</code></pre>
+<p>显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件</p>
+<pre><code class="shell">$ git log [tag] HEAD --grep feature</code></pre>
+<p>显示某个文件的版本历史，包括文件改名</p>
+<pre><code>$ git log --follow [file]
+$ git whatchanged [file]</code></pre><p>显示指定文件相关的每一次diff</p>
+<pre><code class="shell">$ git log -p [file]</code></pre>
+<p>显示过去5次提交, 且仅显示简略信息</p>
+<pre><code class="shell">$ git log -5 --pretty --oneline</code></pre>
+<p>显示所有提交过的用户，按提交次数排序</p>
+<pre><code class="shell">$ git shortlog -sn</code></pre>
+<h2 id="blame"><a href="#blame" class="headerlink" title="blame"></a>blame</h2><p>显示指定文件是什么人在什么时间修改过</p>
+<pre><code class="shell">$ git blame [file]</code></pre>
+<h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><p>显示暂存区和工作区的差异</p>
+<pre><code class="shell">$ git diff</code></pre>
+<p>显示暂存区和上一个commit的差异</p>
+<pre><code class="shell">$ git diff --cached [file]</code></pre>
+<p>显示工作区与当前分支最新commit之间的差异</p>
+<pre><code class="shell">$ git diff HEAD</code></pre>
+<p>显示两次提交之间的差异</p>
+<pre><code class="shell">$ git diff [first-branch]...[second-branch]</code></pre>
+<p>显示今天你写了多少行代码</p>
+<pre><code class="shell">$ git diff --shortstat &quot;@{0 day ago}&quot;</code></pre>
+<h2 id="show"><a href="#show" class="headerlink" title="show"></a>show</h2><p>显示某次提交的元数据和内容变化</p>
+<pre><code class="shell">$ git show [commit]</code></pre>
+<p>显示某次提交发生变化的文件</p>
+<pre><code class="shell">$ git show --name-only [commit]</code></pre>
+<p>显示某次提交时，某个文件的内容</p>
+<pre><code class="shell">$ git show [commit]:[filename]</code></pre>
+<p>显示当前分支的最近几次提交</p>
+<pre><code class="shell">$ git reflog</code></pre>
+<h1 id="临时存储代码"><a href="#临时存储代码" class="headerlink" title="临时存储代码"></a>临时存储代码</h1><h2 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h2><p>存储代码，压入代码堆栈</p>
+<pre><code class="shell">$ git stash</code></pre>
+<p>或(带有注释消息)</p>
+<pre><code class="shell">$ git stash save &quot;message&quot;</code></pre>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>查看现在有点记录</p>
+<pre><code class="shell">$ git stash list</code></pre>
+<p>检查不一样的地方</p>
+<pre><code class="shell">$ git stash show</code></pre>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>弹出栈顶的代码</p>
+<pre><code class="shell">$ git stash pop</code></pre>
+<p>删除指定</p>
+<pre><code class="shell">$ git stash drop stash@{1}</code></pre>
+<p>删除所有</p>
+<pre><code class="shell">$ git stash clear</code></pre>
+<h1 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h1><p>恢复本地仓库的指定文件或目录到工作区(默认最新的一次提交)</p>
+<pre><code class="shell">$ git checkout [文件或目录] ...</code></pre>
+<p>恢复本地仓库某个commit的指定文件到暂存区和工作区</p>
+<pre><code class="shell">$ git checkout [commit] [file]</code></pre>
+<p>重置暂存区的指定文件, 与上一次commit保持一致，但工作区不变</p>
+<pre><code class="shell">$ git reset [file]</code></pre>
+<p>重置暂存区与工作区, 与上一次commit保持一致</p>
+<pre><code class="shell">$ git reset --hard</code></pre>
+<p>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</p>
+<pre><code class="shell">$ git reset [commit]</code></pre>
+<p>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
+<pre><code class="shell">$ git reset --hard [commit]</code></pre>
+<p>重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
+<pre><code class="shell">$ git reset --keep [commit]</code></pre>
+<p>新建一个commit，用来撤销指定commit<br>后者的所有变化都将被前者抵消，并且应用到当前分支   </p>
+<pre><code class="shell">$ git revert [commit]</code></pre>
+<p>暂时将未提交的变化移除，稍后再移入</p>
+<pre><code class="shell">$ git stash
+$ git stash pop</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">常用git命令清单</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2" target="_blank" rel="noopener">Git 基础 - 查看提交历史</a></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 245292011@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>理解和使用git</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1.8k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="常丁方">常丁方</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-10-14, 19:50:08</p>
+    <p><span class="copy-title">最后更新:</span>2021-08-25, 18:31:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/10/14/notes/linux/git/" title="理解和使用git">http://changdingfang.com/2020/10/14/notes/linux/git/</a>
+	<!--
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+	-->
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+    <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+	<a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备18043145号-2</a>
+	</span>
+	
+	©2020-2021 ChangDingFang
+	</p>
+
+
+
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 建站时间 -->
+	<span style="color: #666;padding-left: 20px;">
+	<i class="fa fa-clock-o" aria-hidden="true"></i>
+	<span id="time" align="center">载入时间中...</span>
+	<script>
+	var now = new Date(); 
+	function createtime() { 
+	    var grt= new Date("07/11/2020 19:50:00");//在此处修改你的建站时间
+	    now.setTime(now.getTime()+250); 
+	    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+	    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+	    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+	    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+	    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+	    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+	    document.getElementById("time").innerHTML = "小站已经苟活 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+setInterval("createtime()",250);
+</script>
+<span style="padding-left: 20px; color:#666;"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></span>
+	<!-- 站长统计 -->
+	<script type="text/javascript">
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1279142429'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279142429%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</span>
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+	
+
+	<!-- - - - - - - - - - - - - - - - - - - -->
+	<!-- 底部显示 -->
+	<link rel="stylesheet" href="/css/github-badge.css">
+	<div style="text-align:center; padding-top: 20px;">
+	<div class="github-badge">
+	<a rel="license" href="https://hexo.io/" target="_blank" title="由Hexo强力驱动">
+	<span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+	</div>
+
+	<!-- 
+	<div class="github-badge">
+	<a rel="license" href="https://github.io/" target="_blank" title="静态网页托管于Github">
+	<span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a>
+	</div>
+	-->
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="https://coding.net/" target="_blank" title="静态网页托管于CODING">
+	<span class="badge-subject"><i class="fa fa-heart" aria-hidden="true"></i> Hosted</span>
+	<span class="badge-value bg-gray">CODING</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+	<span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span><span class="badge-value bg-cdn">Github&jsDelivr</span></a>
+	</div>
+	<div class="github-badge">
+	<a rel="license" href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" title="站点使用 Sakura 主题，作者：Mashiro & Hojun">
+	<span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span><span class="badge-value bg-theme">3-blog</span></a>
+	</div>
+
+	<!--
+	<div class="github-badge">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+	<span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+	</div>
+	-->
+	
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
+	<span  class="site_uv badge-value bg-orange"></span>
+	</div>
+
+	<div class="github-badge">
+	<span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
+	<span class="site_pv badge-value bg-brightgreen"></span>
+	</div>
+
+	</div>  
+	<!-- - - - - - - - - - - - - - - - - - - -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+fetch('https://v1.hitokoto.cn/?c=h')
+.then(function (res){
+		return res.json();
+		})
+.then(function (data) {
+		var hitokoto = document.getElementById('hitokoto');
+		var afrom = document.getElementById('afrom');
+		hitokoto.innerText = data.hitokoto;
+		f = data.from;
+		f_w = data.from_who;
+		afrom.innerText =  '——【';
+		if (!(f == null || f == 'null'))
+		{
+			afrom.innerText += f;
+		}
+		if (!(f_w == null || f_w == 'null'))
+		{
+			if (f == null || f == 'null')
+			{
+				afrom.innerText += f_w;
+			}
+			else
+			{
+				afrom.innerText += ' ' + f_w;
+			}
+		}
+		if ((f == null || f == 'null') && (f_w == null || f_w == 'null'))
+		{
+			afrom.innerText += '佚名';
+		}
+		afrom.innerText += '】';
+		})
+.catch(function (err) {
+		console.error(err);
+		})
+</script>
+
+
+<style>
+.cdf {
+position: relative;
+margin: 20px auto;
+width: 4em;
+height: 48px;
+		line-height: 48px;
+		text-align: center;
+color: #eee;
+	   font-size: 48px;
+	   font-weight: 600;
+	   font-family:Helvetica;
+}
+.cdf::after {
+content: attr(data-spotlight);
+color: transparent;
+position: absolute;
+left: 0;top: 0;
+display: block;
+width: 100%;
+height: 100%;
+		line-height: 100%;
+		text-align: center;
+margin: auto;
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+animation: spotlight 10s infinite;
+		   background-image: linear-gradient(to right, red, skyblue, green,black);
+		   background-size: 150%;
+		   background-position: center center;
+		   -webkit-background-clip: text;
+		   background-clip: text;
+}
+@keyframes spotlight{
+	0%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+	50%{
+		-webkit-clip-path: ellipse(32px 32px at 100% 50%);
+		clip-path: ellipse(32px 32px at 100% 50%);
+	}
+	100%{
+		-webkit-clip-path: ellipse(32px 32px at 0% 50%);
+		clip-path: ellipse(32px 32px at 0% 50%);
+	}
+}
+</style>
+
+
+
+
+
+
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 547px;
+    }
+    .nav.fullscreen {
+        margin-left: -547px;
+    }
+    .nav-left {
+        width: 125px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 497px;
+        }
+        .nav.fullscreen {
+            margin-left: -497px;
+        }
+        .nav-left {
+            width: 105px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 497px;
+            margin-left: -497px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #f36c21;
+    }
+    
+    
+    .nav-right nav a.hover > span{
+        color: #7bbfea !important;
+    }
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+background: url("/img/article-list-background/1.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu "   href="/blog_files">资源</a>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 底部音乐 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+.aplayer .aplayer-lrc {
+height: 35px;
+}
+.aplayer .aplayer-lrc p{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current{
+color: #FF1493;
+}
+.aplayer.aplayer-narrow .aplayer-body{
+left: -66px !important;
+}
+.aplayer.aplayer-fixed .aplayer-lrc {
+display: none;
+}
+.aplayer .aplayer-lrc.aplayer-lrc-hide {
+display:none !important;
+}
+.aplayer.aplayer-fixed .lrc-show {
+display: block;
+background: rgba(255, 255, 255, 0.8);
+}
+</style>
+<div class="aplayer"
+data-id="5142495258"
+data-server="netease"
+data-type="playlist"
+data-fixed="true"
+data-autoplay="false"
+data-loop="all"
+data-order="random"
+data-preload="auto"
+data-volume="0.7"
+data-mutex="false"
+>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<script>
+$(function(){
+		$('body').on('click', '.aplayer', function(){
+			if($('.aplayer-button').hasClass('aplayer-play')) {
+			$('.aplayer-lrc').removeClass('lrc-show');
+			} else {
+			$('.aplayer-lrc').addClass('lrc-show');
+			}
+			})
+		});
+</script>
+
+
+
+<!-- // 文字
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+-->
+
+<!-- // 爱心
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+-->
+
+<!-- // 按键屏蔽 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js"></script>
+-->
+
+
+</html>

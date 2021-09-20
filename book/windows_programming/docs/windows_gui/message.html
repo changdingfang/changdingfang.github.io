@@ -1,0 +1,1520 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>windows 消息 · windows编程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="dingfang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-js-sequence-diagram/styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="hello_world.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../img/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../img/favicon.jpg'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://changdingfang.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Windows GUI</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="hello_world.html">
+            
+                <a href="hello_world.html">
+            
+                    
+                    hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    windows 消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >windows 消息</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#windows-&#x6D88;&#x606F;"><b></b>windows &#x6D88;&#x606F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D88;&#x606F;"><b></b>&#x6D88;&#x606F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D88;&#x606F;&#x961F;&#x5217;"><b></b>&#x6D88;&#x606F;&#x961F;&#x5217;</a></li><li><span class="title-icon "></span><a href="#&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;"><b></b>&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x6D88;&#x606F;&#x53D1;&#x9001;"><b></b>&#x6D88;&#x606F;&#x53D1;&#x9001;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x6536;&#x6D88;&#x606F;"><b></b>&#x63A5;&#x6536;&#x6D88;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x8F6C;&#x6362;&#x6D88;&#x606F;"><b></b>&#x8F6C;&#x6362;&#x6D88;&#x606F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D88;&#x606F;&#x5927;&#x5168;"><b></b>&#x6D88;&#x606F;&#x5927;&#x5168;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;windows&#x6D88;&#x606F;"><b></b>&#x5E38;&#x7528;Windows&#x6D88;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x77E5;&#x6D88;&#x606F;"><b></b>&#x901A;&#x77E5;&#x6D88;&#x606F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6309;&#x94AE;"><b></b>&#x6309;&#x94AE;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x5408;&#x6846;"><b></b>&#x7EC4;&#x5408;&#x6846;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8F91;&#x6846;"><b></b>&#x7F16;&#x8F91;&#x6846;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x6846;"><b></b>&#x5217;&#x8868;&#x6846;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></div><a href="#windows-&#x6D88;&#x606F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="windows-&#x6D88;&#x606F;"><a name="windows-&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#windows-&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>windows &#x6D88;&#x606F;</h1>
+<p>windows &#x662F;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x9A71;&#x52A8;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;windows&#x7684;&#x6D88;&#x606F;&#x63D0;&#x4F9B;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x3001;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0E;windows &#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;&#x624B;&#x6BB5;&#x3002;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x7531;&#x6D88;&#x606F;&#x6765;&#x89E6;&#x53D1;&#xFF0C;&#x5E76;&#x4E14;&#x9760;&#x5BF9;&#x6D88;&#x606F;&#x7684;&#x54CD;&#x5E94;&#x548C;&#x5904;&#x7406;&#x6765;&#x5B8C;&#x6210;&#x3002;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6D88;&#x606F;&#x5E76;&#x975E;&#x662F;&#x62A2;&#x5360;&#x6027;&#x7684;&#xFF0C;&#x65E0;&#x8BBA;&#x4E8B;&#x4EF6;&#x7684;&#x7F13;&#x6025;&#xFF0C;&#x603B;&#x662F;&#x6309;&#x7167;&#x8FBE;&#x5230;&#x7684;&#x5148;&#x540E;&#x4F9D;&#x6B21;&#x5904;&#x7406;&#x3002;&#x7F3A;&#x70B9;&#x662F;&#x5C31;&#x662F;&#x53EF;&#x80FD;&#x4F7F;&#x4E00;&#x4E9B;&#x5B9E;&#x65F6;&#x5916;&#x90E8;&#x4E8B;&#x4EF6;&#x5F97;&#x4E0D;&#x5230;&#x53CA;&#x65F6;&#x5904;&#x7406;&#x3002;  </p>
+<p>windows&#x53EF;&#x89C6;&#x5316;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;&#x4E00;&#x822C;&#x662F;&#x901A;&#x8FC7;&#x7A97;&#x53E3;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x7A97;&#x53E3;&#x4E00;&#x822C;&#x5728;&#x67D0;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5185;&#x521B;&#x5EFA;&#x7684;&#x3002;windows&#x7CFB;&#x7EDF;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x673A;&#x5236;&#x6765;&#x7BA1;&#x7406;&#x4EA4;&#x4E92;&#xFF0C;&#x6D88;&#x606F;&#x88AB;&#x53D1;&#x9001;&#xFF0C;&#x4FDD;&#x5B58;&#xFF0C;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4F1A;&#x7EF4;&#x62A4;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x5957;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x4EE5;&#x4FDD;&#x6301;&#x7EBF;&#x7A0B;&#x95F4;&#x7684;&#x72EC;&#x5360;&#x6027;  </p>
+<h2 id="&#x6D88;&#x606F;"><a name="&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;</h2>
+<h3 id="&#x6D88;&#x606F;&#x961F;&#x5217;"><a name="&#x6D88;&#x606F;&#x961F;&#x5217;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;&#x961F;&#x5217;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x961F;&#x5217;</h3>
+<p>&#x4ECE;windows&#x7EF4;&#x62A4;&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#x770B;&#x6709;&#x4E24;&#x79CD;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF1A;  </p>
+<ul>
+<li><strong>&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;</strong><br>  &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x552F;&#x4E00;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x4F1A;&#x628A;&#x64CD;&#x4F5C;&#x8F93;&#x5165;&#x8F6C;&#x5316;&#x6210;&#x6D88;&#x606F;&#x5B58;&#x5728;&#x7CFB;&#x7EDF;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x7CFB;&#x7EDF;&#x4F1A;&#x628A;&#x6B64;&#x6D88;&#x606F;&#x653E;&#x5230;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x6240;&#x5728;&#x7684;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x7B49;&#x5F85;&#x5904;&#x7406;&#x3002;  </li>
+<li><strong>&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;</strong><br>  &#x6BCF;&#x4E00;&#x4E2A;GUI&#x7EBF;&#x7A0B;&#x90FD;&#x4F1A;&#x7EF4;&#x62A4;&#x5B8B;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF08;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x53EA;&#x6709;&#x5728;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;GDI&#x51FD;&#x6570;&#x65F6;&#x624D;&#x4F1A;&#x521B;&#x5EFA;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x521B;&#x5EFA;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x7ED9;Non-GUI&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x4EA7;&#x751F;&#x65F6;&#x5E76;&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x4EC5;&#x5F53;&#x7EBF;&#x7A0B;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;GDI&#x51FD;&#x6570;&#x65F6;&#x7CFB;&#x7EDF;&#x624D;&#x7ED9;&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF09;&#x3002;&#x7136;&#x540E;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6D88;&#x606F;&#x4F1A;&#x88AB;&#x9001;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x5904;&#x7406;&#x3002;  </li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;WM_PAINT / WM_TIMER&#x53EA;&#x6709;&#x5728;&#x961F;&#x5217;&#x4E2D;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x6D88;&#x606F; &#x65F6;&#x624D;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#xFF0C;<br>WM_PAINT&#x6D88;&#x606F;&#x8FD8;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x4EE5;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;<br>&#x5176;&#x4ED6;&#x6240;&#x6709;&#x6D88;&#x606F;&#x4EE5;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x65B9;&#x5F0F;&#x88AB;&#x5904;&#x7406;&#x3002;   </p>
+</blockquote>
+<h3 id="&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;"><a name="&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;</h3>
+<p>&#x4ECE;&#x6D88;&#x606F;&#x7684;&#x53D1;&#x9001;&#x9014;&#x5F84;&#x4E0A;&#x6765;&#x770B;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x961F;&#x5217;&#x6D88;&#x606F;&#x548C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;  </p>
+<ul>
+<li><strong>&#x961F;&#x5217;&#x6D88;&#x606F;</strong><br>  &#x6D88;&#x606F;&#x4F1A;&#x5148;&#x4FDD;&#x5B58;&#x5728;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6D88;&#x606F;&#x5FAA;&#x73AF;&#x4F1A;&#x4ECE;&#x6B64;&#x961F;&#x5217;&#x4E2D;&#x53D6;&#x51FA;&#x6D88;&#x606F;&#x5E76;&#x5206;&#x53D1;&#x5230;&#x5404;&#x7A97;&#x53E3;&#x5904;&#x7406;&#x3002;<br>  &#x5982;&#x9F20;&#x6807;&#x3001;&#x952E;&#x76D8;&#x6D88;&#x606F;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5F53;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x4E9B;&#x4E8B;&#x4EF6;&#x8F6C;&#x6362;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x9001;&#x5230;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7531;windows &#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;windows&#x7CFB;&#x7EDF;&#x5219;&#x5728;&#x9002;&#x5F53;&#x7684;&#x65F6;&#x673A;&#xFF0C;&#x4ECE;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x53D6;&#x51FA;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#xFF0C;&#x6839;&#x636E;MSG&#x6D88;&#x606F;&#x7ED3;&#x6784;&#x786E;&#x5B9A;&#x8981;&#x9001;&#x5F80;&#x54EA;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x53D6;&#x51FA;&#x7684;&#x6D88;&#x606F;&#x9001;&#x5F80;&#x521B;&#x5EFA;&#x7A97;&#x53E3;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x76F8;&#x5E94;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x7531;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x5904;&#x7406;&#x4E86;&#x3002;  </li>
+<li><strong>&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;</strong><br>  &#x6D88;&#x606F;&#x4F1A;&#x7ED5;&#x8FC7;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x548C;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x5230;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;&#x4E5F;&#x53EF;&#x4EE5;&#x7531;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x51FD;&#x6570;&#x4EA7;&#x751F;&#x3002;<br>  &#x5982;&#xFF1A;WM_ACTIVATE / WM_SETFOCUS / WM_SETCURSOR / WM_WINDOWPOSCHANGED(&#x7531;&#x5E94;&#x7528;&#x8C03;&#x7528;SetWindowPos&#x51FD;&#x6570;&#x4EA7;&#x751F;) &#x3002;  </li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;postMessage&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x662F;&#x961F;&#x5217;&#x6D88;&#x606F;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x6D88;&#x606F;Post&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;SendMessage&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x662F;&#x975E;&#x961F;&#x5217;&#x6D88;&#x606F;&#xFF0C;&#x76F4;&#x63A5;&#x9001;&#x5230;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x5904;&#x7406;&#x3002;  </p>
+</blockquote>
+<h3 id="&#x6D88;&#x606F;&#x53D1;&#x9001;"><a name="&#x6D88;&#x606F;&#x53D1;&#x9001;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;&#x53D1;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x53D1;&#x9001;</h3>
+<p>&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x51FD;&#x6570;&#xFF1A;<code>PostMessage / PostThreadMessage / SendMessage</code>  </p>
+<ul>
+<li><code>postMessage</code> &#x628A;&#x6D88;&#x606F;&#x653E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7A97;&#x53E3;&#x6240;&#x5728;&#x7684;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x540E;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x6D88;&#x606F;&#x53EF;&#x80FD;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#x3002;  </li>
+<li><code>PostThreadMessage</code> &#x628A;&#x6D88;&#x606F;&#x653E;&#x5230;&#x6307;&#x5B9A;&#x7EBF;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x540E;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x3002;  </li>
+<li><code>SendMessage</code> &#x76F4;&#x63A5;&#x628A;&#x6D88;&#x606F;&#x9001;&#x5230;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x5904;&#x7406;&#xFF0C;&#x5904;&#x7406;&#x540E;&#x624D;&#x8FD4;&#x56DE;&#xFF0C;&#x5982;&#x679C;&#x6D88;&#x606F;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x7EBF;&#x7A0B;&#x5C06;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x8FD4;&#x56DE;&#x3002;  </li>
+</ul>
+<p><strong>&#x540C;&#x4E00;&#x7EBF;&#x7A0B;&#x5185;&#x53D1;&#x6D88;&#x606F;</strong><br><code>SendMessage</code> &#x53D1;&#x9001;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x7531; <code>user32.dll</code> &#x6A21;&#x5757;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x6D88;&#x606F;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#xFF0C;<code>SendMessage</code> &#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x4E0D;&#x8FDB;&#x5165;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;<code>PostMessage</code> &#x53D1;&#x9001;&#x6D88;&#x606F;&#x8981;&#x5148;&#x653E;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x5FAA;&#x73AF;&#x5206;&#x6D3E;&#x5230;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#xFF08;<code>DispatchMessage</code>&#xFF09;&#x3002;  </p>
+<p><strong>&#x4E0D;&#x540C;&#x7EBF;&#x7A0B;&#x95F4;&#x53D1;&#x6D88;&#x606F;</strong><br><code>SendMessage</code> &#x53D1;&#x9001;&#x6D88;&#x606F;&#x5230;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x7EBF;&#x7A0B;&#x5728; <code>user32.dll</code> &#x6A21;&#x5757;&#x5185;&#x76D1;&#x89C6;&#x548C;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;&#x76F4;&#x5230;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x5904;&#x7406;&#x624D;&#x8FD4;&#x56DE;&#xFF0C;<code>SendMessage</code> &#x5728;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x8FD8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x505A;&#x8BB8;&#x591A;&#x5DE5;&#x4F5C;&#xFF0C;&#x5982;&#x54CD;&#x5E94;&#x522B;&#x7684;&#x7EBF;&#x7A0B;&#x5411;&#x5B83;&#x53D1;&#x9001;&#x7684; <code>SendMessage</code>&#x3002;<code>PostMessage</code> &#x5230;&#x522B;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x6700;&#x597D;&#x4F7F;&#x7528; <code>PostThreadMessage</code> &#x4EE3;&#x66FF;&#x3002;<code>PostMessage</code> &#x7684; <code>HWND</code> &#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4E3A; <code>NULL</code>&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; <code>PostThreadMessage+GetCrrentThreadId</code>&#x3002;  </p>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x5728;windows &#x4E2D;&#x6BCF;&#x4E2A;&#x6D88;&#x606F;&#x961F;&#x5217;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x5B58;&#x653E;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x8D85;&#x8FC7;&#x7684;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x6389;&#x3002;  </p>
+</blockquote>
+<h3 id="&#x63A5;&#x6536;&#x6D88;&#x606F;"><a name="&#x63A5;&#x6536;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x6536;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x6536;&#x6D88;&#x606F;</h3>
+<ul>
+<li>GetMessage` &#x4E3B;&#x8981;&#x662F;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x7A97;&#x53E3;hWnd&#x4E2D;&#x53D6;&#x51FA;wMsgFilterMin&#x548C;wMsgFilterMax&#x53C2;&#x6570;&#x7ED9;&#x51FA;&#x7684;&#x6D88;&#x606F;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6D88;&#x606F;,&#x6D88;&#x606F;&#x53D6;&#x51FA;&#x540E;&#x5C31;&#x4ECE;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x5220;&#x9664;&#x8BE5;&#x6D88;&#x606F;&#x3002;GetMessage&#x4ECE;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x53D6;&#x4E0D;&#x5230;&#x6D88;&#x606F;&#xFF0C;&#x5219;&#x7EBF;&#x7A0B;&#x5C31;&#x4F1A;&#x88AB;&#x6302;&#x8D77;&#xFF0C;&#x76F4;&#x5230;&#x53D6;&#x51FA;&#x6D88;&#x606F;&#x6765;&#x8FD4;&#x56DE;&#x3002;  </li>
+<li><code>PeekMessage</code> &#x53EA;&#x662F;&#x4ECE;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x67E5;&#x8BE2;&#x6D88;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6D88;&#x606F;&#xFF0C;&#x5219;&#x7ACB;&#x523B;&#x8FD4;&#x56DE;true&#xFF1B;&#x6CA1;&#x6709;&#x5219;&#x8FD4;&#x56DE;false&#x3002;&#x5982;&#x679C;&#x6709;&#x6D88;&#x606F;&#xFF0C;PeekMessage&#x4E2D;wRemoveMsg&#x53C2;&#x6570;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;&#x662F;PM_REMOVE&#x5219;&#x5728;&#x53D6;&#x51FA;&#x6D88;&#x606F;&#x5E76;&#x5C06;&#x6D88;&#x606F;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x82E5;&#x8BBE;&#x7F6E;&#x662F;PM_NOREMOVE&#x6D88;&#x606F;&#x5C31;&#x4E0D;&#x4F1A;&#x4ECE;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x53D6;&#x51FA;&#x3002;  </li>
+<li><code>waitMessage</code>  &#x529F;&#x80FD;&#xFF1A;&#x5F53;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x5B58;&#x5728;&#x65F6;&#xFF0C;waitMessage&#x51FD;&#x6570;&#x4F1A;&#x4F7F;&#x8BE5;&#x7EBF;&#x7A0B;&#x4E2D;&#x65AD;&#x5E76;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#xFF0C;&#x540C;&#x65F6;&#x628A;&#x63A7;&#x5236;&#x6743;&#x4EA4;&#x7ED9;&#x5176;&#x5B83;&#x7EBF;&#x7A0B;&#xFF0C;&#x76F4;&#x5230;&#x88AB;&#x4E2D;&#x65AD;&#x90A3;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x6709;&#x4E86;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x4E3A;&#x6B62;&#x3002;  </li>
+</ul>
+<h3 id="&#x8F6C;&#x6362;&#x6D88;&#x606F;"><a name="&#x8F6C;&#x6362;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x8F6C;&#x6362;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6C;&#x6362;&#x6D88;&#x606F;</h3>
+<ul>
+<li><code>TranslateMessage</code>&#xFF1A;&#x628A;&#x4E00;&#x4E2A;virtual-key&#x6D88;&#x606F;&#x8F6C;&#x5316;&#x6210;&#x5B57;&#x7B26;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x653E;&#x5230;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6D88;&#x606F;&#x5FAA;&#x73AF;&#x4E0B;&#x4E00;&#x6B21;&#x53D6;&#x51FA;&#x5904;&#x7406;&#x3002;  </li>
+<li><code>TranslateAccelerator</code>&#xFF1A;&#x5C06;&#x5FEB;&#x6377;&#x952E;&#x5BF9;&#x5E94;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x83DC;&#x5355;&#x547D;&#x4EE4;&#x3002;&#x5B83;&#x4F1A;&#x628A;WM_KEYDOWN&#x6216;&#x8005;WM_SYSKEYDOWN&#x8F6C;&#x5316;&#x6210;&#x5FEB;&#x6377;&#x952E;&#x8868;&#x4E2D;&#x76F8;&#x5E94;&#x7684;WM_COMMAND&#x6216;&#x8005;WM_SYSCOMMAND&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8F6C;&#x5316;&#x540E;&#x7684;WM_COMMAND&#x6216;&#x8005;WM_SYSCOMMAND&#x6D88;&#x606F;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x5230;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x5904;&#x7406;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x540E;&#x624D;&#x4F1A;&#x8FD4;&#x56DE;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x82E5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x975E;&#x96F6;&#x503C;&#xFF0C;&#x82E5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x5219;&#x8FD4;&#x56DE;&#x96F6;&#x3002;    </li>
+</ul>
+<h2 id="&#x6D88;&#x606F;&#x5927;&#x5168;"><a name="&#x6D88;&#x606F;&#x5927;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;&#x5927;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x5927;&#x5168;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x8303;&#x56F4;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 &#xFF5E; WM_USER &#x2013; 1</td>
+<td>&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_USER &#xFF5E; 0x7FFF</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x7A97;&#x53E3;&#x7C7B;&#x6574;&#x6570;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_APP &#xFF5E; 0xBFFF</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>0xC000 &#xFF5E; 0xFFFF</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B57;&#x7B26;&#x4E32;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>&gt; 0xFFFF</td>
+<td>&#x4E3A;&#x4EE5;&#x540E;&#x7CFB;&#x7EDF;&#x5E94;&#x7528;&#x4FDD;&#x7559;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5E38;&#x7528;windows&#x6D88;&#x606F;"><a name="&#x5E38;&#x7528;windows&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;windows&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;Windows&#x6D88;&#x606F;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x503C;</th>
+<th>&#x8BF4;  &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WM_NULL</td>
+<td>0x0000</td>
+<td>&#x7A7A;&#x6D88;&#x606F;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x5C06;&#x88AB;&#x63A5;&#x6536;&#x7A97;&#x53E3;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>WM_CREATE</td>
+<td>0x0001</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_DESTROY</td>
+<td>0x0002</td>
+<td>&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x88AB;&#x9500;&#x6BC1;</td>
+</tr>
+<tr>
+<td>WM_MOVE</td>
+<td>0x0003</td>
+<td>&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_SIZE</td>
+<td>0x0005</td>
+<td>&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x5927;&#x5C0F;</td>
+</tr>
+<tr>
+<td>WM_ACTIVATE</td>
+<td>0x0006</td>
+<td>&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x88AB;&#x6FC0;&#x6D3B;&#x6216;&#x5931;&#x53BB;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>WM_SETFOCUS</td>
+<td>0x0007</td>
+<td>&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x540E;</td>
+</tr>
+<tr>
+<td>WM_KILLFOCUS</td>
+<td>0x0008</td>
+<td>&#x5931;&#x53BB;&#x7126;&#x70B9;</td>
+</tr>
+<tr>
+<td>WM_ENABLE</td>
+<td>0x000A</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;Enable&#x72B6;&#x6001;&#x6539;&#x53D8;&#x65F6;&#x4EA7;&#x751F;</td>
+</tr>
+<tr>
+<td>WM_SETREDRAW</td>
+<td>0x000B</td>
+<td>&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x662F;&#x5426;&#x80FD;&#x91CD;&#x753B;</td>
+</tr>
+<tr>
+<td>WM_SETTEXT</td>
+<td>0x000C</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td>WM_GETTEXT</td>
+<td>0x000D</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x590D;&#x5236;&#x5BF9;&#x5E94;&#x7A97;&#x53E3;&#x7684;&#x6587;&#x672C;&#x5230;&#x7F13;&#x51B2;&#x533A;</td>
+</tr>
+<tr>
+<td>WM_GETTEXTLENGTH</td>
+<td>0x000E</td>
+<td>&#x5F97;&#x5230;&#x4E0E;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x6709;&#x5173;&#x7684;&#x6587;&#x672C;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x7A7A;&#x5B57;&#x7B26;&#xFF09;</td>
+</tr>
+<tr>
+<td>WM_PAINT</td>
+<td>0x000F</td>
+<td>&#x8981;&#x6C42;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x91CD;&#x7ED8;&#x81EA;&#x5DF1;</td>
+</tr>
+<tr>
+<td>WM_CLOSE</td>
+<td>0x0010</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8981;&#x5173;&#x95ED;&#x65F6;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;</td>
+</tr>
+<tr>
+<td>WM_QUERYENDSESSION</td>
+<td>0x0011</td>
+<td>&#x7528;&#x6237;&#x9009;&#x62E9;&#x7ED3;&#x675F;&#x5BF9;&#x8BDD;&#x6846;&#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x81EA;&#x5DF1;&#x8C03;&#x7528;ExitWindows()&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>WM_QUIT</td>
+<td>0x0012</td>
+<td>&#x7528;&#x6765;&#x7ED3;&#x675F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;Postquitmessage()&#x51FD;&#x6570;&#x6765;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_QUERYOPEN</td>
+<td>0x0013</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x7A97;&#x53E3;&#x6062;&#x590D;&#x4EE5;&#x524D;&#x7684;&#x5927;&#x5C0F;&#x4F4D;&#x7F6E;&#x65F6;&#xFF0C;&#x628A;&#x6B64;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x67D0;&#x4E2A;&#x56FE;&#x6807;</td>
+</tr>
+<tr>
+<td>WM_ERASEBKGND</td>
+<td>0x0014</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x80CC;&#x666F;&#x5FC5;&#x987B;&#x88AB;&#x64E6;&#x9664;&#x65F6;&#xFF08;&#x4F8B;&#x5982;&#x5728;&#x7A97;&#x53E3;&#x6539;&#x53D8;&#x5927;&#x5C0F;&#x65F6;&#xFF09;</td>
+</tr>
+<tr>
+<td>WM_SYSCOLORCHANGE</td>
+<td>0x0015</td>
+<td>&#x5F53;&#x7CFB;&#x7EDF;&#x989C;&#x8272;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_ENDSESSION</td>
+<td>0x0016</td>
+<td>&#x5F53;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x53D1;&#x51FA;WM_QUERYENDSESSION&#x6D88;&#x606F;&#x540E;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>WM_SHOWWINDOW</td>
+<td>0x0018</td>
+<td>&#x5F53;&#x9690;&#x85CF;&#x6216;&#x663E;&#x793A;&#x7A97;&#x53E3;&#x662F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8FD9;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_ACTIVATEAPP</td>
+<td>0x001C</td>
+<td>&#x5F53;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x5C06;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#xFF0C;&#x5C06;&#x88AB;&#x6FC0;&#x6D3B;&#x7A97;&#x53E3;&#x548C;&#x5F53;&#x524D;&#x6D3B;&#x52A8;&#xFF08;&#x5373;&#x5C06;&#x5931;&#x53BB;&#x6FC0;&#x6D3B;&#xFF09;&#x7A97;&#x53E3;&#x4F1A;&#x6536;&#x5230;&#x6B64;&#x6D88;&#x606F;&#xFF0C;&#x53D1;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x54EA;&#x4E2A;&#x7A97;&#x53E3;&#x662F;&#x6FC0;&#x6D3B;&#x7684;&#xFF0C;&#x54EA;&#x4E2A;&#x662F;&#x975E;&#x6FC0;&#x6D3B;&#x7684;</td>
+</tr>
+<tr>
+<td>WM_FONTCHANGE</td>
+<td>0x001D</td>
+<td>&#x5F53;&#x7CFB;&#x7EDF;&#x7684;&#x5B57;&#x4F53;&#x8D44;&#x6E90;&#x5E93;&#x53D8;&#x5316;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_TIMECHANGE</td>
+<td>0x001E</td>
+<td>&#x5F53;&#x7CFB;&#x7EDF;&#x7684;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_CANCELMODE</td>
+<td>0x001F</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x53D6;&#x6D88;&#x67D0;&#x79CD;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>WM_SETCURSOR</td>
+<td>0x0020</td>
+<td>&#x5982;&#x679C;&#x9F20;&#x6807;&#x5F15;&#x8D77;&#x5149;&#x6807;&#x5728;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x4E2D;&#x79FB;&#x52A8;&#x4E14;&#x9F20;&#x6807;&#x8F93;&#x5165;&#x6CA1;&#x6709;&#x88AB;&#x6355;&#x83B7;&#x65F6;&#xFF0C;&#x53D1;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MOUSEACTIVATE</td>
+<td>0x0021</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x67D0;&#x4E2A;&#x975E;&#x6FC0;&#x6D3B;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x800C;&#x7528;&#x6237;&#x6B63;&#x6309;&#x7740;&#x9F20;&#x6807;&#x7684;&#x67D0;&#x4E2A;&#x952E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5F53;&#x524D;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_CHILDACTIVATE</td>
+<td>0x0022</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5B50;&#x7A97;&#x53E3;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6B64;&#x7A97;&#x53E3;&#x7684;&#x6807;&#x9898;&#x680F;&#xFF0C;&#x6216;&#x5F53;&#x7A97;&#x53E3;&#x88AB;&#x6FC0;&#x6D3B;&#x3001;&#x79FB;&#x52A8;&#x3001;&#x6539;&#x53D8;&#x5927;&#x5C0F;</td>
+</tr>
+<tr>
+<td>WM_QUEUESYNC</td>
+<td>0x0023</td>
+<td>&#x6B64;&#x6D88;&#x606F;&#x7531;&#x57FA;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x8BAD;&#x7EC3;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#xFF0C;&#x901A;&#x8FC7;WH_JOURNALPALYBACK&#x7684;Hook&#x7A0B;&#x5E8F;&#x5206;&#x79BB;&#x51FA;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_GETMINMAXINFO</td>
+<td>0x0024</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x8981;&#x5C06;&#x8981;&#x6539;&#x53D8;&#x5927;&#x5C0F;&#x6216;&#x4F4D;&#x7F6E;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_PAINTICON</td>
+<td>0x0026</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x56FE;&#x6807;&#x5C06;&#x8981;&#x88AB;&#x91CD;&#x7ED8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_ICONERASEBKGND</td>
+<td>0x0027</td>
+<td>&#x5728;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x5316;&#x7A97;&#x53E3;&#x7684;&#x56FE;&#x6807;&#x5728;&#x91CD;&#x7ED8;&#x524D;&#xFF0C;&#x5F53;&#x56FE;&#x6807;&#x80CC;&#x666F;&#x5FC5;&#x987B;&#x88AB;&#x91CD;&#x7ED8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_NEXTDLGCTL</td>
+<td>0x0028</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x5BF9;&#x8BDD;&#x6846;&#x7A0B;&#x5E8F;&#x4EE5;&#x66F4;&#x6539;&#x7126;&#x70B9;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>WM_SPOOLERSTATUS</td>
+<td>0x002A</td>
+<td>&#x5F53;&#x6253;&#x5370;&#x7BA1;&#x7406;&#x5217;&#x961F;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x4E00;&#x6761;&#x4F5C;&#x4E1A;&#x65F6;&#x53D1;&#x51FA;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_DRAWITEM</td>
+<td>0x002B</td>
+<td>&#x5F53;Button&#xFF0C;ComboBox&#xFF0C;Listbox&#xFF0C;Menu&#x63A7;&#x4EF6;&#x7684;&#x5916;&#x89C2;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8FD9;&#x4E9B;&#x63A7;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_MEASUREITEM</td>
+<td>0x002C</td>
+<td>&#x5F53;Button&#xFF0C;ComboBox&#xFF0C;list box&#xFF0C;ListView&#xFF0C;Menu &#x9879;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x63A7;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_DELETEITEM</td>
+<td>0x002D</td>
+<td>&#x5F53;ListBox &#x6216; ComboBox &#x88AB;&#x9500;&#x6BC1;&#x6216;&#x5F53;&#x67D0;&#x4E9B;&#x9879;&#x901A;&#x8FC7;&#x53D1;&#x9001;LB_DELETESTRING&#x3001;LB_RESETCONTENT&#x3001; CB_DELETESTRING&#x3001;CB_RESETCONTENT &#x6D88;&#x606F;&#x88AB;&#x5220;&#x9664;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x63A7;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_VKEYTOITEM</td>
+<td>0x002E</td>
+<td>&#x4E00;&#x4E2A;&#x5177;&#x6709;LBS_WANTKEYBOARDINPUT&#x98CE;&#x683C;&#x7684;ListBox&#x63A7;&#x4EF6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x6240;&#x6709;&#x8005;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x54CD;&#x5E94;WM_KEYDOWN&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_CHARTOITEM</td>
+<td>0x002F</td>
+<td>&#x4E00;&#x4E2A;&#x5177;&#x6709;LBS_WANTKEYBOARDINPUT&#x98CE;&#x683C;&#x7684;ListBox&#x63A7;&#x4EF6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x6240;&#x6709;&#x8005;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x54CD;&#x5E94;WM_CHAR&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_SETFONT</td>
+<td>0x0030</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7ED8;&#x5236;&#x63A7;&#x4EF6;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x5F97;&#x5230;&#x4EE5;&#x4F55;&#x79CD;&#x5B57;&#x4F53;&#x7ED8;&#x5236;&#x63A7;&#x4EF6;&#x4E2D;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td>WM_GETFONT</td>
+<td>0x0031</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x63A7;&#x4EF6;&#x7ED8;&#x5236;&#x6587;&#x672C;&#x7684;&#x5B57;&#x4F53;</td>
+</tr>
+<tr>
+<td>WM_SETHOTKEY</td>
+<td>0x0032</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x8BA9;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x4E0E;&#x4E00;&#x4E2A;&#x70ED;&#x952E;&#x76F8;&#x5173;&#x8054;</td>
+</tr>
+<tr>
+<td>WM_GETHOTKEY</td>
+<td>0x0033</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x5224;&#x65AD;&#x70ED;&#x952E;&#x4E0E;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x662F;&#x5426;&#x6709;&#x5173;&#x8054;</td>
+</tr>
+<tr>
+<td>WM_QUERYDRAGICON</td>
+<td>0x0037</td>
+<td>&#x6B64;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x6700;&#x5C0F;&#x5316;&#x7A97;&#x53E3;&#xFF0C;&#x5F53;&#x6B64;&#x7A97;&#x53E3;&#x5C06;&#x8981;&#x88AB;&#x62D6;&#x653E;&#x800C;&#x5B83;&#x7684;&#x7C7B;&#x4E2D;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x56FE;&#x6807;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C31;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#x6216;&#x5149;&#x6807;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x62D6;&#x653E;&#x56FE;&#x6807;&#x65F6;&#x7CFB;&#x7EDF;&#x663E;&#x793A;&#x8FD9;&#x4E2A;&#x56FE;&#x6807;&#x6216;&#x5149;&#x6807;</td>
+</tr>
+<tr>
+<td>WM_COMPAREITEM</td>
+<td>0x0039</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x5224;&#x5B9A;ComboBox&#x6216;ListBox&#x65B0;&#x589E;&#x52A0;&#x7684;&#x9879;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>WM_COMPACTING</td>
+<td>0x0041</td>
+<td>&#x663E;&#x793A;&#x5185;&#x5B58;&#x5DF2;&#x7ECF;&#x5F88;&#x5C11;&#x4E86;</td>
+</tr>
+<tr>
+<td>WM_WINDOWPOSCHANGING</td>
+<td>0x0046</td>
+<td>&#x5F53;&#x8C03;&#x7528;SetWindowPos()&#x51FD;&#x6570;&#x6539;&#x53D8;&#x7A97;&#x53E3;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#x540E;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_POWER</td>
+<td>0x0048</td>
+<td>&#x5F53;&#x7CFB;&#x7EDF;&#x5C06;&#x8FDB;&#x5165;&#x6302;&#x8D77;&#x72B6;&#x6001;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x8FDB;&#x7A0B;</td>
+</tr>
+<tr>
+<td>WM_COPYDATA</td>
+<td>0x004A</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_CANCELJOURNAL</td>
+<td>0x004B</td>
+<td>&#x5F53;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x53D6;&#x6D88;&#x7A0B;&#x5E8F;&#x65E5;&#x5FD7;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>WM_NOTIFY</td>
+<td>0x004E</td>
+<td>&#x5F53;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x5DF2;&#x7ECF;&#x53D1;&#x751F;&#x6216;&#x8FD9;&#x4E2A;&#x63A7;&#x4EF6;&#x9700;&#x8981;&#x5F97;&#x5230;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_INPUTLANGCHANGEREQUEST</td>
+<td>0x0050</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x9009;&#x62E9;&#x67D0;&#x79CD;&#x8F93;&#x5165;&#x8BED;&#x8A00;&#xFF0C;&#x6216;&#x8F93;&#x5165;&#x8BED;&#x8A00;&#x7684;&#x70ED;&#x952E;&#x6539;&#x53D8;</td>
+</tr>
+<tr>
+<td>WM_INPUTLANGCHANGE</td>
+<td>0x0051</td>
+<td>&#x5F53;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8F93;&#x5165;&#x8BED;&#x8A00;&#x6539;&#x53D8;&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x6700;&#x9876;&#x7EA7;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_TCARD</td>
+<td>0x0052</td>
+<td>&#x5F53;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;Windows&#x5E2E;&#x52A9;&#x4F8B;&#x7A0B;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>WM_HELP</td>
+<td>0x0053</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x4E86;F1&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x83DC;&#x5355;&#x662F;&#x6FC0;&#x6D3B;&#x7684;&#xFF0C;&#x5C31;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6B64;&#x7A97;&#x53E3;&#x5173;&#x8054;&#x7684;&#x83DC;&#x5355;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x53D1;&#x9001;&#x7ED9;&#x6709;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x90FD;&#x6CA1;&#x6709;&#x7126;&#x70B9;&#xFF0C;&#x5C31;&#x628A;&#x6B64;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x5F53;&#x524D;&#x6FC0;&#x6D3B;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_USERCHANGED</td>
+<td>0x0054</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;&#x6216;&#x9000;&#x51FA;&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6216;&#x9000;&#x51FA;&#x65F6;&#x7CFB;&#x7EDF;&#x66F4;&#x65B0;&#x7528;&#x6237;&#x7684;&#x5177;&#x4F53;&#x8BBE;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x66F4;&#x65B0;&#x8BBE;&#x7F6E;&#x65F6;&#x7CFB;&#x7EDF;&#x9A6C;&#x4E0A;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NOTIFYFORMAT</td>
+<td>0x0055</td>
+<td>&#x516C;&#x7528;&#x63A7;&#x4EF6;&#x548C;&#x5B83;&#x4EEC;&#x7684;&#x7236;&#x7A97;&#x53E3;&#x901A;&#x8FC7;&#x6B64;&#x6D88;&#x606F;&#x6765;&#x5224;&#x65AD;&#x5728;WM_NOTIFY&#x6D88;&#x606F;&#x4E2D;&#x662F;&#x4F7F;&#x7528;ANSI&#x8FD8;&#x662F;UNICODE&#x5F62;&#x5F0F;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x63A7;&#x4EF6;&#x80FD;&#x4F7F;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x4E0E;&#x5B83;&#x7684;&#x7236;&#x63A7;&#x4EF6;&#x8FDB;&#x884C;&#x76F8;&#x4E92;&#x901A;&#x4FE1;</td>
+</tr>
+<tr>
+<td>WM_CONTEXTMENU</td>
+<td>0x007B</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x5728;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x4E2D;&#x70B9;&#x51FB;&#x53F3;&#x952E;&#xFF0C;&#x5219;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_STYLECHANGING</td>
+<td>0x007C</td>
+<td>&#x5F53;&#x5C06;&#x8981;&#x8C03;&#x7528;SetWindowLong()&#x51FD;&#x6570;&#x7A97;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x98CE;&#x683C;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_STYLECHANGED</td>
+<td>0x007D</td>
+<td>&#x5F53;&#x8C03;&#x7528;SetWindowLong()&#x51FD;&#x6570;&#x6539;&#x53D8;&#x4E86;&#x7A97;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x98CE;&#x683C;&#x540E;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_DISPLAYCHANGE</td>
+<td>0x007E</td>
+<td>&#x5F53;&#x663E;&#x793A;&#x5668;&#x7684;&#x5206;&#x8FA8;&#x7387;&#x6539;&#x53D8;&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_GETICON</td>
+<td>0x007F</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0E;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x6709;&#x5173;&#x8054;&#x7684;&#x5927;&#x56FE;&#x6807;&#x6216;&#x5C0F;&#x56FE;&#x6807;&#x7684;&#x53E5;&#x67C4;</td>
+</tr>
+<tr>
+<td>WM_SETICON</td>
+<td>0x0080</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x8BA9;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5927;&#x56FE;&#x6807;&#x6216;&#x5C0F;&#x56FE;&#x6807;&#x4E0E;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x5173;&#x8054;</td>
+</tr>
+<tr>
+<td>WM_NCCREATE</td>
+<td>0x0081</td>
+<td>&#x5F53;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x5728;WM_CREATE&#x6D88;&#x606F;&#x88AB;&#x53D1;&#x9001;&#x524D;&#x53D1;&#x9001;</td>
+</tr>
+<tr>
+<td>WM_NCDESTROY</td>
+<td>0x0082</td>
+<td>&#x6B64;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x6B63;&#x5728;&#x9500;&#x6BC1;&#x975E;&#x5BA2;&#x6237;&#x533A;</td>
+</tr>
+<tr>
+<td>WM_NCCALCSIZE</td>
+<td>0x0083</td>
+<td>&#x5F53;&#x8BA1;&#x7B97;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x5BA2;&#x6237;&#x533A;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCHITTEST</td>
+<td>0x0084</td>
+<td>&#x79FB;&#x52A8;&#x9F20;&#x6807;&#xFF0C;&#x6309;&#x4F4F;&#x6216;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x65F6;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCPAINT</td>
+<td>0x0085</td>
+<td>&#x5F53;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x6846;&#x67B6;&#x5FC5;&#x987B;&#x88AB;&#x7ED8;&#x5236;&#x65F6;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_NCACTIVATE</td>
+<td>0x0086</td>
+<td>&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x6765;&#x8868;&#x793A;&#x7A97;&#x53E3;&#x662F;&#x5904;&#x4E8E;&#x6FC0;&#x6D3B;&#x8FD8;&#x662F;&#x975E;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x88AB;&#x53D1;&#x9001;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_NCMOUSEMOVE</td>
+<td>0x00A0</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#xFF08;&#x7A97;&#x53E3;&#x6807;&#x9898;&#x680F;&#x53CA;&#x8FB9;&#x6846;&#xFF09;&#x5185;&#x79FB;&#x52A8;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_NCLBUTTONDOWN</td>
+<td>0x00A1</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x5DE6;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCLBUTTONUP</td>
+<td>0x00A2</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x5DE6;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCLBUTTONDBLCLK</td>
+<td>0x00A3</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x5DE6;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCRBUTTONDOWN</td>
+<td>0x00A4</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCRBUTTONUP</td>
+<td>0x00A5</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCRBUTTONDBLCLK</td>
+<td>0x00A6</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCMBUTTONDOWN</td>
+<td>0x00A7</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x4E2D;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCMBUTTONUP</td>
+<td>0x00A8</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x4E2D;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_NCMBUTTONDBLCL</td>
+<td>0x00A9</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x7684;&#x975E;&#x5BA2;&#x6237;&#x533A;&#x5E76;&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x4E2D;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_KEYDOWN</td>
+<td>0x0100</td>
+<td>&#x6309;&#x4E0B;&#x4E00;&#x4E2A;&#x975E;&#x7CFB;&#x7EDF;&#x952E;&#xFF08;&#x6309;&#x4E0B;&#x952E;&#x65F6;&#x672A;&#x6309;&#x4E0B;&#x201C;ALT&#x201D;&#x952E;&#xFF09;</td>
+</tr>
+<tr>
+<td>WM_KEYUP</td>
+<td>0x0101</td>
+<td>&#x91CA;&#x653E;&#x4E00;&#x4E2A;&#x975E;&#x7CFB;&#x7EDF;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_CHAR</td>
+<td>0x0102</td>
+<td>&#x6309;&#x4E0B;&#x67D0;&#x952E;&#xFF0C;&#x5F53;TranslateMessage()&#x8F6C;&#x53D1;WM_KEYDOWN&#x540E;&#x53D1;&#x9001;&#x672C;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_DEADCHAR</td>
+<td>0x0103</td>
+<td>&#x91CA;&#x653E;&#x67D0;&#x952E;&#xFF0C;&#x5F53;TranslateMessage()&#x8F6C;&#x53D1;WM_KEYUP&#x540E;&#x53D1;&#x9001;&#x672C;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_SYSKEYDOWN</td>
+<td>0x0104</td>
+<td>&#x5F53;&#x6309;&#x4F4F;ALT&#x952E;&#x540C;&#x65F6;&#x6309;&#x4E0B;&#x5176;&#x4ED6;&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62E5;&#x6709;&#x952E;&#x76D8;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_SYSKEYUP</td>
+<td>0x0105</td>
+<td>&#x5F53;&#x91CA;&#x653E;&#x4E00;&#x4E2A;&#x952E;&#x540C;&#x65F6;&#x6309;&#x4F4F;ALT&#x952E;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62E5;&#x6709;&#x952E;&#x76D8;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_SYSCHAR</td>
+<td>0x0106</td>
+<td>&#x5F53;TranslateMessage()&#x8F6C;&#x53D1;WM_SYSKEYDOWN&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62E5;&#x6709;&#x952E;&#x76D8;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_SYSDEADCHAR</td>
+<td>0x0107</td>
+<td>&#x5F53;TranslateMessage()&#x8F6C;&#x53D1;WM_SYSKEYUP&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62E5;&#x6709;&#x952E;&#x76D8;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_INITDIALOG</td>
+<td>0x0110</td>
+<td>&#x5728;&#x88AB;&#x663E;&#x793A;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x6B64;&#x6D88;&#x606F;&#x521D;&#x59CB;&#x5316;&#x63A7;&#x4EF6;&#x548C;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x4EFB;&#x52A1;</td>
+</tr>
+<tr>
+<td>WM_COMMAND</td>
+<td>0x0111</td>
+<td>&#x9009;&#x62E9;&#x7A97;&#x53E3;&#x83DC;&#x5355;&#x9879;&#x6216;&#x67D0;&#x4E2A;&#x63A7;&#x4EF6;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#x6216;&#x6309;&#x4E0B;&#x4E00;&#x4E2A;&#x5FEB;&#x6377;&#x952E;&#x65F6;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_SYSCOMMAND</td>
+<td>0x0112</td>
+<td>&#x9009;&#x62E9;&#x7A97;&#x53E3;&#x83DC;&#x5355;&#x9879;&#x6216;&#x9009;&#x62E9;&#x6700;&#x5927;&#x5316;&#x6216;&#x6700;&#x5C0F;&#x5316;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_TIMER</td>
+<td>0x0113</td>
+<td>&#x53D1;&#x751F;&#x4E86;&#x5B9A;&#x65F6;&#x5668;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td>WM_HSCROLL</td>
+<td>0x0114</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x6761;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;&#x548C;&#x6EDA;&#x52A8;&#x6761;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_VSCROLL</td>
+<td>0x0115</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x5782;&#x76F4;&#x6EDA;&#x52A8;&#x6761;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;&#x548C;&#x6EDA;&#x52A8;&#x6761;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_INITMENU</td>
+<td>0x0116</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x83DC;&#x5355;&#x5C06;&#x8981;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#xFF0C;&#x5B83;&#x53D1;&#x751F;&#x5728;&#x6309;&#x4E0B;&#x83DC;&#x5355;&#x9879;&#x6216;&#x6309;&#x4E0B;&#x83DC;&#x5355;&#x5FEB;&#x6377;&#x952E;&#x65F6;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5728;&#x663E;&#x793A;&#x524D;&#x66F4;&#x6539;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td>WM_INITMENUPOPUP</td>
+<td>0x0117</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x6216;&#x5B50;&#x83DC;&#x5355;&#x5C06;&#x8981;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x663E;&#x793A;&#x524D;&#x5728;&#x4FEE;&#x6539;&#x83DC;&#x5355;&#x800C;&#x4E0D;&#x5FC5;&#x66F4;&#x6539;&#x6574;&#x4E2A;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td>WM_MENUSELECT</td>
+<td>0x011F</td>
+<td>&#x9009;&#x62E9;&#x4E00;&#x6761;&#x83DC;&#x5355;&#x9879;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x83DC;&#x5355;&#x7684;&#x6240;&#x6709;&#x8005;&#xFF08;&#x4E00;&#x822C;&#x662F;&#x7A97;&#x53E3;&#xFF09;</td>
+</tr>
+<tr>
+<td>WM_MENUCHAR</td>
+<td>0x0120</td>
+<td>&#x5F53;&#x83DC;&#x5355;&#x5DF2;&#x88AB;&#x6FC0;&#x6D3B;&#x4E14;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x4E86;&#x67D0;&#x4E2A;&#x952E;&#xFF08;&#x975E;&#x5FEB;&#x6377;&#x952E;&#xFF09;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x83DC;&#x5355;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_ENTERIDLE</td>
+<td>0x0121</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x6709;&#x6A21;&#x5F0F;&#x5BF9;&#x8BDD;&#x6846;&#x6216;&#x83DC;&#x5355;&#x8FDB;&#x5165;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x6240;&#x6709;&#x8005;&#xFF0C;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x6307;&#x5728;&#x5904;&#x7406;&#x5B8C;&#x4E00;&#x6761;&#x6216;&#x51E0;&#x6761;&#x5148;&#x524D;&#x7684;&#x6D88;&#x606F;&#x540E;&#xFF0C;&#x6D88;&#x606F;&#x5217;&#x961F;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td>WM_MENURBUTTONUP</td>
+<td>0x0122</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x4F4D;&#x4E8E;&#x83DC;&#x5355;&#x9879;&#x4E0A;&#x65F6;&#xFF0C;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_MENUDRAG</td>
+<td>0x0123</td>
+<td>&#x5F53;&#x62D6;&#x52A8;&#x83DC;&#x5355;&#x9879;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62D6;&#x653E;&#x83DC;&#x5355;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_MENUGETOBJECT</td>
+<td>0x0124</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x79FB;&#x5165;&#x83DC;&#x5355;&#x9879;&#x6216;&#x8005;&#x4ECE;&#x83DC;&#x5355;&#x9879;&#x4E2D;&#x5FC3;&#x79FB;&#x5230;&#x83DC;&#x5355;&#x9879;&#x9876;&#x90E8;&#x6216;&#x5E95;&#x90E8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x62D6;&#x653E;&#x83DC;&#x5355;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_UNINITMENUPOPUP</td>
+<td>0x0125</td>
+<td>&#x5F53;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x6216;&#x8005;&#x5B50;&#x83DC;&#x5355;&#x88AB;&#x9500;&#x6BC1;&#x65F6;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_MENUCOMMAND</td>
+<td>0x0126</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x9009;&#x62E9;&#x83DC;&#x5355;&#x9879;&#x65F6;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_CHANGEUISTATE</td>
+<td>0x0127</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x8868;&#x660E;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF08;UI&#xFF09;&#x72B6;&#x6001;&#x5E94;&#x5F53;&#x88AB;&#x6539;&#x53D8;</td>
+</tr>
+<tr>
+<td>WM_UPDATEUISTATE</td>
+<td>0x0128</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x6539;&#x53D8;&#x6307;&#x5B9A;&#x7A97;&#x53E3;&#x53CA;&#x5176;&#x5B50;&#x7A97;&#x53E3;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF08;UI&#xFF09;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>WM_QUERYUISTATE</td>
+<td>0x0129</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x5F97;&#x5230;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;&#xFF08;UI&#xFF09;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORMSGBOX</td>
+<td>0x0132</td>
+<td>&#x7ED8;&#x5236;&#x6D88;&#x606F;&#x6846;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;&#x54CD;&#x5E94;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x7236;&#x7A97;&#x53E3;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x76F8;&#x5173;&#x663E;&#x793A;&#x8BBE;&#x5907;&#x7684;&#x53E5;&#x67C4;&#x6765;&#x8BBE;&#x7F6E;&#x6D88;&#x606F;&#x6846;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLOREDIT</td>
+<td>0x0133</td>
+<td>&#x7ED8;&#x5236;&#x7F16;&#x8F91;&#x578B;&#x63A7;&#x4EF6;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x7F16;&#x8F91;&#x6846;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORLISTBOX</td>
+<td>0x0134</td>
+<td>&#x7ED8;&#x5236;&#x5217;&#x8868;&#x6846;&#x63A7;&#x4EF6;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x7F16;&#x8F91;&#x6846;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORBTN</td>
+<td>0x0135</td>
+<td>&#x7ED8;&#x5236;&#x6309;&#x94AE;&#x63A7;&#x4EF6;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x7F16;&#x8F91;&#x6846;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORDLG</td>
+<td>0x0136</td>
+<td>&#x7ED8;&#x5236;&#x5BF9;&#x8BDD;&#x6846;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x7F16;&#x8F91;&#x6846;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORSCROLLBAR</td>
+<td>0x0137</td>
+<td>&#x7ED8;&#x5236;&#x6EDA;&#x52A8;&#x6761;&#x63A7;&#x4EF6;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x6EDA;&#x52A8;&#x6761;&#x63A7;&#x4EF6;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_CTLCOLORSTATIC</td>
+<td>0x0138</td>
+<td>&#x7ED8;&#x5236;&#x9759;&#x6001;&#x63A7;&#x4EF6;&#x524D;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x9759;&#x6001;&#x63A7;&#x4EF6;&#x7684;&#x6587;&#x672C;&#x548C;&#x80CC;&#x666F;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td>WM_MOUSEMOVE</td>
+<td>0x0200</td>
+<td>&#x9F20;&#x6807;&#x79FB;&#x52A8;</td>
+</tr>
+<tr>
+<td>WM_LBUTTONDOWN</td>
+<td>0x0201</td>
+<td>&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x5DE6;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_LBUTTONUP</td>
+<td>0x0202</td>
+<td>&#x91CA;&#x653E;&#x9F20;&#x6807;&#x5DE6;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_LBUTTONDBLCLK</td>
+<td>0x0203</td>
+<td>&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x5DE6;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_RBUTTONDOWN</td>
+<td>0x0204</td>
+<td>&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x53F3;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_RBUTTONUP</td>
+<td>0x0205</td>
+<td>&#x91CA;&#x653E;&#x9F20;&#x6807;&#x53F3;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_RBUTTONDBLCLK</td>
+<td>0x0206</td>
+<td>&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x53F3;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_MBUTTONDOWN</td>
+<td>0x0207</td>
+<td>&#x6309;&#x4E0B;&#x9F20;&#x6807;&#x4E2D;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_MBUTTONUP</td>
+<td>0x0208</td>
+<td>&#x91CA;&#x653E;&#x9F20;&#x6807;&#x4E2D;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_MBUTTONDBLCLK</td>
+<td>0x0209</td>
+<td>&#x53CC;&#x51FB;&#x9F20;&#x6807;&#x4E2D;&#x952E;</td>
+</tr>
+<tr>
+<td>WM_MOUSEWHEEL</td>
+<td>0x020A</td>
+<td>&#x5F53;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;&#x8F6C;&#x52A8;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5F53;&#x524D;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_PARENTNOTIFY</td>
+<td>0x0210</td>
+<td>&#x5F53;MDI&#x5B50;&#x7A97;&#x53E3;&#x88AB;&#x521B;&#x5EFA;&#x6216;&#x88AB;&#x9500;&#x6BC1;&#xFF0C;&#x6216;&#x5F53;&#x5149;&#x6807;&#x4F4D;&#x4E8E;&#x5B50;&#x7A97;&#x53E3;&#x4E0A;&#x4E14;&#x7528;&#x6237;&#x6309;&#x4E86;&#x4E00;&#x4E0B;&#x9F20;&#x6807;&#x952E;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5B83;&#x7684;&#x7236;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_ENTERMENULOOP</td>
+<td>0x0211</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x7A97;&#x53E3;&#x8FDB;&#x7A0B;&#x5DF2;&#x7ECF;&#x8FDB;&#x5165;&#x4E86;&#x83DC;&#x5355;&#x6A21;&#x5F0F;&#x5FAA;&#x73AF;</td>
+</tr>
+<tr>
+<td>WM_EXITMENULOOP</td>
+<td>0x0212</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x7A97;&#x53E3;&#x8FDB;&#x7A0B;&#x5DF2;&#x7ECF;&#x9000;&#x51FA;&#x4E86;&#x83DC;&#x5355;&#x6A21;&#x5F0F;&#x5FAA;&#x73AF;</td>
+</tr>
+<tr>
+<td>WM_SIZING</td>
+<td>0x0214</td>
+<td>&#x8C03;&#x6574;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x7A97;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;&#x6B64;&#x6D88;&#x606F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x76D1;&#x89C6;&#x6216;&#x4FEE;&#x6539;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>WM_CAPTURECHANGED</td>
+<td>0x0215</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x8BBE;&#x5B9A;&#x4E3A;&#x4E0D;&#x6355;&#x83B7;&#x9F20;&#x6807;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MOVING</td>
+<td>0x0216</td>
+<td>&#x79FB;&#x52A8;&#x7A97;&#x53E3;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x7A97;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;&#x6B64;&#x6D88;&#x606F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x76D1;&#x89C6;&#x6216;&#x4FEE;&#x6539;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>WM_POWERBROADCAST</td>
+<td>0x0218</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x77E5;&#x5B83;&#x6709;&#x5173;&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td>WM_DEVICECHANGE</td>
+<td>0x0219</td>
+<td>&#x5F53;&#x8BBE;&#x5907;&#x7684;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#x6539;&#x53D8;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>WM_MDICREATE</td>
+<td>0x0220</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x591A;&#x6587;&#x6863;&#x7684;&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;MDI &#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDIDESTROY</td>
+<td>0x0221</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x591A;&#x6587;&#x6863;&#x7684;&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x6765;&#x5173;&#x95ED;&#x4E00;&#x4E2A;MDI &#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDIACTIVATE</td>
+<td>0x0222</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x591A;&#x6587;&#x6863;&#x7684;&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x901A;&#x77E5;&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x6FC0;&#x6D3B;&#x53E6;&#x4E00;&#x4E2A;MDI&#x5B50;&#x7A97;&#x53E3;&#xFF0C;&#x5F53;&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x6536;&#x5230;&#x6B64;&#x6D88;&#x606F;&#x540E;&#xFF0C;&#x5B83;&#x53D1;&#x51FA;WM_MDIACTIVE&#x6D88;&#x606F;&#x7ED9;MDI&#x5B50;&#x7A97;&#x53E3;&#xFF08;&#x672A;&#x6FC0;&#x6D3B;&#xFF09;&#x6765;&#x6FC0;&#x6D3B;&#x5B83;</td>
+</tr>
+<tr>
+<td>WM_MDIRESTORE</td>
+<td>0x0223</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x901A;&#x77E5;&#x5B50;&#x7A97;&#x53E3;&#x6062;&#x590D;&#x5230;&#x539F;&#x6765;&#x5927;&#x5C0F;</td>
+</tr>
+<tr>
+<td>WM_MDINEXT</td>
+<td>0x0224</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x6FC0;&#x6D3B;&#x4E0B;&#x4E00;&#x4E2A;&#x6216;&#x524D;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDIMAXIMIZE</td>
+<td>0x0225</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x4EE5;&#x6700;&#x5927;&#x5316;&#x4E00;&#x4E2A;MDI&#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDITILE</td>
+<td>0x0226</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x4EE5;&#x5E73;&#x94FA;&#x65B9;&#x5F0F;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x6240;&#x6709;MDI&#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDICASCADE</td>
+<td>0x0227</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x4EE5;&#x5C42;&#x53E0;&#x65B9;&#x5F0F;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x6240;&#x6709;MDI&#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDIICONARRANGE</td>
+<td>0x0228</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x6240;&#x6709;&#x6700;&#x5C0F;&#x5316;&#x7684;MDI&#x5B50;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MDIGETACTIVE</td>
+<td>0x0229</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x4EE5;&#x627E;&#x5230;&#x6FC0;&#x6D3B;&#x7684;&#x5B50;&#x7A97;&#x53E3;&#x7684;&#x53E5;&#x67C4;</td>
+</tr>
+<tr>
+<td>WM_MDISETMENU</td>
+<td>0x0230</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x7528;MDI&#x83DC;&#x5355;&#x4EE3;&#x66FF;&#x5B50;&#x7A97;&#x53E3;&#x7684;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td>WM_ENTERSIZEMOVE</td>
+<td>0x0231</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x8FDB;&#x5165;&#x79FB;&#x52A8;&#x6216;&#x6539;&#x53D8;&#x5927;&#x5C0F;&#x6A21;&#x5F0F;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_EXITSIZEMOVE</td>
+<td>0x0232</td>
+<td>&#x5F53;&#x7A97;&#x53E3;&#x9000;&#x51FA;&#x79FB;&#x52A8;&#x6216;&#x6539;&#x53D8;&#x5927;&#x5C0F;&#x6A21;&#x5F0F;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_DROPFILES</td>
+<td>0x0233</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7A97;&#x53E3;&#x4E2D;&#x62D6;&#x52A8;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_MDIREFRESHMENU</td>
+<td>0x0234</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;MDI&#x5BA2;&#x6237;&#x7A97;&#x53E3;&#x4EE5;&#x5237;&#x65B0;&#x7A97;&#x53E3;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td>WM_MOUSEHOVER</td>
+<td>0x02A1</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x5728;&#x7A97;&#x53E3;&#x5BA2;&#x6237;&#x533A;&#x60AC;&#x505C;&#x8D85;&#x8FC7;TrackMouseEvent()&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_MOUSELEAVE</td>
+<td>0x02A3</td>
+<td>&#x5F53;&#x5149;&#x6807;&#x79BB;&#x5F00;&#x7A97;&#x53E3;&#x5BA2;&#x6237;&#x533A;&#x8D85;&#x8FC7;TrackMouseEvent()&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x8BE5;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_CUT</td>
+<td>0x0300</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x7F16;&#x8F91;&#x6846;&#x6216;ComboBox&#x4EE5;&#x5220;&#x9664;&#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td>WM_COPY</td>
+<td>0x0301</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x7F16;&#x8F91;&#x6846;&#x6216;ComboBox&#x4EE5;&#x590D;&#x5236;&#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;&#x6587;&#x672C;&#x5230;&#x526A;&#x8D34;&#x677F;</td>
+</tr>
+<tr>
+<td>WM_PASTE</td>
+<td>0x0302</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x7F16;&#x8F91;&#x6846;&#x6216;ComboBox&#x4EE5;&#x4ECE;&#x526A;&#x8D34;&#x677F;&#x4E2D;&#x5F97;&#x5230;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>WM_CLEAR</td>
+<td>0x0303</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x7F16;&#x8F91;&#x6846;&#x6216;ComboBox&#x4EE5;&#x6E05;&#x9664;&#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>WM_UNDO</td>
+<td>0x0304</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x4E00;&#x4E2A;&#x7F16;&#x8F91;&#x6846;&#x6216;ComboBox&#x4EE5;&#x64A4;&#x6D88;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>WM_DESTROYCLIPBOARD</td>
+<td>0x0307</td>
+<td>&#x5F53;&#x8C03;&#x7528;EmptyClipboard()&#x6E05;&#x7A7A;&#x526A;&#x8D34;&#x677F;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_DRAWCLIPBOARD</td>
+<td>0x0308</td>
+<td>&#x5F53;&#x526A;&#x8D34;&#x677F;&#x7684;&#x5185;&#x5BB9;&#x53D8;&#x5316;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x94FE;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x7528;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x6765;&#x663E;&#x793A;&#x526A;&#x8D34;&#x677F;&#x7684;&#x65B0;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>WM_PAINTCLIPBOARD</td>
+<td>0x0309</td>
+<td>&#x5F53;&#x526A;&#x8D34;&#x677F;&#x5305;&#x542B;CF_OWNERDIPLAY&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x4E14;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x7684;&#x5BA2;&#x6237;&#x533A;&#x9700;&#x8981;&#x91CD;&#x7ED8;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_VSCROLLCLIPBOARD</td>
+<td>0x030A</td>
+<td>&#x5F53;&#x526A;&#x8D34;&#x677F;&#x5305;&#x542B;CF_OWNERDIPLAY&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x4E14;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x751F;&#x5782;&#x76F4;&#x6EDA;&#x52A8;&#x6761;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_SIZECLIPBOARD</td>
+<td>0x030B</td>
+<td>&#x5F53;&#x526A;&#x8D34;&#x677F;&#x5305;&#x542B;CF_OWNERDIPLAY&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x4E14;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x7684;&#x5BA2;&#x6237;&#x533A;&#x57DF;&#x7684;&#x5927;&#x5C0F;&#x5DF2;&#x7ECF;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x7684;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_ASKCBFORMATNAME</td>
+<td>0x030C</td>
+<td>&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x6240;&#x6709;&#x8005;&#x4EE5;&#x83B7;&#x5F97;CF_OWNERDISPLAY&#x526A;&#x8D34;&#x677F;&#x683C;&#x5F0F;&#x7684;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>WM_CHANGECBCHAIN</td>
+<td>0x030D</td>
+<td>&#x5F53;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x4ECE;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x94FE;&#x4E2D;&#x79FB;&#x53BB;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x94FE;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>WM_HSCROLLCLIPBOARD</td>
+<td>0x030E</td>
+<td>&#x5F53;&#x526A;&#x8D34;&#x677F;&#x5305;&#x542B;CF_OWNERDIPLAY&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x4E14;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x751F;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x6761;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x526A;&#x8D34;&#x677F;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x526A;&#x8D34;&#x677F;&#x6240;&#x6709;&#x8005;</td>
+</tr>
+<tr>
+<td>WM_QUERYNEWPALETTE</td>
+<td>0x030F</td>
+<td>&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x5C06;&#x8981;&#x83B7;&#x5F97;&#x952E;&#x76D8;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x6B64;&#x6D88;&#x606F;&#x4F7F;&#x7A97;&#x53E3;&#x5728;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x65F6;&#x540C;&#x65F6;&#x6709;&#x673A;&#x4F1A;&#x5B9E;&#x73B0;&#x5B83;&#x7684;&#x903B;&#x8F91;&#x8C03;&#x8272;&#x677F;</td>
+</tr>
+<tr>
+<td>WM_PALETTEISCHANGING</td>
+<td>0x0310</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C06;&#x8981;&#x5B9E;&#x73B0;&#x5B83;&#x7684;&#x903B;&#x8F91;&#x8C03;&#x8272;&#x677F;&#x65F6;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x6240;&#x6709;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>WM_PALETTECHANGED</td>
+<td>0x0311</td>
+<td>&#x83B7;&#x5F97;&#x7126;&#x70B9;&#x7684;&#x7A97;&#x53E3;&#x5B9E;&#x73B0;&#x5B83;&#x7684;&#x903B;&#x8F91;&#x8C03;&#x8272;&#x677F;&#x540E;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x5E76;&#x91CD;&#x53E0;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x6539;&#x53D8;&#x7CFB;&#x7EDF;&#x8C03;&#x8272;&#x677F;</td>
+</tr>
+<tr>
+<td>WM_HOTKEY</td>
+<td>0x0312</td>
+<td>&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x7531;RegisterHotKey()&#x6CE8;&#x518C;&#x7684;&#x70ED;&#x952E;&#x65F6;&#x4EA7;&#x751F;&#x6B64;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td>WM_PRINT</td>
+<td>0x0317</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x7A97;&#x53E3;&#xFF0C;&#x8981;&#x6C42;&#x7A97;&#x53E3;&#x5728;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x73AF;&#x5883;&#x4E2D;&#x7ED8;&#x5236;&#x81EA;&#x5DF1;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x6253;&#x5370;&#x673A;&#x8BBE;&#x5907;&#x73AF;&#x5883;</td>
+</tr>
+<tr>
+<td>WM_PRINTCLIENT</td>
+<td>0x0318</td>
+<td>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6B64;&#x6D88;&#x606F;&#x7ED9;&#x7A97;&#x53E3;&#xFF0C;&#x8981;&#x6C42;&#x7A97;&#x53E3;&#x5728;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x73AF;&#x5883;&#x4E2D;&#x7ED8;&#x5236;&#x7A97;&#x53E3;&#x5BA2;&#x6237;&#x533A;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x6253;&#x5370;&#x673A;&#x8BBE;&#x5907;&#x73AF;&#x5883;</td>
+</tr>
+<tr>
+<td>WM_APP</td>
+<td>0x8000</td>
+<td>&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x4E3A;WM_APP+X&#xFF0C;X&#x4E3A;&#x6B63;&#x6574;&#x6570;</td>
+</tr>
+<tr>
+<td>WM_USER</td>
+<td>0x0400</td>
+<td>&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x4E3A;WM_USER+X&#xFF0C;X&#x4E3A;&#x6B63;&#x6574;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x901A;&#x77E5;&#x6D88;&#x606F;"><a name="&#x901A;&#x77E5;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x77E5;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x77E5;&#x6D88;&#x606F;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BN_CLICKED</td>
+<td>&#x5355;&#x51FB;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_DISABLE</td>
+<td>&#x6309;&#x94AE;&#x88AB;&#x7981;&#x6B62;</td>
+</tr>
+<tr>
+<td>BN_DOUBLECLICKED</td>
+<td>&#x53CC;&#x51FB;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_HILITE</td>
+<td>&#x52A0;&#x4EAE;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_PAINT</td>
+<td>&#x6309;&#x94AE;&#x5E94;&#x5F53;&#x91CD;&#x753B;</td>
+</tr>
+<tr>
+<td>BN_UNHILITE</td>
+<td>&#x52A0;&#x4EAE;&#x5E94;&#x5F53;&#x53BB;&#x6389;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6309;&#x94AE;"><a name="&#x6309;&#x94AE;" class="anchor-navigation-ex-anchor" href="#&#x6309;&#x94AE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6309;&#x94AE;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BN_CLICKED</td>
+<td>&#x5355;&#x51FB;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_DISABLE</td>
+<td>&#x6309;&#x94AE;&#x88AB;&#x7981;&#x6B62;</td>
+</tr>
+<tr>
+<td>BN_DOUBLECLICKED</td>
+<td>&#x53CC;&#x51FB;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_HILITE</td>
+<td>&#x52A0;&#x4EAE;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>BN_PAINT</td>
+<td>&#x6309;&#x94AE;&#x5E94;&#x5F53;&#x91CD;&#x753B;</td>
+</tr>
+<tr>
+<td>BN_UNHILITE</td>
+<td>&#x52A0;&#x4EAE;&#x5E94;&#x5F53;&#x53BB;&#x6389;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7EC4;&#x5408;&#x6846;"><a name="&#x7EC4;&#x5408;&#x6846;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x5408;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x5408;&#x6846;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CBN_CLOSEUP</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x7684;&#x5217;&#x8868;&#x6846;&#x88AB;&#x5173;&#x95ED;</td>
+</tr>
+<tr>
+<td>CBN_DBLCLK</td>
+<td>&#x7528;&#x6237;&#x53CC;&#x51FB;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>CBN_DROPDOWN</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x7684;&#x5217;&#x8868;&#x6846;&#x88AB;&#x62C9;&#x4E0B;</td>
+</tr>
+<tr>
+<td>CBN_EDITCHANGE</td>
+<td>&#x7528;&#x6237;&#x4FEE;&#x6539;&#x4E86;&#x7EC4;&#x5408;&#x6846;&#x4E2D;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td>CBN_EDITUPDATE</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x5185;&#x7684;&#x6587;&#x672C;&#x5373;&#x5C06;&#x66F4;&#x65B0;</td>
+</tr>
+<tr>
+<td>CBN_ERRSPACE</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;</td>
+</tr>
+<tr>
+<td>CBN_KILLFOCUS</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x5931;&#x53BB;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+<tr>
+<td>CBN_SELCHANGE</td>
+<td>&#x5728;&#x7EC4;&#x5408;&#x6846;&#x4E2D;&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x9879;</td>
+</tr>
+<tr>
+<td>CBN_SELENDCANCEL</td>
+<td>&#x7528;&#x6237;&#x7684;&#x9009;&#x62E9;&#x5C06;&#x88AB;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>CBN_SELENDOK</td>
+<td>&#x7528;&#x6237;&#x7684;&#x9009;&#x62E9;&#x5C06;&#x88AB;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>CBN_SETFOCUS</td>
+<td>&#x7EC4;&#x5408;&#x6846;&#x83B7;&#x5F97;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7F16;&#x8F91;&#x6846;"><a name="&#x7F16;&#x8F91;&#x6846;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8F91;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8F91;&#x6846;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EN_CHANGE</td>
+<td>&#x7F16;&#x8F91;&#x6846;&#x4E2D;&#x7684;&#x6587;&#x672C;&#x5DF1;&#x66F4;&#x65B0;</td>
+</tr>
+<tr>
+<td>EN_ERRSPACE</td>
+<td>&#x7F16;&#x8F91;&#x6846;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;</td>
+</tr>
+<tr>
+<td>EN_HSCROLL</td>
+<td>&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E86;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x6761;</td>
+</tr>
+<tr>
+<td>EN_KILLFOCUS</td>
+<td>&#x7F16;&#x8F91;&#x6846;&#x5931;&#x53BB;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+<tr>
+<td>EN_MAXTEXT</td>
+<td>&#x63D2;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x88AB;&#x622A;&#x65AD;</td>
+</tr>
+<tr>
+<td>EN_SETFOCUS</td>
+<td>&#x7F16;&#x8F91;&#x6846;&#x83B7;&#x5F97;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+<tr>
+<td>EN_UPDATE</td>
+<td>&#x7F16;&#x8F91;&#x6846;&#x4E2D;&#x7684;&#x6587;&#x672C;&#x5C06;&#x8981;&#x66F4;&#x65B0;</td>
+</tr>
+<tr>
+<td>EN_VSCROLL</td>
+<td>&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E86;&#x5782;&#x76F4;&#x6EDA;&#x52A8;&#x6761;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5217;&#x8868;&#x6846;"><a name="&#x5217;&#x8868;&#x6846;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x6846;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x6D88;&#x606F;&#x540D;&#x79F0;</th>
+<th>&#x8BF4; &#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LBN_DBLCLK</td>
+<td>&#x7528;&#x6237;&#x53CC;&#x51FB;&#x4E86;&#x4E00;&#x9879;</td>
+</tr>
+<tr>
+<td>LBN_ERRSPACE</td>
+<td>&#x5217;&#x8868;&#x6846;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;</td>
+</tr>
+<tr>
+<td>LBN_KILLFOCUS</td>
+<td>&#x5217;&#x8868;&#x6846;&#x6B63;&#x5728;&#x5931;&#x53BB;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+<tr>
+<td>LBN_SELCANCEL</td>
+<td>&#x7528;&#x6237;&#x9009;&#x62E9;&#x88AB;&#x53D6;&#x6D88;</td>
+</tr>
+<tr>
+<td>LBN_SELCHANGE</td>
+<td>&#x7528;&#x6237;&#x9009;&#x62E9;&#x5C06;&#x6539;&#x53D8;</td>
+</tr>
+<tr>
+<td>LBN_SETFOCUS</td>
+<td>&#x5217;&#x8868;&#x6846;&#x83B7;&#x5F97;&#x8F93;&#x5165;&#x7126;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<ul>
+<li><a href="https://blog.csdn.net/zhangguofu2/article/details/19236081" target="_blank">Windows &#x5E38;&#x7528;&#x6D88;&#x606F;&#x5927;&#x5168;</a>  </li>
+<li><a href="https://zhuanlan.zhihu.com/p/42992978" target="_blank">WIndows &#x6D88;&#x606F;&#x673A;&#x5236;</a>    </li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2020-2021 ChangDingFang all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-09-19 14:23:11
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="hello_world.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: hello world">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"windows 消息","level":"2.2","depth":1,"previous":{"title":"hello world","level":"2.1","depth":1,"path":"docs/windows_gui/hello_world.md","ref":"docs/windows_gui/hello_world.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","expandable-chapters-small","emphasize","-lunr","-search","search-plus","splitter","tbfed-pagefooter","-sharing","advanced-emoji","github","-github-buttons","favicon","image-captions","multipart","code","hide-element","insert-logo","popup","js-sequence-diagram","-highlight","prism","prism-themes","autotheme","redirect"],"root":"./windows_programming","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 2020-2021 ChangDingFang","modify_label":"最近一次修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"c++":"cpp","conf":"cpp","shell":"bash","txt":"bash","Dockerfile":"bash"},"ignore":["none"],"//备用主题":["prism-themes/themes/prism-vsc-dark-plus.css","prism-themes/themes/prism-atom-dark.css","// 青蓝色","prism-themes/themes/prism-coldark-cold.css","// 非主流字体","prism-themes/themes/prism-material-oceanic.css"],"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"emphasize":{},"github":{"url":"https://github.com/changdingfang"},"splitter":{},"js-sequence-diagram":{},"popup":{},"multipart":{},"code":{"copyButtons":true},"sitemap-general":{"prefix":"https://changdingfang.com/"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"showGoTop":true,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-anchor","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{"shortcut":"../../img/favicon.jpg","bookmark":"../../img/favicon.jpg","appleTouch":"../../img/favicon.jpg"},"prism-themes":{},"//github-buttons":{"buttons":[{"user":"changdingfang","repo":"changdingfang","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"autotheme":{"night":[20,21,22,23,0,1,2,3,4,5],"sepia":[0,1,2,3,4,5,6,7,21,22,23],"white":[8,9,10,11,12,13,14,15,16,17,18,19,20]},"advanced-emoji":{"embedEmojis":false},"sharing":{"weibo":false,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":[]},"redirect":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://changdingfang.com/img/avatar.jpg"},"search-plus":{},"image-captions":{"variable_name":"_pictures"}},"//plugins: 插件功能说明":{"tbfed-pagefooter":"添加页脚,修改时间，版权等","prism":"代码高亮","emphasize":"给文子加底纹颜色","splitter":"使侧边栏的宽度可以自由调节","-highlight":"去除自带高亮","js-sequence-diagram":"时序图","popup":"点击图片放大","multipart":"分章显示","code":"代码可复制","-sharing":"禁用gitbook默认分享插件","sitemap-general":"生成sitemap","hide-element":"y隐藏一些不想看到的元素，如果published with GitBook","anchor-navigation-ex":"(已经包含anchors功能)添加侧边悬浮导航以及回到顶部按钮(只会提取1~3级,且必须按照1、2、3顺序写，不能跳级)","favicon":"图标","-search":"为支持中文搜索插件给删掉","pageview-count":"显示访问量","prism-themes":"代码高亮样式","github-buttons":"github按钮","expandable-chapters-small":"章节栏带有略微缩进，看起来更美观(##开头顶格, * 开头的缩进)","autotheme":"自动换肤，根据时间来换","-lunr":"为支持中文搜索插件给删掉","advanced-emoji":"emoji表情","redirect":"重定向页面 !REDIRECT \"new path\"","anchors":"添加github风格锚点样式(h1~h6前面带有锚点图标)","insert-logo":"插入logo","search-plus":"支持中文搜索","image-captions":"显示图片名称"},"theme":"default","author":"dingfang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"//structure":"配置readme,summary,glossary,languages对应的文件名","variables":{"_pictures":[]},"title":"windows编程","language":"zh-hans","links":{"sidebar":{"我的博客":"https://changdingfang.com"}},"gitbook":">=3.0.0","description":"遇见更好的自己","direction":"ltr"},"file":{"path":"docs/windows_gui/message.md","mtime":"2021-09-19T06:23:11.085Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-19T06:23:13.717Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/jquery-2.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/underscore-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-autotheme/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
